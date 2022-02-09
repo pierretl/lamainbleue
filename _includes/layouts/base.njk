@@ -1,11 +1,11 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="fr">
 
 	{% include "components/head.njk" %}
 
 	<body>
 
-		<header>
+		<header class="hide">
 			<em>
 				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
 			</em>

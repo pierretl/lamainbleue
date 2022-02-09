@@ -30,8 +30,11 @@
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.6",
-    "clean-css": "^4.2.1",
     "html-minifier": "^4.0.0",
-    "uglify-js": "^3.14.2"
+    "uglify-js": "^3.14.2",
+    "autoprefixer": "^10.0.2",
+    "fs-extra": "^9.1.0",
+    "postcss": "^8.1.8",
+    "sass": "^1.29.0"
   }
 }

@@ -1,8 +1,11 @@
 const { DateTime } = require("luxon");
-const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const fs = require("fs-extra");
+const sass = require("sass");
+const postcss = require("postcss");
+const autoprefixer = require("autoprefixer");
 
 module.exports = function(eleventyConfig) {
 
@@ -47,10 +50,28 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
-  // Minify CSS
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
+  // SCSS
+eleventyConfig.on("beforeBuild", () => {
+
+  // Compile Sass
+  let result = sass.renderSync({
+    file: "_sass/style.scss",
+    sourceMap: false,
+    outputStyle: "compressed",
   });
+  console.log("SCSS compiled");
+
+  // Optimize and write file with PostCSS
+  let css = result.css.toString();
+  postcss([autoprefixer])
+    .process(css, { from: "style.css", to: "style.css" })
+    .then((result) => {
+        fs.outputFile("_site/style.css", result.css, (err) => {
+          if (err) throw err;
+          console.log("CSS optimized");
+        });
+    });
+});
 
   // Minify JS
   eleventyConfig.addFilter("jsmin", function(code) {
@@ -77,9 +98,7 @@ module.exports = function(eleventyConfig) {
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("_includes/assets/css/inline.css");
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
@@ -97,6 +116,12 @@ module.exports = function(eleventyConfig) {
     .use(markdownItAnchor, opts)
   );
 
+  // trigger a rebuild if sass changes
+  eleventyConfig.addWatchTarget("_sass/");
+
+  // Copie le dossier "images" dans "_site/images"
+  eleventyConfig.addPassthroughCopy({"images": "images"});
+
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
 
@@ -109,6 +134,7 @@ module.exports = function(eleventyConfig) {
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
+    passthroughFileCopy: true,
     dir: {
       input: ".",
       includes: "_includes",
