@@ -1,0 +1,68 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    background-color: var(--couleur1);
+    color: var(--couleur2);
+    font-family: 'Martel', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+header {
+    padding: 1rem;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+
+footer {
+    text-align: center;
+    font-size: .8rem;
+    font-family: 'Raleway', serif;
+    padding: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Raleway', serif;
+    font-size: 2rem;
+}
+
+a {
+    color: var(--couleur3);
+    font-family: 'Raleway', serif;
+}
+a:hover,
+a:focus {
+    color: var(--couleur2);
+}
+
+
+@media screen and (min-width: 900px) {
+    body {  
+        font-size: 1.3rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}

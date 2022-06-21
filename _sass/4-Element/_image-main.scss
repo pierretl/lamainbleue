@@ -1,0 +1,23 @@
+.main__conteneur {
+    background-image: url(images/design/main-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main__img {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+
+    .main__conteneur {
+        background-image: none;
+    }
+    
+    .main__img {
+        display: inherit;
+        width: 381px;
+    }
+
+}

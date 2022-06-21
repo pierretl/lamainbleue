@@ -1,0 +1,39 @@
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="fr">
+
+	{% include "components/head.njk" %}
+
+	<body>
+
+        {% include "components/header-accueil.njk" %}
+
+        <main class="df ai-c main__conteneur">
+
+            <div class="df ai-c">
+                <img class="main__img" src="../images/design/main.png" alt="">
+                <section>
+                    {{ layoutContent | safe }}
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/art">Art</a>
+                            </li>
+                            <li>
+                                <a href="/yoga">Yoga</a>
+                            </li>
+                            <li>
+                                <a href="/massage">Massage</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                </section>
+            </div>
+
+        </main>
+
+		{% include "components/footer.njk" %}
+
+	</body>
+
+</html>

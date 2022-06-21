@@ -1,7 +1,18 @@
----
-layout: layouts/base.njk
-section: page
----
-<h1>{{ title }}</h1>
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="fr">
 
-{{ layoutContent | safe }}
+	{% include "components/head.njk" %}
+
+	<body>
+
+        {% include "components/header.njk" %}
+
+		<main>
+			{{ layoutContent | safe }}
+		</main>
+
+		{% include "components/footer.njk" %}
+
+	</body>
+
+</html>
