@@ -41,6 +41,11 @@ img {
 h1 {
     font-family: 'Raleway', serif;
     font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.1rem;
 }
 
 a {
@@ -60,5 +65,10 @@ a:focus {
 
     h1 {
         font-size: 3rem;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 1.4rem;
     }
 }
