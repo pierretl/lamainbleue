@@ -1,0 +1,48 @@
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="fr">
+
+	{% include "components/head.njk" %}
+
+	<body>
+
+		<main class="df ai-c main__conteneur">
+
+            <div class="df ai-c">
+                <img class="main__img" src="../images/design/main.png" alt="">
+                <section>
+                    <h1>{{ metadata.title }}</h1>
+
+					<p class="text-center mm gras">
+						{{intro1}}
+						<br>
+						) {{intro2}} (
+					</p>
+
+					<p>
+						{{contactIntro}}
+						<br>
+						{{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{telephone}}</a>
+						<br>
+						{{infoMail}} : <a href="mailto:{{mail}}">{{mail}}</a>
+					</p>
+                    
+                </section>
+            </div>
+
+        </main>
+
+		<main>
+
+		
+
+
+			
+
+
+		</main>
+
+		{% include "components/footer.njk" %}
+
+	</body>
+
+</html>

@@ -42,6 +42,20 @@ collections:
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
   # Pages specifiques
+  - name: "maintenance"
+    label: "Maintenance"
+    folder: "page-maintenance"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Intro ligne 1", name: "intro1", widget: "string" }
+      - { label: "Intro ligne 2", name: "intro2", widget: "string" }
+      - { label: "Intro contact", name: "contactIntro", widget: "string" }
+      - { label: "Info téléphone", name: "infoTelephone", widget: "string" }
+      - { label: "Téléphone", name: "telephone", widget: "string" }
+      - { label: "Téléphone (sans espace)", name: "telephoneHref", widget: "string" }
+      - { label: "Info mail", name: "infoMail", widget: "string" }
+      - { label: "Mail", name: "mail", widget: "string" }
   - name: "art"
     label: "Art"
     folder: "page-art"
