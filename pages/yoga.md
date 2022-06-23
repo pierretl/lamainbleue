@@ -39,12 +39,6 @@ eleventyNavigation:
 ### Cours réguliers
 
 <ul class="df jc-sb gap">
-    <li><img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt=""></li>
-    <li><img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt=""></li>
-    <li><img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt=""></li>
-</ul>
-
-<ul class="df jc-sb gap">
     <li class="fg-1 df fd-c gap-2">
         <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
         <h4>Lundi 
@@ -81,13 +75,6 @@ Bouton: (Calendly)
 
 
 ### Cours et ateliers ponctuels
-
-<ul class="df jc-sb gap">
-    <li><img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt=""></li>
-    <li><img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt=""></li>
-    <li><img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">en collaboration avec ma soeur (voyage au tambour, soin énergétique de groupe).
-        Selon calendrier lunaire et évènements particuliers.</li>
-</ul>
 
 <ul class="df jc-sb gap">
     <li class="df fd-c gap-2">
