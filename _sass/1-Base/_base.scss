@@ -36,6 +36,7 @@ footer {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 h1 {
@@ -46,6 +47,16 @@ h1 {
 
 h2 {
     font-size: 1.1rem;
+}
+
+ul.df {
+    padding: 0;
+    list-style: none;
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 a {

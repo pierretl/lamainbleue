@@ -41,10 +41,10 @@ collections:
           - { label: "Key", name: "key", widget: "string" }
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
-  # Pages specifiques
+  # Pages Maintenance
   - name: "maintenance"
     label: "Maintenance"
-    folder: "page-maintenance"
+    folder: "collection-cms/maintenance"
     create: false
     slug: "{{slug}}"
     fields:
@@ -56,9 +56,10 @@ collections:
       - { label: "Téléphone (sans espace)", name: "telephoneHref", widget: "string" }
       - { label: "Info mail", name: "infoMail", widget: "string" }
       - { label: "Mail", name: "mail", widget: "string" }
+  # Pages Art
   - name: "art"
     label: "Art"
-    folder: "page-art"
+    folder: "collection-cms/art"
     create: false
     slug: "{{slug}}"
     fields:
