@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 # yoga
 
-<div class="df gap">
+<div class="df gap grille v--inverse">
     <p>
         Cours de Yoga Hatha Vinyasa pour toutes toux tous!  <br>
         Explorer à la fois souplesse, force, équilibre, concentration, respiration consciente, relaxation guidée. Focus spéciaux pour vos besoins, adaptation tous niveaux. Petits groupes, cours privés. Salles associatives ou plein air. 
@@ -38,7 +38,7 @@ eleventyNavigation:
 
 ### Cours réguliers
 
-<ul class="df jc-sb gap">
+<ul class="df jc-sb gap carte">
     <li class="fg-1 df fd-c gap-2">
         <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
         <h4>Lundi 
@@ -76,7 +76,7 @@ Bouton: (Calendly)
 
 ### Cours et ateliers ponctuels
 
-<ul class="df jc-sb gap">
+<ul class="df jc-sb gap carte">
     <li class="df fd-c gap-2">
         <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
         <h4>Cours en extérieur</h4>
@@ -111,7 +111,7 @@ Bouton : (S’abonner à la newsletter)
 
 <h2 id="Approche">Approche</h2>
 
-<div class="df gap">
+<div class="df gap grille">
     <img src="https://via.placeholder.com/400x300/375063/FFFFFF/?text=Toi+ou+tes+mains" alt="">
     <p>
         Je propose des sessions de 1h de Hatha Vinyasa Yoga. 
@@ -125,7 +125,7 @@ Les exercices de respiration et la relaxation y ont une place très importante, 
 
 <h2 id="Parcours">Parcours</h2>
 
-<div class="df gap">
+<div class="df gap grille">
     <p>
         C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Thaïlande et aux Etats Unis, avec, notamment, Olivia Tüscher (Hatha Raja Yoga, Liquid Flow) et Yves Vandeplas (Hatha Yoga, Yoga Nidra) à Genève, Anja Maier (Vinyasa, Reiki) en Thaïlande, Nico Luce (Vinyasa, Yin Yoga) à Nyon et à l’international.
     </p>

@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 # Massage
 
-<div class="df gap">
+<div class="df gap grille v--inverse">
     <p>
         Le massage est un voyage passionnant, l’occasion d’une re-connexion avec notre corps, nos intuitions et nos émotions enfouies, mais aussi une re-connexion avec les bienfaits du soin et de l’attention. Le flux des pensées se ralentit, les tensions et fatigues sont reconnues, écoutées et peuvent enfin lâcher prise. La circulation sanguine est stimulée, un sentiment profond de relaxation s’installe. De nouvelles bonnes habitudes s’ancrent petit à petit en nous, amenant plus de conscience dans notre corps et nos postures, et dans l’importance de prendre soin de nous-même au quotidien. 
     </p>
@@ -38,7 +38,7 @@ eleventyNavigation:
 
 <h2 id="Durée-Tarifs">Durée & Tarifs</h2>
 
-<ul class="df jc-sb gap">
+<ul class="df jc-sb gap carte" style="--taille:25%">
   <li class="fg-1 df fd-c gap-2">
       <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
       <h4>Découverte</h4>
@@ -82,7 +82,7 @@ Toux corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; rela
 La palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés sur table confortable avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.
 
 
-<ul class="df jc-sb gap">
+<ul class="df jc-sb gap carte">
   <li class="fg-1 df fd-c gap-2">
     <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
     <h4>Complet</h4>
@@ -107,7 +107,7 @@ La palette de soins proposés se combine selon vos envies. Nous choisissons ense
 </ul>
 
 
-<ul class="df jc-sb gap">
+<ul class="df jc-sb gap carte">
     <li class="fg-1 df fd-c gap-2">
         <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
         <h4>etoile</h4>
@@ -135,7 +135,7 @@ La palette de soins proposés se combine selon vos envies. Nous choisissons ense
 
 <h2 id="Monapproche">Mon approche</h2>
 
-<div class="df gap">
+<div class="df gap grille v--inverse">
     <p>
       Je propose toujours un moment de massage sur mesure et en pleine présence, élaboré en fonction de chaque personne; son histoire, son profil, et ses envies du moment. 
       Basé sur une solide formation suisse reconnue EDUQUA, ASCA et RME, je continue de me former en continu avec des approches complémentaires venant de différentes cultures pour continuer à découvrir l’art du massage et élargir la palette de soins que je vous propose.      

@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: var(--couleur2);
+    color: var(--couleur1);
+}
+
 body {
     display: flex;
     flex-direction: column;

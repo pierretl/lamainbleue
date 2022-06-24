@@ -50,8 +50,7 @@ bouton : Me suivre sur Instagram
 
 <div class="df gap">
     <img src="https://via.placeholder.com/150x150/375063/FFFFFF/?text=visuel" alt="">
-    <p>
-        « Echos »
+    <p>« Echos »
 Livre d’artiste, 2020
 Editions Casa Grande, 331pages, En/Fr/It/Es 
 ISBN 978-88-7713-868-2
