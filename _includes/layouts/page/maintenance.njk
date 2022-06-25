@@ -11,20 +11,25 @@ noHeader: true
         
         <section class="df fd-c ai-c">
 
-            <h1 class="maintenance__titre">{{ metadata.title }}</h1>
+            <h1 class="text-center maintenance__titre">{{ metadata.title }}</h1>
+            <p class="text-center maintenance__ligne1">{{intro1}}</p>
+            <p class="text-center maintenance__ligne2">
+                <span aria-hidden="true">~</span>
+                &nbsp;&nbsp;<em>{{intro2}}</em>&nbsp;&nbsp;
+                <span aria-hidden="true">~</span>
+            </p>
 
-            <h2 class="maintenance__sous-titre text-center mm">
-                <strong>{{intro1}}</strong>
-                <br>
-                ~&nbsp;&nbsp;<em>{{intro2}}</em>&nbsp;&nbsp;~
-            </h2>
-            <ul class="df gap maintenance__liste">
+            <ul class="df maintenance__liste">
                 <li>Massage</li>
                 <li>Yoga</li>
                 <li>Art</li>
             </ul>
 
-            <p>
+            <p class="maintenance__tilde" aria-hidden="true">
+                ~
+            </p>
+
+            <p class="maintenance__texte">
                 {{contactIntro}}
                 <br>
                 {{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{telephone}}</a>

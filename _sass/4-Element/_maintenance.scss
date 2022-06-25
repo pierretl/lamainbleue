@@ -1,41 +1,47 @@
 .maintenance__titre {
-    font-size: 2rem;
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0;
 
     @include breakpoint(large) {
-        font-size: 3rem;
-        text-align: left;
+        font-size: 3.5rem;
     }
 }
 
-.maintenance__sous-titre {
-    @include typo1;
-    font-size: 1.1rem;
-    font-weight: 300;
-    margin-bottom: map-get($space, xxl );
+.maintenance__ligne1 {
+    @include typo2;
+    font-size: 1.3rem;
+    letter-spacing: .4rem;
+    margin: 0;
 
     @include breakpoint(large) {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        letter-spacing: .45rem;
     }
 }
 
-.maintenance__sous-titre strong {
-    font-weight: 700;
+.maintenance__ligne2 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 1.2rem;
 
-    @include breakpoint(large) {
-        font-size: 1.6rem;
-    }
 }
 
 .maintenance__liste {
     @include typo2;
-    margin-top: map-get($space, m );
+    position: relative;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0 map-get($space, s ) 10px;
     font-size: 1.1rem;
+}
 
-    padding: map-get($space, s );
-    border-top: 1px solid var(--couleur2);
-    border-bottom: 1px solid var(--couleur2);
+.maintenance__tilde {
+    margin: 0;
+    font-size: 1.2rem;
+}
 
-    @include breakpoint(large) {
-        font-size: 1.4rem;
-    }
+.maintenance__texte {
+    margin-top: 50px;
 }
