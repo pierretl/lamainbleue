@@ -9,7 +9,7 @@
     display: none;
 }
 
-@media screen and (min-width: 900px) {
+@include breakpoint(large) {
 
     .main__conteneur {
         background-image: none;

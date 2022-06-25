@@ -5,20 +5,23 @@
 
 	<body>
 
-		<main class="df ai-c main__conteneur">
+		<main class="df ai-c jc-c main__conteneur">
 
-            <div class="df ai-c">
-                <img class="main__img" src="../images/design/main.png" alt="">
-                <section>
-                    <h1>{{ metadata.title }}</h1>
+			<div class="df ai-c">
+				<img class="main__img" src="../images/design/main.png" alt="">
+				<section class="df fd-c ai-c">
+					<h1 class="maintenance__titre">{{ metadata.title }}</h1>
 
-					<h2 class="text-center mm gras">
+					<h2 class="maintenance__sous-titre text-center mm gras">
 						{{intro1}}
 						<br>
 						) {{intro2}} (
-						<br><br>
-						Massage ~ Yoga ~ Art
 					</h2>
+					<ul class="df gap gras maintenance__liste">
+						<li>Massage</li>
+						<li>Yoga</li>
+						<li>Art</li>
+					</ul>
 
 					<p>
 						{{contactIntro}}
@@ -27,11 +30,11 @@
 						<br>
 						{{infoMail}} : <a href="mailto:{{mail}}">{{mail}}</a>
 					</p>
-                    
-                </section>
-            </div>
+					
+				</section>
+			</div>
 
-        </main>
+		</main>
 
 		<main>
 
