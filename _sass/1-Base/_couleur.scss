@@ -5,12 +5,21 @@
     --couleur4: #A9C4D5;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --couleur1: #172C48;
-        --couleur2: #E9EDEE;
-        --couleur3: #BDDEFA;
-        --couleur4: #284D7E;
+[data-color-scheme="light"] {
+    .show-for-dark {
+        display: none;
+    }
+}
+
+[data-color-scheme="dark"] {
+
+    --couleur1: #172C48;
+    --couleur2: #E9EDEE;
+    --couleur3: #BDDEFA;
+    --couleur4: #284D7E;
+
+    .show-for-light {
+        display: none;
     }
 
     img {
@@ -19,5 +28,9 @@
 
     body .main__conteneur {
         background-image: url(images/design/main-bg--dark.png);
+
+        @include breakpoint(large) {
+            background-image: none;
+        }
     }
 }

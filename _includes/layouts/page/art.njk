@@ -1,80 +1,69 @@
-<!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="fr">
+---
+layout: layouts/base.njk
+---
 
-	{% include "components/head.njk" %}
+<main>
 
-	<body>
+    <h1>
+        {{title}}
+    </h1>
 
-        {% include "components/header.njk" %}
+    <p>
+        {{intro}}
+    </p>
 
-		<main>
-
-			<h1>
-				{{title}}
-			</h1>
-
-			<p>
-				{{intro}}
-			</p>
-
-			<nav>
-				<ul>
-					<li>
-						<a href="#exemple-realisation">Exemple réalisation</a>
-					</li>
-					<li>
-						<a href="#projet-futur">Projet futur</a>
-					</li>
-					<li>
-						<a href="#a-propos">A propos</a>
-					</li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
-			</nav>
+    <nav>
+        <ul>
+            <li>
+                <a href="#exemple-realisation">Exemple réalisation</a>
+            </li>
+            <li>
+                <a href="#projet-futur">Projet futur</a>
+            </li>
+            <li>
+                <a href="#a-propos">A propos</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
 
 
-			<hr>
+    <hr>
 
-			<h2 id="exemple-realisation">Exemple réalisation</h2>
+    <h2 id="exemple-realisation">Exemple réalisation</h2>
 
-			<ul>
-				{% for entry in exempleRealisation %}
-					<li>
-						<ul>
-							<li>{{ entry.label }}</li>
-							{% if entry.image %}
-								<li>{{ entry.image }}</li>
-							{% endif %}
-							<li>{{ entry.description }}</li>
-						</ul>
-					</li>
-				{% endfor %}
-			</ul>
-
-
-			<hr>
-
-			<h2 id="eprojet-futur">Projet futur</h2>
-			{{introProjet}}
-
-			<hr>
-
-			<h2 id="a-propos">A propos</h2>
-			{{introAPropos}}
+    <ul>
+        {% for entry in exempleRealisation %}
+            <li>
+                <ul>
+                    <li>{{ entry.label }}</li>
+                    {% if entry.image %}
+                        <li>{{ entry.image }}</li>
+                    {% endif %}
+                    <li>{{ entry.description }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
 
 
-			<hr>
+    <hr>
 
-			<h2 id="contact">Contact</h2>
-			{{introContact}}
+    <h2 id="eprojet-futur">Projet futur</h2>
+    {{introProjet}}
+
+    <hr>
+
+    <h2 id="a-propos">A propos</h2>
+    {{introAPropos}}
 
 
-		</main>
+    <hr>
 
-		{% include "components/footer.njk" %}
+    <h2 id="contact">Contact</h2>
+    {{introContact}}
 
-	</body>
 
-</html>
+</main>

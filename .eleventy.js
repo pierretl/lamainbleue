@@ -122,6 +122,12 @@ eleventyConfig.on("beforeBuild", () => {
   // Copie le dossier "images" dans "_site/images"
   eleventyConfig.addPassthroughCopy({"images": "images"});
 
+  // Copie le dossier "fonts" dans "_site/fonts"
+  eleventyConfig.addPassthroughCopy({"fonts": "fonts"});
+
+  // Copie le dossier "js" dans "_site/js"
+  eleventyConfig.addPassthroughCopy({"js": "js"});
+
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
 

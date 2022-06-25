@@ -1,0 +1,17 @@
+.btn_color-scheme {
+    border: 0 none;
+    background-color: transparent;
+}
+.btn_color-scheme svg {
+    fill: var(--couleur2);
+}
+
+.btn_color-scheme:hover,
+.btn_color-scheme:focus {
+    cursor: pointer;
+}
+
+.btn_color-scheme:hover svg,
+.btn_color-scheme:focus svg {
+    fill: var(--couleur3);
+}

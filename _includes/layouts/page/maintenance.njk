@@ -1,57 +1,41 @@
-<!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="fr">
+---
+layout: layouts/base.njk
+noHeader: true
+---
 
-	{% include "components/head.njk" %}
+<main class="df ai-c jc-c main__conteneur">
 
-	<body>
+    <div class="df ai-c">
 
-		<main class="df ai-c jc-c main__conteneur">
+        <img class="main__img" src="../images/design/main.png" alt="">
+        
+        <section class="df fd-c ai-c">
 
-			<div class="df ai-c">
+            <h1 class="maintenance__titre">{{ metadata.title }}</h1>
 
-				<img class="main__img" src="../images/design/main.png" alt="">
-				
-				<section class="df fd-c ai-c">
+            <h2 class="maintenance__sous-titre text-center mm">
+                <strong>{{intro1}}</strong>
+                <br>
+                ~&nbsp;&nbsp;<em>{{intro2}}</em>&nbsp;&nbsp;~
+            </h2>
+            <ul class="df gap maintenance__liste">
+                <li>Massage</li>
+                <li>Yoga</li>
+                <li>Art</li>
+            </ul>
 
-					<h1 class="maintenance__titre">{{ metadata.title }}</h1>
+            <p>
+                {{contactIntro}}
+                <br>
+                {{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{telephone}}</a>
+                <br>
+                {{infoMail}} : <a href="mailto:{{mail}}">{{mail}}</a>
+            </p>
 
-					<h2 class="maintenance__sous-titre text-center mm">
-						<strong>{{intro1}}</strong>
-						<br>
-						~&nbsp;&nbsp;<em>{{intro2}}</em>&nbsp;&nbsp;~
-					</h2>
-					<ul class="df gap maintenance__liste">
-						<li>Massage</li>
-						<li>Yoga</li>
-						<li>Art</li>
-					</ul>
+            {% include "components/btn-color-scheme.njk" %}
+            
+        </section>
 
-					<p>
-						{{contactIntro}}
-						<br>
-						{{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{telephone}}</a>
-						<br>
-						{{infoMail}} : <a href="mailto:{{mail}}">{{mail}}</a>
-					</p>
-					
-				</section>
+    </div>
 
-			</div>
-
-		</main>
-
-		<main>
-
-		
-
-
-			
-
-
-		</main>
-
-		{% include "components/footer.njk" %}
-
-	</body>
-
-</html>
+</main>

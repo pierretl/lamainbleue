@@ -17,3 +17,7 @@
 .gap2 {
     gap: 10px;
 }
+
+.mt-xl {
+    margin-top: map-get($space, xxl );
+}
