@@ -8,6 +8,7 @@
 }
 
 body {
+    @include typo1;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,7 +16,6 @@ body {
 
     background-color: var(--couleur1);
     color: var(--couleur2);
-    font-family: 'Martel', sans-serif;
     font-weight: 300;
     font-size: 1rem;
 }
@@ -33,18 +33,23 @@ main {
 }
 
 footer {
+    @include typo2;
     text-align: center;
     font-size: .8rem;
-    font-family: 'Raleway', serif;
     padding: 1rem;
+
+    @include breakpoint(large) {
+        font-size: 1rem;
+    }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+h1,
+h2 {
+    @include typo2;
 }
 
 h1 {
+    font-weight: 700;
     font-size: 3rem;
     
     @include breakpoint(large) {
@@ -61,7 +66,7 @@ h2 {
 }
 
 ul.df {
-    padding: 0;
+    //padding: 0;
     list-style: none;
 }
 
@@ -73,14 +78,14 @@ hr {
 a {
     color: var(--couleur3);
     font-family: 'Raleway', serif;
+    text-underline-offset: 0.3rem;
 }
 a:hover,
 a:focus {
     color: var(--couleur2);
 }
 
-@include breakpoint(large) {
-    .footer {
-        font-size: 1rem;
-    }
+img {
+    max-width: 100%;
+    height: auto;
 }

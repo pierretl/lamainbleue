@@ -1,6 +1,6 @@
 ---
 intro1: Se reconnecter à soi
-intro2: Corps, Esprit et Inspiration
+intro2: Corps, Esprit & Inspiration
 telephone: +41 79 731 23 51
 infoMail: mail
 layout: layouts/page/maintenance.njk

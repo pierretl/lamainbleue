@@ -1,5 +1,4 @@
 .maintenance__titre {
-    font-family: 'Raleway', serif;
     font-size: 2rem;
 
     @include breakpoint(large) {
@@ -9,17 +8,32 @@
 }
 
 .maintenance__sous-titre {
-    margin-bottom: map-get($space, xxl );
+    @include typo1;
     font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: map-get($space, xxl );
 
     @include breakpoint(large) {
         font-size: 1.4rem;
     }
 }
 
+.maintenance__sous-titre strong {
+    font-weight: 700;
+
+    @include breakpoint(large) {
+        font-size: 1.6rem;
+    }
+}
+
 .maintenance__liste {
+    @include typo2;
     margin-top: map-get($space, m );
     font-size: 1.1rem;
+
+    padding: map-get($space, s );
+    border-top: 1px solid var(--couleur2);
+    border-bottom: 1px solid var(--couleur2);
 
     @include breakpoint(large) {
         font-size: 1.4rem;

@@ -4,3 +4,20 @@
     --couleur3: #004F8F;
     --couleur4: #A9C4D5;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --couleur1: #172C48;
+        --couleur2: #E9EDEE;
+        --couleur3: #BDDEFA;
+        --couleur4: #284D7E;
+    }
+
+    img {
+        filter: grayscale(20%);
+    }
+
+    body .main__conteneur {
+        background-image: url(images/design/main-bg--dark.png);
+    }
+}
