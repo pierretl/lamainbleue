@@ -1,3 +1,23 @@
 .text-center {
     text-align: center;
 }
+
+.text-typo2 {
+    @include typo2;
+}
+
+.text-size0 {
+    font-size: 2rem;
+
+    @include breakpoint(large) {
+        font-size: 1.5rem;
+    }
+}
+
+.text-size1 {
+    font-size: 1.5rem;
+}
+
+.text-gras {
+    font-weight: 700;
+}

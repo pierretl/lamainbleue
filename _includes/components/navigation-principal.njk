@@ -1,0 +1,20 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+<ul class="reset df fw-w jc-c gap">
+
+    {%- for entry in navPages %}
+        <li>
+            {% if entry.url == page.url %}
+                <span class="text-size1 text-typo2 text-gras">
+                    {{ entry.title }}
+                </span>
+            {% else %}
+                <a class="text-size1 text-typo2 text-underline" href="{{ entry.url | url }}">
+                    {{ entry.title }}
+                </a>
+            {% endif %}
+            
+        </li>
+    {%- endfor %}
+
+</ul>

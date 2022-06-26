@@ -7,11 +7,18 @@
 
         {% if noHeader == true %}
         {% else %}
-            <header class="df jc-sb">
-                <em>
-                    <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-                </em>
-                {% include "components/nav.njk" %}
+            <header class="df fd-c fd-r--large jc-sb ai-c gap">
+
+                <a class="text-size0 text-gras text-typo2" href="{{ '/' | url }}">{{ metadata.title }}</a>
+
+                <nav class="df fd-c fd-r--large gap">
+
+                    {% include "components/navigation-principal.njk" %}
+                
+                    {% include "components/btn-color-scheme.njk" %}
+
+                </nav>
+                
             </header>
         {% endif %}
 

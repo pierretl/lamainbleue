@@ -1,21 +1,21 @@
-.main__conteneur {
+.accueil__conteneur {
     background-image: url(images/design/main-bg.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.main__img {
+.accueil__img {
     display: none;
 }
 
 @include breakpoint(large) {
 
-    .main__conteneur {
+    .accueil__conteneur {
         background-image: none;
     }
     
-    .main__img {
+    .accueil__img {
         display: inherit;
         width: 340px;
     }

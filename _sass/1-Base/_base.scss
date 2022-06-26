@@ -65,9 +65,11 @@ h2 {
     }
 }
 
-ul.df {
-    //padding: 0;
+ul.reset {
     list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 hr {
@@ -75,13 +77,18 @@ hr {
     margin-bottom: 40px;
 }
 
-a {
+a:not([class]) {
     color: var(--couleur3);
     font-family: 'Raleway', serif;
     text-underline-offset: 0.3rem;
 }
 a:hover,
 a:focus {
+    color: var(--couleur2);
+}
+
+a[class] {
+    text-decoration: none;
     color: var(--couleur2);
 }
 
