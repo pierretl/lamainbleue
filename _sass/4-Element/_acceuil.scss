@@ -5,6 +5,10 @@
     background-position: center;
 }
 
+[data-color-scheme="dark"] .accueil__conteneur {
+    background-image: url(images/design/main-bg--dark.png);
+}
+
 .accueil__img {
     display: none;
 }

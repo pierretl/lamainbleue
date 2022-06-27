@@ -25,12 +25,4 @@
     img {
         filter: grayscale(20%);
     }
-
-    body .main__conteneur {
-        background-image: url(images/design/main-bg--dark.png);
-
-        @include breakpoint(large) {
-            background-image: none;
-        }
-    }
 }
