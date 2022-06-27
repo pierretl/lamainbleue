@@ -1,0 +1,22 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+
+
+@include breakpoint(small) {
+
+    .header__nav {
+        grid-column: 1/3;
+        margin-top: 3rem;
+        text-align: right;
+    }
+
+    .btn_color-scheme {
+        margin-top: 3rem;
+        text-align: right;
+    }
+
+}

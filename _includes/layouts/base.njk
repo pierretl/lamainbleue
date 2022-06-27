@@ -1,17 +1,19 @@
 <!doctype html>
 <html {% if section %} data-current="{{ section }}"{% endif %}data-color-scheme="light" lang="fr">
 
-    {% include "components/head.njk" %}
+    {% include "layouts/head.njk" %}
 
     <body>
 
         {% if noHeader == true %}
         {% else %}
-            <header class="df fd-c fd-r--large jc-sb ai-c gap">
+            <header class="jc-sb ai-c gap header">
 
-                <a class="text-size0 text-gras text-typo2" href="{{ '/' | url }}">{{ metadata.title }}</a>
+                <a class="text-size0 text-typo2" href="{{ '/' | url }}">{{ metadata.title }}</a>
 
-                <nav class="df fd-c fd-r--large gap">
+                <button class="burger hide-for-large" data-statut="hide" id="js_burger" aria-label="Afficher le menu" aria-expanded="false" data-label="Fermer le menu"></button>
+
+                <nav class="df fd-c fd-r--large gap header__nav hide-for-small" id="js_nav">
 
                     {% include "components/navigation-principal.njk" %}
                 
@@ -22,9 +24,11 @@
             </header>
         {% endif %}
 
-        {{ layoutContent | safe }}
+        <main class="{{layoutMainClass}}" id="js_main">
+            {{ layoutContent | safe }}
+        </main>
 
-        {% include "components/footer.njk" %}
+        {% include "layouts/footer.njk" %}
 
     </body>
 

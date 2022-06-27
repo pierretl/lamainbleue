@@ -1,11 +1,28 @@
 @mixin breakpoint($taille) {
 
     @if $taille == 'large' {
-
         @media screen and (min-width: 900px) {
             @content
         }
-
     }
 
+    @if $taille == 'small' {
+        @media screen and (max-width: 899px) {
+            @content
+        }
+    }
+
+}
+
+
+@include breakpoint(large) {
+    .hide-for-large {
+        display: none;
+    }
+}
+
+@include breakpoint(small) {
+    .hide-for-small {
+        display: none !important;
+    }
 }
