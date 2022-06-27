@@ -1,28 +1,25 @@
 ---
 layout: layouts/base.njk
+layoutMainClass : df ai-c accueil__conteneur
 ---
 
-<main class="df ai-c accueil__conteneur">
-
-    <div class="df ai-c">
-        <img class="main__img" src="../images/design/main.png" alt="">
-        <section>
-            {{ layoutContent | safe }}
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/art">Art</a>
-                    </li>
-                    <li>
-                        <a href="/yoga">Yoga</a>
-                    </li>
-                    <li>
-                        <a href="/massage">Massage</a>
-                    </li>
-                </ul>
-            </nav>
-            
-        </section>
-    </div>
-
-</main>
+<div class="df ai-c">
+    <img class="main__img" src="../images/design/main.png" alt="">
+    <section>
+        {{ layoutContent | safe }}
+        <nav>
+            <ul>
+                <li>
+                    <a href="/art">Art</a>
+                </li>
+                <li>
+                    <a href="/yoga">Yoga</a>
+                </li>
+                <li>
+                    <a href="/massage">Massage</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </section>
+</div>

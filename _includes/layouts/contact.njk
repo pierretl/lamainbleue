@@ -2,10 +2,10 @@
 layout: layouts/base.njk
 section: contact
 ---
-<main>
-    <h1>{{ title }}</h1>
 
-    {{ layoutContent | safe }}
+<h1>{{ title }}</h1>
 
-    {% include "components/form.njk" %}
-</main>
+{{ layoutContent | safe }}
+
+{% include "components/form.njk" %}
+
