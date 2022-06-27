@@ -7,11 +7,11 @@
 
         {% if noHeader == true %}
         {% else %}
-            <header class="jc-sb ai-c gap header">
+            <header class="jc-sb ai-c gap header" id="js_header">
 
-                <a class="text-size0 text-typo2" href="{{ '/' | url }}">{{ metadata.title }}</a>
+                <a class="header__marque text-size0 text-typo2" href="{{ '/' | url }}">{{ metadata.title }}</a>
 
-                <button class="burger hide-for-large" data-statut="hide" id="js_burger" aria-label="Afficher le menu" aria-expanded="false" data-label="Fermer le menu"></button>
+                <button class="header__burger burger hide-for-large" data-statut="hide" id="js_burger" aria-label="Afficher le menu" aria-expanded="false" data-label="Fermer le menu"></button>  
 
                 <nav class="df fd-c fd-r--large gap header__nav hide-for-small" id="js_nav">
 
@@ -20,6 +20,10 @@
                     {% include "components/btn-color-scheme.njk" %}
 
                 </nav>
+
+                <div class="header__illus">
+                    <img class="hide-for-small hide-for-large" src="../images/design/main.png" alt="" id="js_nav-illus">
+                </div> 
                 
             </header>
         {% endif %}
