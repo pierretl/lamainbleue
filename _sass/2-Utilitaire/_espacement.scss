@@ -7,13 +7,13 @@
 }
 
 .gap {
-    gap: 1rem;
+    gap: map-get($space, m);
 
     @include breakpoint(large) {
-        gap: 1.25rem;
+        gap: map-get($space, l);
     }
 }
 
 .gap2 {
-    gap: 10px;
+    gap: map-get($space, s);
 }

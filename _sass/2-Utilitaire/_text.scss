@@ -8,10 +8,6 @@
 
 .text-size0 {
     font-size: 2rem;
-
-    @include breakpoint(large) {
-        font-size: 1.5rem;
-    }
 }
 
 .text-size1 {

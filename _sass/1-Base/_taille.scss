@@ -1,13 +1,11 @@
-@import "./unite";
-
 $space :(
-    "xxs":      rem-calc(4),
-    "xs":       rem-calc(8),
-    "s":        rem-calc(12),
-    "m":        rem-calc(16),
-    "l":        rem-calc(20),
-    "xl":       rem-calc(24),
-    "xxl":      rem-calc(28),
+    "xxs":      0,
+    "xs":       0,
+    "s":        .75rem,
+    "m":        1rem,
+    "l":        1.25rem,
+    "xl":       1.75rem,
+    "xxl":      3.125rem
 );
 
 

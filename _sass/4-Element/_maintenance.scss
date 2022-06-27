@@ -21,7 +21,7 @@
 }
 
 .maintenance__ligne2 {
-    margin-top: 50px;
+    margin-top: map-get($space, xxl);
     margin-bottom: 0;
     font-size: 1.2rem;
 
@@ -30,10 +30,10 @@
 .maintenance__liste {
     @include typo2;
     position: relative;
-    gap: 10px;
-    margin-top: 10px;
+    gap: map-get($space, s);
+    margin-top: map-get($space, s);
     margin-bottom: 0;
-    padding: 0 map-get($space, s ) 10px;
+    padding: 0 map-get($space, s) map-get($space, s);
     font-size: 1.1rem;
 }
 
@@ -43,6 +43,6 @@
 }
 
 .maintenance__texte {
-    margin-top: 50px;
-    margin-bottom: map-get($space, xxl );
+    margin-top: map-get($space, xxl);
+    margin-bottom: map-get($space, xl );
 }
