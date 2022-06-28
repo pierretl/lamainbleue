@@ -1,3 +1,17 @@
 .hide {
     display: none;
 }
+
+
+@include breakpoint(medium) {
+
+    .cc-2 {
+        column-count: 2;
+    }
+    
+    .cc-gap {
+        column-gap: map-get($map: $space, $key: xxl);
+    }
+
+}
+

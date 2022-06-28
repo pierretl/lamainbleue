@@ -8,7 +8,9 @@ eleventyNavigation:
   key: Massage
   order: 1
 ---
-# Massage
+{% import "components/macro.njk" as macro %}
+
+<h1>Massage</h1>
 
 <div class="df gap grille v--inverse">
     <p>
@@ -18,25 +20,12 @@ eleventyNavigation:
 </div>
 
 
-<ul class="df jc-c gap">
-    <li>
-        <a href="#Durée-Tarifs">Durée & Tarifs</a>
-    </li>
-    <li>
-        <a href="#Typesdemassages">Types de massages</a>
-    </li>
-    <li>
-        <a href="#Monapproche">Mon approche</a>
-    </li>
-    <li>
-        <a href="#PrendreRDV">Prendre RDV</a>
-    </li>
-</ul>
+{{ macro.sommaire(["Durée & Tarifs", "Types de massages", "Mon approche", "Prendre RDV"]) }}
 
 
 <hr>
 
-<h2 id="Durée-Tarifs">Durée & Tarifs</h2>
+{{ macro.h2("Durée & Tarifs") }}
 
 <ul class="df jc-sb gap carte" style="--taille:25%">
   <li class="fg-1 df fd-c gap-2">
@@ -75,7 +64,7 @@ eleventyNavigation:
 
 <hr>
 
-<h2 id="Typesdemassages">Types de massages</h2>
+{{ macro.h2("Types de massages") }}
 
 Toux corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. 
 
@@ -133,7 +122,7 @@ La palette de soins proposés se combine selon vos envies. Nous choisissons ense
 
 <hr>
 
-<h2 id="Monapproche">Mon approche</h2>
+{{ macro.h2("Mon approche") }}
 
 <div class="df gap grille v--inverse">
     <p>
@@ -156,7 +145,7 @@ La palette de soins proposés se combine selon vos envies. Nous choisissons ense
 
 <hr>
 
-<h2 id="PrendreRDV">Prendre un rendez-vous</h2>
+{{ macro.h2("Prendre RDV", "Prendre un rendez-vous") }}
 
 Je vous reçois habituellement les lundi, mercredi et vendredi, en journée ou soirée. 
 Sur rdv uniquement. Dates et horaires flexibles ; contactez-moi pour trouver le moment idéal.

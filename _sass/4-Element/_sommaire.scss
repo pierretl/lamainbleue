@@ -1,0 +1,49 @@
+.sommaire {
+    list-style: none;
+    padding-left: 0;
+    margin: map-get($space, xxxl) 0;
+}
+
+.sommaire a {
+    text-decoration: none;
+    font-size: 1.1rem;
+
+    @include breakpoint(medium) {
+        font-size: 1.3rem;
+    }
+}
+
+.sommaire__item {
+    padding: map-get($space, m );
+    text-align: center;
+}
+
+@include breakpoint(mediumDown) {
+
+    .sommaire__item {
+        width: 50%;
+    }
+
+    .sommaire__item:nth-child(odd) {
+        border-right: 1px solid var(--couleur2);
+    }
+    
+    .sommaire__item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--couleur2);
+    }
+    
+}
+
+@include breakpoint(large) {
+    .sommaire {
+        justify-content: center;
+    }
+
+    .sommaire__item {
+        padding: 0 map-get($space, xl );
+    }
+    
+    .sommaire__item:not(:first-child) {
+        border-left: 1px solid var(--couleur2);
+    }
+}

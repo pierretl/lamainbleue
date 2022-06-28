@@ -1,0 +1,24 @@
+{% macro sommaire(liste) %}
+    <ul class="df fw-w sommaire">
+        {% for item in liste %}
+            <li class="df jc-c ai-c sommaire__item">
+                <a href="#{{ item | slug }}">
+                    {{ item }}
+                </a>
+            </li>
+         {% endfor %}
+    </ul>
+{% endmacro %}
+
+
+
+
+{% macro h2(titre, titreSurcharger) %}
+    <h2 id="{{ titre | slug  }}">
+        {% if titreSurcharger %}
+            {{ titreSurcharger | safe }}
+        {% else %}
+            {{ titre | safe }}
+        {% endif %}
+    </h2>
+{% endmacro %}

@@ -8,7 +8,9 @@ eleventyNavigation:
     key: Yoga
     order: 2
 ---
-# yoga
+{% import "components/macro.njk" as macro %}
+
+<h1>Yoga</h1>
 
 <div class="df gap grille v--inverse">
     <p>
@@ -19,24 +21,15 @@ eleventyNavigation:
 </div>
 
 
-<ul class="df jc-c gap">
-    <li>
-        <a href="#Cours">Cours</a>
-    </li>
-    <li>
-        <a href="#Approche">Approche</a>
-    </li>
-    <li>
-        <a href="#Parcours">Parcours</a>
-    </li>
-</ul>
+{{ macro.sommaire(["Cours", "Approche", "Parcours"]) }}
 
 
 <hr>
 
-<h2 id="Cours">Cours</h2>
 
-### Cours réguliers
+{{ macro.h2("Cours") }}
+
+<h3>Cours réguliers</h3>
 
 <ul class="df jc-sb gap carte">
     <li class="fg-1 df fd-c gap-2">
@@ -74,7 +67,7 @@ Bouton: (Calendly)
 </ul>
 
 
-### Cours et ateliers ponctuels
+<h3>Cours et ateliers ponctuels</h3>
 
 <ul class="df jc-sb gap carte">
     <li class="df fd-c gap-2">
@@ -109,7 +102,7 @@ Bouton : (S’abonner à la newsletter)
 
 <hr>
 
-<h2 id="Approche">Approche</h2>
+{{ macro.h2("Approche") }}
 
 <div class="df gap grille">
     <img src="https://via.placeholder.com/400x300/375063/FFFFFF/?text=Toi+ou+tes+mains" alt="">
@@ -123,7 +116,7 @@ Les exercices de respiration et la relaxation y ont une place très importante, 
 
 <hr>
 
-<h2 id="Parcours">Parcours</h2>
+{{ macro.h2("Parcours") }}
 
 <div class="df gap grille">
     <p>

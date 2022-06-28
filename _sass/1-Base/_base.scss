@@ -7,6 +7,11 @@
     color: var(--couleur1);
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
 body {
     @include typo1;
     display: flex;
@@ -43,26 +48,44 @@ footer {
     }
 }
 
-h1,
-h2 {
-    @include typo2;
+h1:not([class]),
+h2:not([class]),
+h3:not([class]) {
+    @include typo3;
+    font-weight: 200;
 }
 
-h1 {
-    font-weight: 700;
+h1:not([class]) {
+    text-align: center;
     font-size: 3rem;
     
     @include breakpoint(large) {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 }
 
-h2 {
-    font-size: 1.1rem;
+h2:not([class]) {
+    font-size: 2rem;
 
     @include breakpoint(large) {
-        font-size: 1.4rem;
+        font-size: 3rem;
     }
+}
+
+h3:not([class]) {
+    font-size: 1.5rem;
+
+    @include breakpoint(large) {
+        font-size: 1.8rem;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    margin-top: map-get($space, m );
 }
 
 ul.reset {
@@ -73,8 +96,10 @@ ul.reset {
 }
 
 hr {
-    margin-top: map-get($space, xxl);
-    margin-bottom: map-get($space, xxl);
+    border-width: 1px 0 0;
+    border-color: transparent;
+    margin-top: map-get($space, xxxl);
+    margin-bottom: map-get($space, xxxl);
 }
 
 a:not([class]) {
