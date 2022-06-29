@@ -12,12 +12,15 @@ eleventyNavigation:
 
 <h1>Massage</h1>
 
-<div class="df gap grille v--inverse">
-    <p>
-        Le massage est un voyage passionnant, l’occasion d’une re-connexion avec notre corps, nos intuitions et nos émotions enfouies, mais aussi une re-connexion avec les bienfaits du soin et de l’attention. Le flux des pensées se ralentit, les tensions et fatigues sont reconnues, écoutées et peuvent enfin lâcher prise. La circulation sanguine est stimulée, un sentiment profond de relaxation s’installe. De nouvelles bonnes habitudes s’ancrent petit à petit en nous, amenant plus de conscience dans notre corps et nos postures, et dans l’importance de prendre soin de nous-même au quotidien. 
-    </p>
-    <img src="https://via.placeholder.com/400x200/375063/FFFFFF/?text=Photos" alt="">
-</div>
+{{ macro.texteEtVisuel(
+    typeHeroBanner="true",
+    titre="Le massage est un voyage passionnant.",
+    contenu="<p>
+                 L’occasion d’une re-connexion avec notre corps, nos intuitions et nos émotions enfouies, mais aussi une re-connexion avec les bienfaits du soin et de l’attention. Le flux des pensées se ralentit, les tensions et fatigues sont reconnues, écoutées et peuvent enfin lâcher prise. La circulation sanguine est stimulée, un sentiment profond de relaxation s’installe. De nouvelles bonnes habitudes s’ancrent petit à petit en nous, amenant plus de conscience dans notre corps et nos postures, et dans l’importance de prendre soin de nous-même au quotidien. 
+            </p>",
+    srcImage="../images/design/massage.jpg",
+    inverseBloc="true"
+) }}
 
 
 {{ macro.sommaire(["Durée & Tarifs", "Types de massages", "Mon approche", "Prendre RDV"]) }}
@@ -124,15 +127,16 @@ La palette de soins proposés se combine selon vos envies. Nous choisissons ense
 
 {{ macro.h2("Mon approche") }}
 
-<div class="df gap grille v--inverse">
-    <p>
-      Je propose toujours un moment de massage sur mesure et en pleine présence, élaboré en fonction de chaque personne; son histoire, son profil, et ses envies du moment. 
-      Basé sur une solide formation suisse reconnue EDUQUA, ASCA et RME, je continue de me former en continu avec des approches complémentaires venant de différentes cultures pour continuer à découvrir l’art du massage et élargir la palette de soins que je vous propose.      
-        <br> 
-        <a href="">> Voir mes diplomes et fromations</a>
-    </p>
-    <img src="https://via.placeholder.com/400x300/375063/FFFFFF/?text=je+sais+pas" alt="">
-</div>
+{{ macro.texteEtVisuel(
+    contenu='<p>
+        Je propose toujours un moment de massage sur mesure et en pleine présence, élaboré en fonction de chaque personne; son histoire, son profil, et ses envies du moment. 
+      Basé sur une solide formation suisse reconnue EDUQUA, ASCA et RME, je continue de me former en continu avec des approches complémentaires venant de différentes cultures pour continuer à découvrir l’art du massage et élargir la palette de soins que je vous propose.
+    </p>',
+    srcImage="../images/design/massage-main.jpg",
+    hrefLien="#",
+    labelLien="Voir mes diplomes et fromations",
+    inverseBloc="true"
+) }}
 
 
 <div class="df gap">

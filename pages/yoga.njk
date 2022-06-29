@@ -12,13 +12,16 @@ eleventyNavigation:
 
 <h1>Yoga</h1>
 
-<div class="df gap grille v--inverse">
-    <p>
-        Cours de Yoga Hatha Vinyasa pour toutes toux tous!  <br>
-        Explorer à la fois souplesse, force, équilibre, concentration, respiration consciente, relaxation guidée. Focus spéciaux pour vos besoins, adaptation tous niveaux. Petits groupes, cours privés. Salles associatives ou plein air. 
-    </p>
-    <img src="https://via.placeholder.com/400x200/375063/FFFFFF/?text=Photos" alt="">
-</div>
+
+{{ macro.texteEtVisuel(
+    typeHeroBanner="true",
+    titre="Cours de Yoga Hatha Vinyasa pour toutes toux tous !",
+    contenu="<p>
+                Explorer à la fois souplesse, force, équilibre, concentration, respiration consciente, relaxation guidée. Focus spéciaux pour vos besoins, adaptation tous niveaux. Petits groupes, cours privés. Salles associatives ou plein air. 
+            </p>",
+    srcImage="../images/design/yoga-mer.jpg",
+    inverseBloc="true"
+) }}
 
 
 {{ macro.sommaire(["Cours", "Approche", "Parcours"]) }}
@@ -104,26 +107,28 @@ Bouton : (S’abonner à la newsletter)
 
 {{ macro.h2("Approche") }}
 
-<div class="df gap grille">
-    <img src="https://via.placeholder.com/400x300/375063/FFFFFF/?text=Toi+ou+tes+mains" alt="">
-    <p>
+
+{{ macro.texteEtVisuel(
+    contenu='<p>
         Je propose des sessions de 1h de Hatha Vinyasa Yoga. 
-Le niveau d’intensité et les focus anatomiques s’adaptent aux besoins des personnes participantes. En effet, la pratique du yoga que je propose est influencée par l’approche thérapeutique de mes massages. <br>
-<br>
-Les exercices de respiration et la relaxation y ont une place très importante, ainsi que l’harmonie et l’improvisation, inspirés par la danse. La convivialité est au coeur de ces séances dont le nombre restreint de participant.x.es permet de se sentir en confiance pour partager et expérimenter ensemble. 
-    </p>
-</div>
+        Le niveau d’intensité et les focus anatomiques s’adaptent aux besoins des personnes participantes. En effet, la pratique du yoga que je propose est influencée par <a href="/massage">l’approche thérapeutique de mes massages</a>. <br>
+        <br>
+        Les exercices de respiration et la relaxation y ont une place très importante, ainsi que l’harmonie et l’improvisation, inspirés par la danse. La convivialité est au coeur de ces séances dont le nombre restreint de participant.x.es permet de se sentir en confiance pour partager et expérimenter ensemble. 
+    </p>',
+    srcImage="../images/design/yoga-groupe.jpg"
+) }}
 
 <hr>
 
 {{ macro.h2("Parcours") }}
 
-<div class="df gap grille">
-    <p>
+{{ macro.texteEtVisuel(
+    contenu='<p>
         C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Thaïlande et aux Etats Unis, avec, notamment, Olivia Tüscher (Hatha Raja Yoga, Liquid Flow) et Yves Vandeplas (Hatha Yoga, Yoga Nidra) à Genève, Anja Maier (Vinyasa, Reiki) en Thaïlande, Nico Luce (Vinyasa, Yin Yoga) à Nyon et à l’international.
-    </p>
-    <img src="https://via.placeholder.com/400x300/375063/FFFFFF/?text=je+sais+pas" alt="">
-</div>
+    </p>',
+    srcImage="../images/design/yoga-parcours.jpg",
+    inverseBloc="true"
+) }}
 
 
 <div class="df gap">
