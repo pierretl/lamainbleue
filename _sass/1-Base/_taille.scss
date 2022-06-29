@@ -13,3 +13,10 @@ $space :(
 :root {
     --taille: 33.333%;
 }
+
+
+@include breakpoint(large) {
+    .max-w-50--large {
+        max-width: 50%;
+    }
+}

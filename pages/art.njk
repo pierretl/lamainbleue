@@ -36,10 +36,15 @@ eleventyNavigation:
     </p>
 </div>
 
-<p>
-    Mes projets en cours et à venir poursuivent... <br>
-    bouton : Me suivre sur Instagram
-</p>
+<div class="df fd-c fd-r--large ai-c jc-sb gap mt">
+    <p class="text-size2 text-typo2">
+        Mes projets en cours et à venir poursuivent...
+    </p>
+    <a href="{{metadata.instagram}}" rel="external">Me suivre sur Instagram</a>
+</div>
+
+
+
 
 <hr>
 
@@ -47,43 +52,56 @@ eleventyNavigation:
 {{ macro.h2("Quelques réalisations") }}
 
 
-<div class="df gap">
-    <img src="https://via.placeholder.com/150x150/375063/FFFFFF/?text=visuel" alt="">
-    <p>« Echos »
-        Livre d’artiste, 2020
-        Editions Casa Grande, 331pages, En/Fr/It/Es 
-        ISBN 978-88-7713-868-2
+
+{{ macro.texteEtVisuel(
+    titre="Echos",
+    contenu="<p>
+        Livre d’artiste, 2020<br>
+        Editions Casa Grande, 331pages, En/Fr/It/Es <br>
+        ISBN 978-88-7713-868-2<br>
         Textes : Mark Lewis, Beau Rhee, Valeria Venditti, Cristòbal Barria, Lucille Ulrich
-        Commander ici :
-        http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html
-    </p>
+    </p>",
+    srcImage="../images/design/echos-livre.jpg",
+    altImage="",
+    hrefLien="http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html",
+    labelLien="Comander le livre",
+    margetop="",
+    inverseBloc=""
+) }}
+
+{{ macro.texteEtVisuel(
+    titre="Eventide",
+    contenu="<p>
+        Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm<br>
+        Pour les prix et plus d’infos, contactez la galerie Laurence Bernard, Genève
+    </p>",
+    srcImage="https://freight.cargo.site/w/1250/i/3d4e99c8e1caa9c017387130ba33027346d75e44159c97674642d0f456762c2d/EVENTIDE_MARION-TAMPON-LAJARRIETTERaphaelleMueller-5.jpg",
+    altImage="",
+    hrefLien="mailto:info@galerielaurencebernard.ch",
+    labelLien="Galerie Laurence Bernard (mail)",
+    margetop="true",
+    inverseBloc="true"
+) }}
+
+{{ macro.texteEtVisuel(
+    titre="Podomorfos",
+    contenu="<p>
+        Série céramique, 2021, dimensions variables<br>
+        Pour plus d’infos sur les ventes directes à l’atelier,<br>
+        me contacter
+    </p>",
+    srcImage="https://freight.cargo.site/w/1250/i/44f95c7767faad36e9b87a05679fd8d1f86178d0dfc28bcc71b037d61f42ee01/4U3A9645ok.jpg",
+    altImage="",
+    hrefLien="mailto:marion.tamponlajarriette@gmail.com",
+    labelLien="marion.tamponlajarriette@gmail.com",
+    margetop="true",
+    inverseBloc=""
+) }}
+
+<div class="text-center mt">
+    <button>Afficher plus</button>
 </div>
 
-
-
-<div class="df gap">
-    <p>
-        « Eventide »
-        Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm
-        Pour les prix et plus d’infos, contactez la galerie Laurence Bernard, Genève : info@galerielaurencebernard.ch
-    </p>
-    <img src="https://via.placeholder.com/150x150/375063/FFFFFF/?text=visuel" alt="">
-</div>
-
-
-
-
-<div class="df gap">
-    <img src="https://via.placeholder.com/150x150/375063/FFFFFF/?text=visuel" alt="">
-    <p>
-        « Podomorfos »
-        Série céramique, 2021, dimensions variables
-        Pour plus d’infos sur les ventes directes à l’atelier, me contacter :
-        marion.tamponlajarriette@gmail.com
-    </p>
-</div>
-
-<a href="">> Afficher plus</a>
 
 
 <hr> 
@@ -91,17 +109,23 @@ eleventyNavigation:
 
 {{ macro.h2("Projet futur") }}
 
-<p>
+<p class="cc-2 cc-gap">
     Je désire de plus en plus développer des projets en collaboration avec les univers de la danse, du théâtre et de la musique. Créer des environnements scéniques ou des propositions hybrides pluridisciplinaires m’attire particulièrement, offrant de nouvelles possibilités et de nouveaux défis à ma pratique artistique individuelle en développant ses aspects spatial, corporel et collectif.
 </p>
-bouton « parlons-en »
+
+<div class="mt">
+    <a href="">Parlons-en</a>
+</div>
 
 
 <hr> 
 
 {{ macro.h2("Me suivre") }}
 
-<p>
-    Mes inspirations et étapes de projets en cours  
-    Me suivre sur Instagram
-</p>
+<div class="df fd-c fd-r--large ai-c gap">
+    <p>
+        Mes inspirations et étapes de projets en cours&hellip;
+    </p>
+
+    <a href="{{metadata.instagram}}" rel="external">Me suivre sur Instagram</a>
+</div>

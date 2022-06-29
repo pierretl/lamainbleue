@@ -39,6 +39,7 @@ main {
 
 footer {
     @include typo2;
+    margin-top: map-get($space, xxxl);
     text-align: center;
     font-size: .8rem;
     padding: 1rem;
@@ -53,6 +54,10 @@ h2:not([class]),
 h3:not([class]) {
     @include typo3;
     font-weight: 200;
+}
+
+h3[class] {
+    margin: 0;
 }
 
 h1:not([class]) {
@@ -102,18 +107,35 @@ hr {
     margin-bottom: map-get($space, xxxl);
 }
 
-a:not([class]) {
+a,
+button {
+    @include typo2;
     color: var(--couleur3);
-    font-family: 'Raleway', serif;
     text-underline-offset: 0.3rem;
 }
 a:hover,
-a:focus {
+a:focus,
+button:hover,
+button:focus {
     color: var(--couleur2);
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: 0 none;
+    border-radius: 0;
+    text-decoration: underline;
+    font-size: 1rem;
 }
 
 a[class] {
     text-decoration: none;
+}
+
+a[rel="external"]:after {
+    content: "↗";
+    font-family: system-ui,-apple-system,sans-serif;
     color: var(--couleur2);
 }
 

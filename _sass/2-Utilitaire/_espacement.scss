@@ -2,6 +2,10 @@
     margin: 0 auto;
 }
 
+.mt {
+    margin-top: map-get($space, xxl);
+}
+
 .p0 {
     padding: 0
 }
@@ -15,5 +19,9 @@
 }
 
 .gap2 {
-    gap: map-get($space, s);
+    gap: map-get($space, xl);
+
+    @include breakpoint(large) {
+        gap: map-get($space, xxl);
+    }
 }

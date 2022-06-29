@@ -16,6 +16,9 @@
 .ai-c {
     align-items: center;
 }
+.ai-fs {
+    align-items: flex-start;
+}
 .fg-1 {
     flex-grow: 1;
 }
@@ -23,8 +26,16 @@
     flex-wrap: wrap;
 }
 
+
+
 @include breakpoint(large) {
     .fd-r--large {
         flex-direction: row;
+    }
+    .ai-c--large {
+        align-items: center;
+    }
+    .order-1--large {
+        order: 1;
     }
 }
