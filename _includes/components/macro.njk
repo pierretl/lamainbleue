@@ -28,8 +28,8 @@
 
 {% macro texteEtVisuel(typeHeroBanner,titre,contenu,srcImage,altImage,hrefLien,labelLien,margetop,inverseBloc) %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}">
-        <img src="{{srcImage}}" alt="{{altImage}}" class="max-w-50--large{% if inverseBloc %} order-1--large{% endif %}">
-        <div class="df fd-c gap">
+        <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+        <div class="df fd-c gap w-50--large">
             {% if titre %}
                 {% if typeHeroBanner %}
                     <h2 class="text-typo2 text-size1 text-fin">&laquo; {{titre}} &raquo;</h2>

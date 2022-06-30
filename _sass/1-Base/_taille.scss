@@ -16,7 +16,8 @@ $space :(
 
 
 @include breakpoint(large) {
-    .max-w-50--large {
+    .w-50--large {
+        flex: 0 0 50%;
         max-width: 50%;
     }
 }
