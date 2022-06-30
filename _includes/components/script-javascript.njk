@@ -1,0 +1,21 @@
+<!-- capture the JS content as a Nunjucks variable -->
+{% set js %}
+	{% include "js/prefers-color-scheme.js" %}
+	{% include "js/menu-burger.js" %}
+{% endset %}
+
+<script>{{ js | jsmin | safe }}</script> <!-- feed it through our jsmin filter to minify -->
+
+
+
+
+
+<!-- horizontal-scroll sur les pages qui en on besoin -->
+{% set horizontalScroll %}
+	{% include "js/horizontal-scroll.js" %}
+{% endset %}
+
+{% if scriptHorizontalScroll %}
+	<script>{{ horizontalScroll | jsmin | safe }}</script>
+{% endif %}
+

@@ -1,9 +1,0 @@
-<!-- capture the JS content as a Nunjucks variable -->
-{% set js %}
-	{% include "js/prefers-color-scheme.js" %}
-	{% include "js/menu-burger.js" %}
-{% endset %}
-
-
-<!-- feed it through our jsmin filter to minify -->
-<script>{{ js | jsmin | safe }}</script>
