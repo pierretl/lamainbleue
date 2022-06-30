@@ -7,6 +7,7 @@ permalink: /yoga/index.html
 eleventyNavigation:
     key: Yoga
     order: 2
+scriptHorizontalScroll: true
 ---
 {% import "components/macro.njk" as macro %}
 
@@ -19,7 +20,7 @@ eleventyNavigation:
     contenu="<p>
                 Explorer à la fois souplesse, force, équilibre, concentration, respiration consciente, relaxation guidée. Focus spéciaux pour vos besoins, adaptation tous niveaux. Petits groupes, cours privés. Salles associatives ou plein air. 
             </p>",
-    srcImage="../images/design/yoga-mer.jpg",
+    srcImage="../images/media/yoga-mer.jpg",
     inverseBloc="true"
 ) }}
 
@@ -34,70 +35,74 @@ eleventyNavigation:
 
 <h3>Cours réguliers</h3>
 
-<ul class="df jc-sb gap carte">
-    <li class="fg-1 df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>Lundi 
-            18h30-19h30</h4>
-        <div>
+
+{{ macro.cartes([
+    {
+        titre:"Lundi 18h30-19h30",
+        contenu:"
             Espace de Quartier Jonction
-        Rue Michel-Simon 7, 1205 Genève
-        Prix libre, sur inscription
-        Bouton: (Calendly)
-        </div>
-    </li>
-    <li class="fg-1 df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4> Mercredi
-            12h-13h30</h4>
-        <div>
+            <br>
+            Rue Michel-Simon 7, 1205 Genève
+            <br>
+            Prix libre
+        ",
+        hrefInscription:"https://calendly.com/fr/"
+    },
+    {
+        titre:"Mercredi 12h-13h30",
+        contenu:"
             Espace de Quartier Saint-Jean
-Quai du Seujet 32, 1201 Genève
-Prix libre, sur inscription
-Bouton: (Calendly)
-        </div>
-    </li>
-    <li class="fg-1 df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>Vendredi 
-            12h-13h</h4>
-        <div>
-            Espace de Quartier Jonction, rue Michel-Simon 7, 1205 Genève
-Prix libre, sur inscription
-Bouton: (Calendly)
-        </div>
-    </li>
-</ul>
+            <br>
+            Quai du Seujet 32, 1201 Genève
+            <br>
+            Prix libre
+        ",
+        hrefInscription:"https://calendly.com/fr/"
+    },
+    {   
+        titre:"Vendredi 12h-13h",
+        contenu:"
+            Espace de Quartier Jonction
+            <br>
+            Rue Michel-Simon 7, 1205 Genève
+            <br>
+            Prix libre
+        ",
+        hrefInscription:"https://calendly.com/fr/"
+    }
+]) }}
 
 
 <h3>Cours et ateliers ponctuels</h3>
 
-<ul class="df jc-sb gap carte">
-    <li class="df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>Cours en extérieur</h4>
-        <div>
-            Au parc ou au bord de l’eau, selon météo
-        Bouton: (s’inscrire au groupe Signal ou WhatsApp: 0797312351
-        </div>
-    </li>
-    <li class="df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>Cours privé ou entre ami.x.es</h4>
-        <div>
-            pour une occasion ponctuelle ou régulière
-            Bouton: parlez-moi de votre envie : <br>hello@lamainbleue.ch
-        </div>
-    </li>
-    <li class="df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>Ateliers ponctuels</h4>
-        <div>
-            en collaboration avec ma soeur (voyage au tambour, soin énergétique de groupe).
+{{ macro.cartes([
+    {
+        titre:"En extérieur",
+        contenu:"
+            Au parc ou au bord de l’eau,
+            <br>
+            selon météo
+            <br><br>
+Bouton: (s’inscrire au groupe Signal ou WhatsApp: 0797312351
+        "
+    },
+    {
+        titre:"Privé ou entre ami.x.es",
+        contenu:"
+            Pour une occasion ponctuelle ou régulière
+        ",
+        hrefInscription:["mailto:", metadata.mailMain],
+        labelLien:"Parlez-moi de votre envie"
+    },
+    {   
+        titre:"Ateliers ponctuels",
+        contenu:'
+            En collaboration avec <a href="#" rel="external">ma soeur</a> (voyage au tambour, soin énergétique de groupe).
+            <br>
             Selon calendrier lunaire et évènements particuliers.
-        </div>
-    </li>
-</ul>
+        '
+    }
+]) }}
 
 En savoir plus sur ma soeur-cière : ((lien caché))  http://oliviatamponlajarriette.fr/
 Bouton : (S’abonner à la newsletter)
@@ -115,7 +120,7 @@ Bouton : (S’abonner à la newsletter)
         <br>
         Les exercices de respiration et la relaxation y ont une place très importante, ainsi que l’harmonie et l’improvisation, inspirés par la danse. La convivialité est au coeur de ces séances dont le nombre restreint de participant.x.es permet de se sentir en confiance pour partager et expérimenter ensemble. 
     </p>',
-    srcImage="../images/design/yoga-groupe.jpg"
+    srcImage="../images/media/yoga-groupe.jpg"
 ) }}
 
 <hr>
@@ -126,7 +131,7 @@ Bouton : (S’abonner à la newsletter)
     contenu='<p>
         C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Thaïlande et aux Etats Unis, avec, notamment, Olivia Tüscher (Hatha Raja Yoga, Liquid Flow) et Yves Vandeplas (Hatha Yoga, Yoga Nidra) à Genève, Anja Maier (Vinyasa, Reiki) en Thaïlande, Nico Luce (Vinyasa, Yin Yoga) à Nyon et à l’international.
     </p>',
-    srcImage="../images/design/yoga-parcours.jpg",
+    srcImage="../images/media/yoga-parcours.jpg",
     inverseBloc="true"
 ) }}
 

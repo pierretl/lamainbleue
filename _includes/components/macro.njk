@@ -31,7 +31,11 @@
         <img src="{{srcImage}}" alt="{{altImage}}" class="max-w-50--large{% if inverseBloc %} order-1--large{% endif %}">
         <div class="df fd-c gap">
             {% if titre %}
-                <h3 class="text-typo2 text-size1 text-fin">&laquo; {{titre}} &raquo;</h3>
+                {% if typeHeroBanner %}
+                    <h2 class="text-typo2 text-size1 text-fin">&laquo; {{titre}} &raquo;</h2>
+                {% else %}
+                    <h3 class="text-typo2 text-size1 text-fin">&laquo; {{titre}} &raquo;</h3>
+                {% endif %}
             {% endif %}
             <div{% if typeHeroBanner %} class="text-size2"{% endif %}>
                 {{contenu | safe}}
@@ -41,4 +45,36 @@
             {% endif %}
         </div>
     </div>
+{% endmacro %}
+
+
+
+
+{% macro cartes(liste) %}
+    <ul class="reset df jc-sb gap2 carte js_scroll-x">
+        {% for item in liste %}
+            <li class="fg-1 df fd-c gap-2">
+                <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
+                <div class="df fd-c gap">
+                    <h4 class="text-typo2 text-size1 text-fin mb-0">{{ item.titre }}</h4>
+                    <p>
+                        {{ item.contenu | safe }}
+                    </p>
+                    {% if item.hrefInscription %}
+                        <p class="text-center">
+                            {% if item.hrefInscription %}
+                                <a href="{{ item.hrefInscription | safe }}" target="_blank" rel="external">
+                                    {% if item.labelLien %}
+                                        {{ item.labelLien }}
+                                    {% else %}
+                                        Inscription
+                                    {% endif %}
+                                </a>
+                            {% endif %}
+                        </p>
+                    {% endif %}
+                </div>
+            </li>
+         {% endfor %}
+    </ul>
 {% endmacro %}
