@@ -9,6 +9,7 @@ eleventyNavigation:
     order: 2
 scriptsJs: 
     - horizontalScroll
+    - basculeVisibilite
 ---
 {% import "components/macro.njk" as macro %}
 
@@ -82,10 +83,9 @@ scriptsJs:
         contenu:"
             Au parc ou au bord de l’eau,
             <br>
-            selon météo
-            <br><br>
-Bouton: (s’inscrire au groupe Signal ou WhatsApp: 0797312351
-        "
+            selon météo",
+        hrefInscription:"tel:0797312351",
+        labelLien:"S’inscrire au groupe Signal ou WhatsApp"
     },
     {
         titre:"Privé ou entre ami.x.es",
@@ -98,15 +98,14 @@ Bouton: (s’inscrire au groupe Signal ou WhatsApp: 0797312351
     {   
         titre:"Ateliers ponctuels",
         contenu:'
-            En collaboration avec <a href="#" rel="external">ma soeur</a> (voyage au tambour, soin énergétique de groupe).
+            En collaboration avec <a href="http://oliviatamponlajarriette.fr/" rel="external">ma soeur-cière</a> (voyage au tambour, soin énergétique de groupe).
             <br>
             Selon calendrier lunaire et évènements particuliers.
-        '
+        ',
+        hrefInscription:["mailto:", metadata.mailMain],
+        labelLien:"Me contacter"
     }
 ]) }}
-
-En savoir plus sur ma soeur-cière : ((lien caché))  http://oliviatamponlajarriette.fr/
-Bouton : (S’abonner à la newsletter)
 
 
 <hr>
@@ -137,10 +136,20 @@ Bouton : (S’abonner à la newsletter)
 ) }}
 
 
-<div class="df gap">
-    <img src="https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil" alt="">
-    <p>
-        TEMOIGNAGES : Sophie, Silvia, Suzana? Pascaline, Yves? <br>
-        <a href="">Voir plus de témoignage</a>
-    </p>
-</div>
+{{ macro.temoignage([
+    {
+        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        contenu:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae eros in dolor varius feugiat a at turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
+        nom:"Sophie"
+    },
+    {
+        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        contenu:"Nulla sit amet interdum lectus. Vestibulum eget lacus interdum, hendrerit felis vitae, facilisis erat. ",
+        nom:"Silvia"
+    },
+    {
+        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        contenu:"Suspendisse non ligula in felis mattis pretium non dapibus leo. Quisque placerat felis ac pretium tempus. Cras hendrerit, ex eu malesuada fermentum, metus ligula euismod sem, sit amet luctus tortor tellus sed quam",
+        nom:"Pascaline"
+    }
+]) }}

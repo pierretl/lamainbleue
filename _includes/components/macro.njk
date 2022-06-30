@@ -54,7 +54,7 @@
     <ul class="reset df jc-sb gap2 carte js_scroll-x">
         {% for item in liste %}
             <li class="fg-1 df fd-c gap-2">
-                <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
+                <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
                 <div class="df fd-c gap">
                     <h4 class="text-typo2 text-size1 text-fin mb-0">{{ item.titre }}</h4>
                     <p>
@@ -77,4 +77,64 @@
             </li>
          {% endfor %}
     </ul>
+{% endmacro %}
+
+
+
+
+{% macro temoignage(liste) %}
+    <div class="df gap fd-c">
+        {% for item in liste %}
+            {% if loop.index =="1" %}
+                <div class="df ai-c gap2 mt">
+                    <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image fs-0">
+                    <figure>
+                        <blockquote>
+                            <p>
+                                <span class="text-size1">&laquo;</span>
+                                {{item.contenu}}
+                                <span class="text-size1">&raquo;</span>
+                            </p>
+                        </blockquote>
+                        <figcaption>
+                            <cite class="text-size1 text-typo2">
+                                {{item.nom}}
+                            </cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            {% endif %}   
+        {% endfor %}
+        <div class="js_bascule-visibilite__zone hide" data-zone="temoignage">
+            <div class="df gap fd-c">
+                {% for item in liste %}
+                    {% if loop.index !="1" %}
+                        <div class="df ai-c gap2">
+                            <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image fs-0">
+                            <figure>
+                                <blockquote>
+                                    <p>
+                                        <span class="text-size1">&laquo;</span>
+                                        {{item.contenu}}
+                                        <span class="text-size1">&raquo;</span>
+                                    </p>
+                                </blockquote>
+                                <figcaption>
+                                    <cite class="text-size1 text-typo2">
+                                        {{item.nom}}
+                                    </cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    {% endif %} 
+                {% endfor %}
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="temoignage">
+                <span class="js_bascule-visibilite__passif">Voir plus de témoignage</span>
+                <span class="js_bascule-visibilite__actif hide">Voir moins de témoignage</span>
+            </button>
+        </div>
+    </div>
 {% endmacro %}

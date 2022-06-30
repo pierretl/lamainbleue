@@ -144,6 +144,11 @@ img {
     height: auto;
 }
 
+figure,
+blockquote {
+    margin: 0;
+}
+
 *:focus {
     outline: none;
 }

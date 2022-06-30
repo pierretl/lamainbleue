@@ -7,6 +7,8 @@ permalink: /massage/index.html
 eleventyNavigation:
   key: Massage
   order: 1
+scriptsJs: 
+    - basculeVisibilite
 ---
 {% import "components/macro.njk" as macro %}
 
@@ -139,13 +141,23 @@ La palette de soins proposés se combine selon vos envies. Nous choisissons ense
 ) }}
 
 
-<div class="df gap">
-    <img src="https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil" alt="">
-    <p>
-        TEMOIGNAGES : Barbara, Gaga, Sook, Olivia,?        <br>
-        <a href="">Voir plus de témoignage</a>
-    </p>
-</div>
+{{ macro.temoignage([
+    {
+        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        contenu:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae eros in dolor varius feugiat a at turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
+        nom:"Barbara"
+    },
+    {
+        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        contenu:"Nulla sit amet interdum lectus. Vestibulum eget lacus interdum, hendrerit felis vitae, facilisis erat. ",
+        nom:"Gaga"
+    },
+    {
+        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        contenu:"Suspendisse non ligula in felis mattis pretium non dapibus leo. Quisque placerat felis ac pretium tempus. Cras hendrerit, ex eu malesuada fermentum, metus ligula euismod sem, sit amet luctus tortor tellus sed quam",
+        nom:"Sook"
+    }
+]) }}
 
 <hr>
 

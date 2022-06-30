@@ -1,0 +1,8 @@
+.temoignage_image {
+
+    @include breakpoint(mediumDown) {
+        display: none;
+    }
+
+    width: 200px;
+}
