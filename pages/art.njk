@@ -7,6 +7,8 @@ permalink: /art/index.html
 eleventyNavigation:
     key: Art
     order: 3
+scriptsJs: 
+    - basculeVisibilite
 ---
 {% import "components/macro.njk" as macro %}
 
@@ -62,11 +64,8 @@ eleventyNavigation:
         Textes : Mark Lewis, Beau Rhee, Valeria Venditti, Cristòbal Barria, Lucille Ulrich
     </p>",
     srcImage="../images/media/echos-livre.jpg",
-    altImage="",
     hrefLien="http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html",
-    labelLien="Comander le livre",
-    margetop="",
-    inverseBloc=""
+    labelLien="Comander le livre"
 ) }}
 
 {{ macro.texteEtVisuel(
@@ -76,7 +75,6 @@ eleventyNavigation:
         Pour les prix et plus d’infos, contactez la galerie Laurence Bernard, Genève
     </p>",
     srcImage="https://freight.cargo.site/w/1250/i/3d4e99c8e1caa9c017387130ba33027346d75e44159c97674642d0f456762c2d/EVENTIDE_MARION-TAMPON-LAJARRIETTERaphaelleMueller-5.jpg",
-    altImage="",
     hrefLien="mailto:info@galerielaurencebernard.ch",
     labelLien="Galerie Laurence Bernard (mail)",
     margetop="true",
@@ -91,15 +89,61 @@ eleventyNavigation:
         me contacter
     </p>",
     srcImage="https://freight.cargo.site/w/1250/i/44f95c7767faad36e9b87a05679fd8d1f86178d0dfc28bcc71b037d61f42ee01/4U3A9645ok.jpg",
-    altImage="",
     hrefLien="mailto:marion.tamponlajarriette@gmail.com",
     labelLien="marion.tamponlajarriette@gmail.com",
-    margetop="true",
-    inverseBloc=""
+    margetop="true"
 ) }}
 
+<div class="js_bascule-visibilite__zone hide" data-zone="quelques-realisations">
+    
+    {{ macro.texteEtVisuel(
+        titre="Echos",
+        contenu="<p>
+            Livre d’artiste, 2020<br>
+            Editions Casa Grande, 331pages, En/Fr/It/Es <br>
+            ISBN 978-88-7713-868-2<br>
+            Textes : Mark Lewis, Beau Rhee, Valeria Venditti, Cristòbal Barria, Lucille Ulrich
+        </p>",
+        srcImage="../images/media/echos-livre.jpg",
+        hrefLien="http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html",
+        labelLien="Comander le livre",
+        margetop="true",
+        inverseBloc="true"
+    ) }}
+
+    {{ macro.texteEtVisuel(
+        titre="Eventide",
+        contenu="<p>
+            Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm<br>
+            Pour les prix et plus d’infos, contactez la galerie Laurence Bernard, Genève
+        </p>",
+        srcImage="https://freight.cargo.site/w/1250/i/3d4e99c8e1caa9c017387130ba33027346d75e44159c97674642d0f456762c2d/EVENTIDE_MARION-TAMPON-LAJARRIETTERaphaelleMueller-5.jpg",
+        hrefLien="mailto:info@galerielaurencebernard.ch",
+        labelLien="Galerie Laurence Bernard (mail)",
+        margetop="true"
+    ) }}
+
+    {{ macro.texteEtVisuel(
+        titre="Podomorfos",
+        contenu="<p>
+            Série céramique, 2021, dimensions variables<br>
+            Pour plus d’infos sur les ventes directes à l’atelier,<br>
+            me contacter
+        </p>",
+        srcImage="https://freight.cargo.site/w/1250/i/44f95c7767faad36e9b87a05679fd8d1f86178d0dfc28bcc71b037d61f42ee01/4U3A9645ok.jpg",
+        hrefLien="mailto:marion.tamponlajarriette@gmail.com",
+        labelLien="marion.tamponlajarriette@gmail.com",
+        margetop="true",
+        inverseBloc="true"
+    ) }}
+
+</div>
+
 <div class="text-center mt">
-    <button>Afficher plus</button>
+    <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="quelques-realisations">
+        <span class="js_bascule-visibilite__passif">Afficher plus</span>
+        <span class="js_bascule-visibilite__actif hide">Afficher moins</span>
+    </button>
 </div>
 
 

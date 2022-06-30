@@ -10,12 +10,23 @@
 
 
 
-<!-- horizontal-scroll sur les pages qui en on besoin -->
-{% set horizontalScroll %}
-	{% include "js/horizontal-scroll.js" %}
-{% endset %}
+{% for item in scriptsJs %}
 
-{% if scriptHorizontalScroll %}
-	<script>{{ horizontalScroll | jsmin | safe }}</script>
-{% endif %}
+	{% if item == 'horizontalScroll' %}
 
+			{% set horizontalScroll %}
+				{% include "js/horizontal-scroll.js" %}
+			{% endset %}
+			<script>{{ horizontalScroll | jsmin | safe }}</script>
+
+	{% elif  item == 'basculeVisibilite' %}
+
+			{% set basculeVisibilite %}
+				{% include "js/panneau-depliant.js" %}
+				{% include "js/bascule-visibilite.js" %}
+			{% endset %}
+			<script>{{ basculeVisibilite | jsmin | safe }}</script>
+
+	{% endif %}
+
+{% endfor %}
