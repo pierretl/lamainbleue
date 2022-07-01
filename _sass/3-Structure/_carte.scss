@@ -7,7 +7,7 @@
     background-color: var(--couleur4);
 }
 
-.carte li *:not(img) {
+.carte li *:not(img):not(.p0) {
     padding: .5rem;
 }
 

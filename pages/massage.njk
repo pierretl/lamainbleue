@@ -8,6 +8,7 @@ eleventyNavigation:
   key: Massage
   order: 1
 scriptsJs: 
+    - horizontalScroll
     - basculeVisibilite
 ---
 {% import "components/macro.njk" as macro %}
@@ -32,39 +33,49 @@ scriptsJs:
 
 {{ macro.h2("Durée & Tarifs") }}
 
-<ul class="df jc-sb gap carte" style="--taille:25%">
-  <li class="fg-1 df fd-c gap-2">
-      <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-      <h4>Découverte</h4>
-      <div>
-        1h15        CH 100.-
-      </div>
-  </li>
-  <li class="fg-1 df fd-c gap-2">
-      <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto+cadeau" alt="">
-      <h4>Bon cadeau</h4>
-      <div>
-        1h00        CH 80.-
-      </div>
-  </li>
-  <li class="fg-1 df fd-c gap-2">
-      <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-      <h4>Tarifs habituels </h4>
-      <div>
-        1h15        CH 130.-
-        1h30        CH 160.-
-        1h45        CH 180.-
-      </div>
-  </li>
-  <li class="fg-1 df fd-c gap-2">
-      <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto+piece" alt="">
-      <h4>Tarifs réduit </h4>
-      <div>
-        Tarif petits revenus / étudiant.x.e / chômage / AI :
-1h15        CH 100.-
-      </div>
-  </li>
-</ul>
+{{ macro.cartes([
+    {
+        titre:"Découverte",
+        contenu:'
+            <div class="df jc-sb">
+                <span class="text-typo2 text-size2 p0">1h15</span>
+                <span class="text-typo2 text-size2 p0">CH 100</span>
+            </div>'
+    },
+    {
+        titre:"Bon cadeau",
+        contenu:'
+            <div class="df jc-sb">
+                <span class="text-typo2 text-size2 p0">1h00</span>
+                <span class="text-typo2 text-size2 p0">CH 80</span>
+            </div>'
+    },
+    {
+        titre:"Tarifs habituels",
+        contenu:'
+            <div class="df jc-sb">
+                <span class="text-typo2 text-size2 p0">1h05</span>
+                <span class="text-typo2 text-size2 p0">CH 130</span>
+            </div>
+            <div class="df jc-sb">
+                <span class="text-typo2 text-size2 p0">1h30</span>
+                <span class="text-typo2 text-size2 p0">CH 160</span>
+            </div>
+            <div class="df jc-sb">
+                <span class="text-typo2 text-size2 p0">1h45</span>
+                <span class="text-typo2 text-size2 p0">CH 180</span>
+            </div>'
+    },
+    {
+        titre:"Tarifs réduit",
+        contenu:'
+            Tarif petits revenus / étudiant.x.e / chômage / AI : <br><br>
+            <div class="df jc-sb">
+                <span class="text-typo2 text-size2 p0">1h15</span>
+                <span class="text-typo2 text-size2 p0">CH 100</span>
+            </div>'
+    }
+]) }}
 
 
 <hr>

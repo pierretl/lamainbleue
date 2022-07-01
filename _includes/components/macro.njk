@@ -56,10 +56,14 @@
             <li class="fg-1 df fd-c gap-2">
                 <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
                 <div class="df fd-c gap h-100">
-                    <h4 class="text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h4>
-                    <p class="fg-1">
+                    {% if item.baliseTitre == "h4" %}
+                        <h4 class="text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h4>
+                    {% else %}
+                        <h3 class="text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h3>
+                    {% endif %}
+                    <div class="fg-1">
                         {{ item.contenu | safe }}
-                    </p>
+                    </div>
                     {% if item.hrefInscription %}
                         <p class="text-center">
                             {% if item.hrefInscription %}
