@@ -1,0 +1,54 @@
+---
+layout: layouts/page.njk
+title: La Main Bleue
+date: 2016-01-01T00:00:00.000Z
+#permalink: /
+permalink: /index/
+
+intro1: Se reconnecter à soi
+intro2: Corps, Esprit & Inspiration
+telephone: +41 79 731 23 51
+infoMail: mail
+contactIntro: Pour plus d'infos et pour prendre rendez-vous
+info: "Pour plus d'infos et pour prendre rendez-vous :
+  tel/whatsapp/signal/telegrame :"
+infoTelephone: tel/whatsapp/signal/telegram
+telephoneHref: "41797312351"
+mail: hello@lamainbleue.ch
+---
+
+<div class="df ai-c">
+
+    <img class="accueil__img" src="../images/media/main.png" alt="">
+    
+    <section class="df fd-c ai-c">
+
+        <h1 class="text-center maintenance__titre">{{ metadata.title }}</h1>
+        <p class="text-center maintenance__ligne1">{{intro1}}</p>
+        <p class="text-center maintenance__ligne2">
+            <span aria-hidden="true">~</span>
+            &nbsp;&nbsp;<em>{{intro2}}</em>&nbsp;&nbsp;
+            <span aria-hidden="true">~</span>
+        </p>
+
+        <ul class="reset df maintenance__liste">
+            <li>Massage</li>
+            <li>Yoga</li>
+            <li>Art</li>
+        </ul>
+
+        <p class="maintenance__tilde" aria-hidden="true">
+            ~
+        </p>
+
+        <p class="maintenance__texte">
+            {{contactIntro}}
+            <br>
+            {{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{telephone}}</a>
+            <br>
+            {{infoMail}} : <a href="mailto:{{mail}}">{{mail}}</a>
+        </p>
+        
+    </section>
+
+</div>

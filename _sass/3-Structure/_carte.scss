@@ -2,13 +2,13 @@
     overflow:auto;
 }
 
-.carte li {
-    width: var(--taille);
-    background-color: var(--couleur4);
+.carte + .carte {
+    margin-top: map-get($space, xxl);
 }
 
-.carte li *:not(img):not(.p0) {
-    padding: .5rem;
+.carte__item {
+    width: var(--taille);
+    background-color: var(--couleur4);
 }
 
 .carte img {
@@ -17,6 +17,16 @@
 
 .carte__titre {
     margin-top: 0;
+}
+
+.carte__titre,
+.carte__contenu {
+    padding: .5rem;
+}
+
+.carte__contenu ul {
+    list-style-type: disc;
+    padding-left: 1rem;
 }
 
 @media (max-width: 600px) {

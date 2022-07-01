@@ -36,44 +36,39 @@ scriptsJs:
 {{ macro.cartes([
     {
         titre:"Découverte",
-        contenu:'
-            <div class="df jc-sb">
-                <span class="text-typo2 text-size2 p0">1h15</span>
-                <span class="text-typo2 text-size2 p0">CH 100</span>
-            </div>'
+        tableau:[{
+            duree:'1h15',
+            prix:'CH 100'
+        }]
     },
     {
         titre:"Bon cadeau",
-        contenu:'
-            <div class="df jc-sb">
-                <span class="text-typo2 text-size2 p0">1h00</span>
-                <span class="text-typo2 text-size2 p0">CH 80</span>
-            </div>'
+        tableau:[{
+            duree:'1h00',
+            prix:'CH 80'
+        }]
     },
     {
         titre:"Tarifs habituels",
-        contenu:'
-            <div class="df jc-sb">
-                <span class="text-typo2 text-size2 p0">1h05</span>
-                <span class="text-typo2 text-size2 p0">CH 130</span>
-            </div>
-            <div class="df jc-sb">
-                <span class="text-typo2 text-size2 p0">1h30</span>
-                <span class="text-typo2 text-size2 p0">CH 160</span>
-            </div>
-            <div class="df jc-sb">
-                <span class="text-typo2 text-size2 p0">1h45</span>
-                <span class="text-typo2 text-size2 p0">CH 180</span>
-            </div>'
+        tableau:[{
+            duree:'1h05',
+            prix:'CH 130'
+        },{
+            duree:'1h30',
+            prix:'CH 160'
+        },{
+            duree:'1h45',
+            prix:'CH 180'
+        }]
     },
     {
         titre:"Tarifs réduit",
         contenu:'
-            Tarif petits revenus / étudiant.x.e / chômage / AI : <br><br>
-            <div class="df jc-sb">
-                <span class="text-typo2 text-size2 p0">1h15</span>
-                <span class="text-typo2 text-size2 p0">CH 100</span>
-            </div>'
+            Tarif petits revenus / étudiant.x.e / chômage / AI',
+        tableau:[{
+            duree:'1h15',
+            prix:'CH 100'
+        }]
     }
 ]) }}
 
@@ -82,59 +77,55 @@ scriptsJs:
 
 {{ macro.h2("Types de massages") }}
 
-Toux corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. 
+<div class="cc-2 cc-gap mb">
+    <p>Toux corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. </p>
 
-La palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés sur table confortable avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.
+    <p>La palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés sur table confortable avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.</p>
+</div>
 
+{{ macro.cartes([
+    {
+        titre:"Complet",
+        contenu:"Massage complet du corps relaxant"
+    },
+    {
+        titre:"Soin",
+        contenu:"Massage et soin visage & nuque"
+    },
+    {
+        titre:"Thaï-Yoga",
+        contenu:"Massage Thaï-Yoga sur table <br>Mobilisation douce et étirements; bassin, bras, jambes"
+    }
+]) }}
 
-<ul class="df jc-sb gap carte">
-  <li class="fg-1 df fd-c gap-2">
-    <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-    <h4>Complet</h4>
-    <div>
-        Massage complet du corps relaxant
-    </div>
-  </li>
-  <li class="fg-1 df fd-c gap-2">
-    <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-    <h4>Soin</h4>
-    <div>
-        Massage et soin visage & nuque
-    </div>
-</li>
-<li class="fg-1 df fd-c gap-2">
-    <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-    <h4>Thaï-Yoga</h4>
-    <div>
-        Massage Thaï-Yoga sur table (mobilisation douce et étirements; bassin, bras, jambes)
-    </div>
-</li>
-</ul>
-
-
-<ul class="df jc-sb gap carte">
-    <li class="fg-1 df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>etoile</h4>
-        <div>
-        Massage « étoile » (mains, pieds et nuque)
-        </div>
-    </li>
-    <li class="fg-1 df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>Dos</h4>
-        <div>
-            Focus mal de dos (tonique et apaisant, tissus profonds)
-        </div>
-    </li>
-    <li class="fg-1 df fd-c gap-2">
-        <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Picto" alt="">
-        <h4>Stress & maux de tête </h4>
-        <div>
-            Spécial stress & maux de tête (épaules, crâne, visage)
-        </div>
-    </li>
-</ul>
+{{ macro.cartes([
+    {
+        titre:"Étoile",
+        contenu:"
+            <ul>
+                <li>Mains</li>
+                <li>Pieds</li>
+                <li>Nuque</li>
+            </ul>"
+    },
+    {
+        titre:"Focus Dos",
+        contenu:"
+            <ul>
+                <li>Tonique et apaisant</li>
+                <li>Tissus profonds</li>
+            </ul>"
+    },
+    {
+        titre:"Stress & maux de tête",
+        contenu:"
+            <ul>
+                <li>Épaules</li>
+                <li>Crâne</li>
+                <li>Visage</li>
+            </ul>"
+    }
+]) }}
 
 <hr>
 
@@ -174,16 +165,21 @@ La palette de soins proposés se combine selon vos envies. Nous choisissons ense
 
 {{ macro.h2("Prendre RDV", "Prendre un rendez-vous") }}
 
-Je vous reçois habituellement les lundi, mercredi et vendredi, en journée ou soirée. 
-Sur rdv uniquement. Dates et horaires flexibles ; contactez-moi pour trouver le moment idéal.
+<div class="cc-2 cc-gap mb">
+    <p>Je vous reçois habituellement les lundi, mercredi et vendredi, en journée ou soirée. </p>
+    <p>Sur rdv uniquement. Dates et horaires flexibles ; contactez-moi pour trouver le moment idéal.</p>
+    <p>En cas de désistement, veuillez annuler votre rendez-vous au moins 48 heures à l’avance afin que d’autres personnes puissent réserver le créneau.</p>
+</div>
 
-En cas de désistement, veuillez annuler votre rendez-vous au moins 48 heures à l’avance afin que d’autres personnes puissent réserver le créneau.
-
-hello@lamainbleue.ch
-Tel / Signal / WhatsApp / Telegram : +41 79 731 23 51
+<div class="text-center mt">
+    WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel}}</a>
+    <br>
+    Mail : <a href="mailto:{{metadata.mailMain}}">hello (at) lamainbleue (point) ch</a>
+</div>
 
 <hr>
 
+<!--
 Formulaire de contact - séance massage :
 
 Nom, 
@@ -215,3 +211,4 @@ libre
 
 Commentaire
 libre
+-->

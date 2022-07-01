@@ -50,22 +50,31 @@
 
 
 
-{% macro cartes(liste) %}
+{% macro cartes(liste,margeTop) %}
     <ul class="reset df jc-sb gap2 carte js_scroll-x">
         {% for item in liste %}
-            <li class="fg-1 df fd-c gap-2">
+            <li class="fg-1 df fd-c gap carte__item">
                 <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
-                <div class="df fd-c gap h-100">
+                <div class="df fd-c h-100">
                     {% if item.baliseTitre == "h4" %}
-                        <h4 class="text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h4>
+                        <h4 class="text-center text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h4>
                     {% else %}
-                        <h3 class="text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h3>
+                        <h3 class="text-center text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h3>
                     {% endif %}
-                    <div class="fg-1">
+                    <div class="fg-1 carte__contenu">
                         {{ item.contenu | safe }}
+                        {% if item.contenu and item.tableau %}
+                            <br>
+                        {% endif %}
+                        {% for ligne in item.tableau %}
+                            <div class="df jc-sb">
+                                <span class="text-typo2 text-size2 p0">{{ ligne.duree }}</span>
+                                <span class="text-typo2 text-size2 p0">{{ ligne.prix }}</span>
+                            </div>
+                        {% endfor %}
                     </div>
                     {% if item.hrefInscription %}
-                        <p class="text-center">
+                        <p class="text-center carte__contenu">
                             {% if item.hrefInscription %}
                                 <a href="{{ item.hrefInscription | safe }}" target="_blank" rel="external">
                                     {% if item.labelLien %}
