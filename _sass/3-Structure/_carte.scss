@@ -4,10 +4,19 @@
 
 .carte li {
     width: var(--taille);
+    background-color: var(--couleur4);
+}
+
+.carte li *:not(img) {
+    padding: .5rem;
 }
 
 .carte img {
     width:100%
+}
+
+.carte__titre {
+    margin-top: 0;
 }
 
 @media (max-width: 600px) {
