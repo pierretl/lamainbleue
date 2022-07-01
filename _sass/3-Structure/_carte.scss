@@ -11,7 +11,13 @@
 }
 
 @media (max-width: 600px) {
+    .carte {
+        margin-right: -$main_marge-x ;
+    }
     .carte li {
-        min-width:80vw;
+        min-width:70vw;
+    }
+    .carte li:last-child {
+        margin-right: $main_marge-x ;
     }
 }
