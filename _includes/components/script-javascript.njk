@@ -4,29 +4,32 @@
 	{% include "js/menu-burger.js" %}
 {% endset %}
 
-<script>{{ js | jsmin | safe }}</script> <!-- feed it through our jsmin filter to minify -->
+<!-- feed it through our jsmin filter to minify -->
+<script>
 
+	//commun dans chaque page
+	{{ js | jsmin | safe }} 
 
+	//spécifique à un composant
+	{% for item in scriptsJs %}
 
+		{% if item == 'horizontalScroll' %}
 
+				{% set horizontalScroll %}
+					{% include "js/horizontal-scroll.js" %}
+				{% endset %}
+				{{ horizontalScroll | jsmin | safe }}
 
-{% for item in scriptsJs %}
+		{% elif  item == 'basculeVisibilite' %}
 
-	{% if item == 'horizontalScroll' %}
+				{% set basculeVisibilite %}
+					{% include "js/panneau-depliant.js" %}
+					{% include "js/bascule-visibilite.js" %}
+				{% endset %}
+				{{ basculeVisibilite | jsmin | safe }}
 
-			{% set horizontalScroll %}
-				{% include "js/horizontal-scroll.js" %}
-			{% endset %}
-			<script>{{ horizontalScroll | jsmin | safe }}</script>
+		{% endif %}
 
-	{% elif  item == 'basculeVisibilite' %}
+	{% endfor %}
 
-			{% set basculeVisibilite %}
-				{% include "js/panneau-depliant.js" %}
-				{% include "js/bascule-visibilite.js" %}
-			{% endset %}
-			<script>{{ basculeVisibilite | jsmin | safe }}</script>
-
-	{% endif %}
-
-{% endfor %}
+</script>
