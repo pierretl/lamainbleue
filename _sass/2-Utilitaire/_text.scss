@@ -6,16 +6,28 @@
     @include typo2;
 }
 
+.text-typo3 {
+    @include typo3;
+}
+
 .text-size0 {
     font-size: 2rem;
 }
 
 .text-size1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+
+    @include breakpoint(large) {
+        font-size: 1.5rem;
+    }
 }
 
 .text-size2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+
+    @include breakpoint(large) {
+        font-size: 1.2rem;
+    }
 }
 
 .text-gras {

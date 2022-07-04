@@ -61,11 +61,11 @@ h3[class] {
 }
 
 h1:not([class]) {
-    text-align: center;
     font-size: 3rem;
     
     @include breakpoint(large) {
-        font-size: 5rem;
+        margin-top: map-get($space, l);
+        font-size: 4.2rem;
     }
 }
 

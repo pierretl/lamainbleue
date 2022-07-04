@@ -39,4 +39,7 @@
     .carte li:last-child {
         margin-right: $main_marge-x ;
     }
+    .carte__contenu {
+        font-size: .9rem;
+    }
 }

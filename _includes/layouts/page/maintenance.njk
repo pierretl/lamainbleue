@@ -11,22 +11,16 @@ noHeader: true
     <section class="df fd-c ai-c">
 
         <h1 class="text-center maintenance__titre">{{ metadata.title }}</h1>
-        <p class="text-center maintenance__ligne1">{{intro1}}</p>
-        <p class="text-center maintenance__ligne2">
-            <span aria-hidden="true">~</span>
-            &nbsp;&nbsp;<em>{{intro2}}</em>&nbsp;&nbsp;
-            <span aria-hidden="true">~</span>
+        <p class="text-center maintenance__baseline">
+            {{intro1}}<br>
+            {{intro2}}
         </p>
 
-        <ul class="reset df maintenance__liste">
+        <ul class="reset df jc-sb maintenance__liste">
             <li>Massage</li>
             <li>Yoga</li>
             <li>Art</li>
         </ul>
-
-        <p class="maintenance__tilde" aria-hidden="true">
-            ~
-        </p>
 
         <p class="maintenance__texte">
             {{contactIntro}}

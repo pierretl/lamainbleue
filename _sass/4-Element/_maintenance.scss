@@ -9,41 +9,36 @@
     }
 }
 
-.maintenance__ligne1 {
+.maintenance__baseline {
     @include typo2;
+    margin-top: map-get($space, xxl);
+    margin-bottom: 0;
     font-size: 1.3rem;
-    letter-spacing: .4rem;
-    margin: 0;
+    font-style: normal;
 
     @include breakpoint(large) {
         font-size: 1.5rem;
-        letter-spacing: .45rem;
+    }
+
+}
+
+ul.maintenance__liste {
+    @include typo2;
+    width: 100%;
+    margin-top: map-get($space, xxxl);
+    margin-bottom: map-get($space, xxl);
+    position: relative;
+    gap: map-get($space, s);
+    padding: 0;
+    font-size: 1.1rem;
+
+    @include breakpoint(large) {
+        font-size: 1.3rem;
     }
 }
 
-.maintenance__ligne2 {
-    margin-top: map-get($space, xxl);
-    margin-bottom: 0;
-    font-size: 1.2rem;
-
-}
-
-.maintenance__liste {
-    @include typo2;
-    position: relative;
-    gap: map-get($space, s);
-    margin-top: map-get($space, s);
-    margin-bottom: 0;
-    padding: 0 map-get($space, s) map-get($space, s);
-    font-size: 1.1rem;
-}
-
-.maintenance__tilde {
-    margin: 0;
-    font-size: 1.2rem;
-}
-
 .maintenance__texte {
-    margin-top: map-get($space, xxl);
+    width: 100%;
+    margin-top: 0;
     margin-bottom: map-get($space, xl );
 }
