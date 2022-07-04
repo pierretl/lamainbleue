@@ -14,12 +14,17 @@ scriptsJs:
 
 <h1>Art</h1>
 
-<p class="cc-2 cc-gap">
-    Plus de dix années de création plastique et numérique indépendante. Installations photo, vidéo, céramique, mix media. Expositions personnelles et collectives. Vente en galerie ou en direct à l’atelier. Collaboration avec d’autres domaines; musique, performance, danse…
-</p> 
+{{ macro.texteEtVisuel(
+    typeHeroBanner="true",
+    contenu="<p>
+                Plus de dix années de création plastique et numérique indépendante.<br>Installations photo, vidéo, céramique, mix media.<br>Expositions personnelles et collectives.<br>Vente en galerie ou en direct à l’atelier.<br>Collaboration avec d’autres domaines; musique, performance, danse…
+            </p>",
+    srcImage="../images/media/galerie.jpg",
+    inverseBloc="true"
+) }}
 
 
-{{ macro.sommaire(["A propos", "Quelques réalisations", "Projet futur", "Me suivre"]) }}
+{{ macro.sommaire(["A propos", "Quelques réalisations", "Perspectives", "Contact"]) }}
 
 <hr> 
 
@@ -28,21 +33,31 @@ scriptsJs:
 <div class="cc-2 cc-gap">
     <p>
         Issue d’un parcours scolaire qui a commencé aux Beaux Arts dès 2001, je mène ma carrière d’artiste visuelle en indépendante depuis l’obtention de mes master dans les Hautes écoles d’Art de Genève et Lyon en 2008.
-        Le livre « Echos » qui re-parcoure en mots et en images mes dix dernières années de création a été publié en 2020 chez CasaGrande. Il est disponible en ligne et dans certaines librairies d’art en Suisse et en Europe.
+    </p>
+    <p>
+        Le livre « Echos » qui reparcourt en mots et en images mes dix dernières années de création a été
+publié en 2020 chez CasaGrande. Il est disponible en ligne et dans une sélection de librairies d’art
+en Suisse et en Europe.
     </p>
 
     <p>
-        J’utilise divers medium tels que la photographie et la vidéo, souvent inclues dans des installations immersives associant sons, lumière, impressions et/ou projections sur divers supports (tissu, bois, collages, etc).
-        Le corps est de plus en plus central dans l’évolution de mon travail artistique. La figure de la main y est récurrente ; sa chaleur (filmée en caméra thermique), ses tâtonnements (dans une série utilisant l’ancienne technique photo du cyanotype), et toute la symbolique qu’elle charrie de relation à soi, à l’autre et au monde.
-        Dernièrement, des fragments du corps envahissent une série de céramiques aux formes artisanales inspirées de traditions ancestrales insulaires des îles volcaniques des Canaries.
+        J’utilise divers medium tels que la photographie et la vidéo, souvent incluses dans des installations
+immersives associant sons, lumière, impressions et/ou projections sur divers supports (tissu, bois,
+collages, etc).
+    </p>
+    <p>
+        Le corps est de plus en plus central dans l’évolution de mon travail artistique. La figure de la main
+y est récurrente ; sa chaleur (filmée en caméra thermique), ses tâtonnements (dans une série
+utilisant d’anciennes techniques photo), et toute la symbolique qu’elle charrie de relation à soi, à
+l’autre et au monde. <br>
+Récemment, je développe de nouvelles séries de céramiques intimement liées au corps. Inspiré
+de traditions insulaires, je modèle à la main une terre volcanique d’abord préparée par le foulage
+aux pieds. Le souvenir du corps y laisse ses traces.
     </p>
 </div>
 
-<div class="df fd-c fd-r--large ai-c jc-sb gap mt">
-    <p class="text-size2 text-typo2">
-        Mes projets en cours et à venir poursuivent...
-    </p>
-    <a href="{{metadata.instagram}}" rel="external">Me suivre sur Instagram</a>
+<div class="mt text-right">
+    <a href="{{metadata.instagram}}" rel="external">Suivre mon travail sur Instagram</a>
 </div>
 
 
@@ -57,6 +72,7 @@ scriptsJs:
 
 {{ macro.texteEtVisuel(
     titre="Echos",
+    titreArt="true",
     contenu="<p>
         Livre d’artiste, 2020<br>
         Editions Casa Grande, 331pages, En/Fr/It/Es <br>
@@ -65,24 +81,26 @@ scriptsJs:
     </p>",
     srcImage="../images/media/echos-livre.jpg",
     hrefLien="http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html",
-    labelLien="Comander le livre"
+    labelLien="Commander le livre"
 ) }}
 
 {{ macro.texteEtVisuel(
     titre="Eventide",
+    titreArt="true",
     contenu="<p>
         Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm<br>
-        Pour les prix et plus d’infos, contactez la galerie Laurence Bernard, Genève
+        Pour les prix et plus d’infos :
     </p>",
     srcImage="https://freight.cargo.site/w/1250/i/3d4e99c8e1caa9c017387130ba33027346d75e44159c97674642d0f456762c2d/EVENTIDE_MARION-TAMPON-LAJARRIETTERaphaelleMueller-5.jpg",
-    hrefLien="mailto:info@galerielaurencebernard.ch",
-    labelLien="Galerie Laurence Bernard (mail)",
+    hrefLien="https://www.galerielaurencebernard.ch/artists/marion-tampon-lajarriette/biography/",
+    labelLien="Contact galerie",
     margetop="true",
     inverseBloc="true"
 ) }}
 
 {{ macro.texteEtVisuel(
-    titre="Podomorfos",
+    titre="Tacande",
+    titreArt="true",
     contenu="<p>
         Série céramique, 2021, dimensions variables<br>
         Pour plus d’infos sur les ventes directes à l’atelier,<br>
@@ -97,44 +115,30 @@ scriptsJs:
 <div class="js_bascule-visibilite__zone hide" data-zone="quelques-realisations">
     
     {{ macro.texteEtVisuel(
-        titre="Echos",
+        titre="The Lazy Clock",
+        titreArt="true",
         contenu="<p>
-            Livre d’artiste, 2020<br>
-            Editions Casa Grande, 331pages, En/Fr/It/Es <br>
-            ISBN 978-88-7713-868-2<br>
-            Textes : Mark Lewis, Beau Rhee, Valeria Venditti, Cristòbal Barria, Lucille Ulrich
+            Installation immersive son et lumière, 2019 <br>
+            4 hauts-parleurs, tapis, coussins, filtres bleus sur fenêtres, projection vidéo
         </p>",
         srcImage="../images/media/echos-livre.jpg",
-        hrefLien="http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html",
-        labelLien="Comander le livre",
+        hrefLien="https://mariontamponlajarriette.com/",
+        labelLien="https://mariontamponlajarriette.com/",
         margetop="true",
         inverseBloc="true"
     ) }}
 
     {{ macro.texteEtVisuel(
-        titre="Eventide",
+        titre="Hot Marble",
+        titreArt="true",
         contenu="<p>
-            Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm<br>
-            Pour les prix et plus d’infos, contactez la galerie Laurence Bernard, Genève
+           Installation mix media, 2019 <br>
+            Son stéréo, double projection vidéo, tulle, béton, métal
         </p>",
         srcImage="https://freight.cargo.site/w/1250/i/3d4e99c8e1caa9c017387130ba33027346d75e44159c97674642d0f456762c2d/EVENTIDE_MARION-TAMPON-LAJARRIETTERaphaelleMueller-5.jpg",
-        hrefLien="mailto:info@galerielaurencebernard.ch",
-        labelLien="Galerie Laurence Bernard (mail)",
+        hrefLien="https://vimeo.com/328250549",
+        labelLien="https://vimeo.com/328250549",
         margetop="true"
-    ) }}
-
-    {{ macro.texteEtVisuel(
-        titre="Podomorfos",
-        contenu="<p>
-            Série céramique, 2021, dimensions variables<br>
-            Pour plus d’infos sur les ventes directes à l’atelier,<br>
-            me contacter
-        </p>",
-        srcImage="https://freight.cargo.site/w/1250/i/44f95c7767faad36e9b87a05679fd8d1f86178d0dfc28bcc71b037d61f42ee01/4U3A9645ok.jpg",
-        hrefLien=["mailto:", metadata.mailArt],
-        labelLien=metadata.mailArt,
-        margetop="true",
-        inverseBloc="true"
     ) }}
 
 </div>
@@ -151,10 +155,13 @@ scriptsJs:
 <hr> 
 
 
-{{ macro.h2("Projet futur") }}
+{{ macro.h2("Perspectives") }}
 
 <p class="cc-2 cc-gap">
-    Je désire de plus en plus développer des projets en collaboration avec les univers de la danse, du théâtre et de la musique. Créer des environnements scéniques ou des propositions hybrides pluridisciplinaires m’attire particulièrement, offrant de nouvelles possibilités et de nouveaux défis à ma pratique artistique individuelle en développant ses aspects spatial, corporel et collectif.
+    Je souhaite développer davantage les projets en collaboration avec les univers de la danse, du
+théâtre et de la musique. Créer des environnements scéniques ou des propositions hybrides
+pluridisciplinaires m’attire particulièrement, offrant de nouvelles possibilités et de nouveaux défis à
+ma pratique artistique individuelle en développant ses aspects spatial, corporel et collectif.
 </p>
 
 <div class="mt">
@@ -163,12 +170,15 @@ scriptsJs:
 
 <hr> 
 
-{{ macro.h2("Me suivre") }}
+{{ macro.h2("Contact") }}
 
-<div class="df fd-c fd-r--large ai-c gap">
-    <p>
-        Mes inspirations et étapes de projets en cours&hellip;
-    </p>
+<p>
+    Pour découvrir mon portfolio plus détaillé :   <a href="https://mariontamponlajarriette.com/">https://mariontamponlajarriette.com/</a>
+</p>
+<p>
+    Suivre les étapes de projets en cours : <a href="{{metadata.instagram}}" rel="external">Me suivre sur Instagram</a>
+</p>
+<p>
+    Me contacter directement : <a href="mailto:marion.tamponlajarriette@gmail.com">marion.tamponlajarriette@gmail.com</a>
+</p>
 
-    <a href="{{metadata.instagram}}" rel="external">Me suivre sur Instagram</a>
-</div>
