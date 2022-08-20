@@ -39,3 +39,7 @@
 .text-fin {
     font-weight: 200;
 }
+
+.list li:not(:first-child){
+    margin-top: .75rem;
+}

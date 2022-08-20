@@ -9,19 +9,26 @@
 .carte__item {
     width: var(--taille);
     background-color: var(--couleur4);
+    border-radius: .5rem;
 }
 
-.carte img {
-    width:100%
+.carte_img {
+    width: 70px;
+    margin-top: 1rem;
 }
 
 .carte__titre {
     margin-top: 0;
+    padding: 0 .5rem .5rem;
 }
 
-.carte__titre,
 .carte__contenu {
     padding: .5rem;
+    text-align: center;
+}
+
+.carte__contenu:last-child {
+    margin-bottom: .5rem;
 }
 
 .carte__contenu ul {

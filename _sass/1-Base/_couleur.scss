@@ -25,4 +25,9 @@
     img {
         filter: grayscale(20%);
     }
+
+    .icone-dark {
+        background-color: var(--couleur3);
+        border-radius: 50%;
+    }
 }

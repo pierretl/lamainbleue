@@ -26,7 +26,7 @@
 
 
 
-{% macro texteEtVisuel(typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,hrefLien,labelLien,margetop,inverseBloc) %}
+{% macro texteEtVisuel(typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteContenu) %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}">
         <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
         <div class="df fd-c gap w-50--large">
@@ -47,6 +47,24 @@
             {% endif %}
         </div>
     </div>
+    {% if basculeVisibiliteId and basculeVisibiliteLabelOn and basculeVisibiliteLabelOff and basculeVisibiliteContenu %}
+    <div class="js_bascule-visibilite__zone mt hide" data-zone="{{ basculeVisibiliteId }}">
+        <ul class="list">
+            {% for item in basculeVisibiliteContenu %}
+                <li>
+                    <span class="text-size1 text-typo2">{{item.date}}</span><br>
+                    {{item.description | safe}}
+                </li>        
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="text-center mt">
+        <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="{{ basculeVisibiliteId }}">
+            <span class="js_bascule-visibilite__passif">{{ basculeVisibiliteLabelOn }}</span>
+            <span class="js_bascule-visibilite__actif hide">{{ basculeVisibiliteLabelOff }}</span>
+        </button>
+    </div>
+    {% endif %}
 {% endmacro %}
 
 
@@ -56,29 +74,35 @@
     <ul class="reset df jc-sb gap2 carte js_scroll-x">
         {% for item in liste %}
             <li class="fg-1 df fd-c gap carte__item">
-                <img src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
                 <div class="df fd-c h-100">
+                <div class="text-center">
+                    {% if item.image %}
+                        <img class="carte_img icone-dark" src="{{ item.image }}" alt="">
+                    {% else %}
+                        <img class="carte_img icone-dark" src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
+                    {% endif %}
+                </div>
                     {% if item.baliseTitre == "h4" %}
                         <h4 class="text-center text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h4>
                     {% else %}
                         <h3 class="text-center text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h3>
                     {% endif %}
                     <div class="fg-1 carte__contenu">
-                        {{ item.contenu | safe }}
-                        {% if item.contenu and item.tableau %}
-                            <br>
-                        {% endif %}
                         {% for ligne in item.tableau %}
                             <div class="df jc-sb">
                                 <span class="text-typo2 text-size2 p0">{{ ligne.duree }}</span>
                                 <span class="text-typo2 text-size2 p0">{{ ligne.prix }}</span>
                             </div>
                         {% endfor %}
+                        {% if item.contenu and item.tableau %}
+                            <br>
+                        {% endif %}
+                        {{ item.contenu | safe }}
                     </div>
                     {% if item.hrefInscription %}
                         <p class="text-center carte__contenu">
                             {% if item.hrefInscription %}
-                                <a href="{{ item.hrefInscription | safe }}" target="_blank" rel="external">
+                                <a href="{% if item.hrefMail %}mailto:{% endif %}{{ item.hrefInscription | safe }}" target="_blank" rel="external">
                                     {% if item.labelLien %}
                                         {{ item.labelLien }}
                                     {% else %}
@@ -102,7 +126,7 @@
         {% for item in liste %}
             {% if loop.index =="1" %}
                 <div class="df ai-c gap2 mt">
-                    <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image fs-0">
+                    <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
                     <figure>
                         <blockquote>
                             <p>
@@ -125,21 +149,39 @@
                 {% for item in liste %}
                     {% if loop.index !="1" %}
                         <div class="df ai-c gap2">
-                            <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image fs-0">
-                            <figure>
-                                <blockquote>
-                                    <p>
-                                        <span class="text-size1">&laquo;</span>
-                                        {{item.contenu}}
-                                        <span class="text-size1">&raquo;</span>
-                                    </p>
-                                </blockquote>
-                                <figcaption>
-                                    <cite class="text-size1 text-typo2">
-                                        {{item.nom}}
-                                    </cite>
-                                </figcaption>
-                            </figure>
+                            {% if loop.index % 2 == 0 %}
+                                <figure>
+                                    <blockquote>
+                                        <p>
+                                            <span class="text-size1">&laquo;</span>
+                                            {{item.contenu}}
+                                            <span class="text-size1">&raquo;</span>
+                                        </p>
+                                    </blockquote>
+                                    <figcaption>
+                                        <cite class="text-size1 text-typo2">
+                                            {{item.nom}}
+                                        </cite>
+                                    </figcaption>
+                                </figure>
+                                <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                            {% else %}
+                                <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                                <figure>
+                                    <blockquote>
+                                        <p>
+                                            <span class="text-size1">&laquo;</span>
+                                            {{item.contenu}}
+                                            <span class="text-size1">&raquo;</span>
+                                        </p>
+                                    </blockquote>
+                                    <figcaption>
+                                        <cite class="text-size1 text-typo2">
+                                            {{item.nom}}
+                                        </cite>
+                                    </figcaption>
+                                </figure>
+                            {% endif %}
                         </div>
                     {% endif %} 
                 {% endfor %}

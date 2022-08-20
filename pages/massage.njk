@@ -21,7 +21,7 @@ scriptsJs:
     contenu="<p>
                  Le flux des pensées se ralentit, les tensions et fatigues sont reconnues, écoutées et peuvent enfin lâcher prise. La circulation sanguine est stimulée, un sentiment profond de relaxation s’installe. De nouvelles bonnes habitudes s’ancrent petit à petit en nous, amenant plus de conscience dans notre corps et nos postures, et dans l’importance de prendre soin de nous-même au quotidien. 
             </p>",
-    srcImage="../images/media/massage1.jpg",
+    srcImage="../images/media/massage/accueil.jpg",
     inverseBloc="true"
 ) }}
 
@@ -40,8 +40,10 @@ scriptsJs:
             duree:'1h15',
             prix:'CH 100'
         }],
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/main-etoile.png"
     },
     {
         titre:"Bon cadeau",
@@ -51,8 +53,10 @@ scriptsJs:
             duree:'1h00',
             prix:'CH 80'
         }],
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/main-cadeau.png"
     },
     {
         titre:"Tarifs habituels",
@@ -66,19 +70,23 @@ scriptsJs:
             duree:'1h45',
             prix:'CH 180'
         }],
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/main-horloge.png"
     },
     {
         titre:"Tarifs réduit",
         contenu:'
-            Tarif petits revenus / étudiant.x.e / chômage',
+            Tarif petits revenus, étudiant.x.e, chômage',
         tableau:[{
             duree:'1h15',
             prix:'CH 100'
         }],
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/main-plante.png"
     }
 ]) }}
 
@@ -88,7 +96,7 @@ scriptsJs:
 
 <p class="mt-0">La plus belle des idées de cadeau, pour toute.x.s, valable 6 mois. <br>
 Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par voie postale suite à
-<a href="{{metadata.mailArt}}" rel="external">votre commande en ligne</a> ou sur TWINT.</p>
+<a href="mailto:{{metadata.mailMain}}" rel="external">votre commande en ligne</a> ou sur TWINT.</p>
 
 
 
@@ -109,20 +117,26 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
     {
         titre:"Complet",
         contenu:"Massage complet du corps relaxant",
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/yoga.png"
     },
     {
         titre:"Soin",
         contenu:"Massage et soin visage & nuque",
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/flacon.png"
     },
     {
         titre:"Thaï-Yoga",
         contenu:"Massage Thaï-Yoga sur table <br>Mobilisation douce et étirements; bassin, bras, jambes",
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/lotus.png"
     }
 ]) }}
 
@@ -135,8 +149,10 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
                 <li>Pieds</li>
                 <li>Nuque</li>
             </ul>",
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/etoile.png"
     },
     {
         titre:"Focus Dos",
@@ -145,8 +161,10 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
                 <li>Tonique et apaisant</li>
                 <li>Tissus profonds</li>
             </ul>",
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/pierre.png"
     },
     {
         titre:"Stress & maux de tête",
@@ -156,8 +174,10 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
                 <li>Crâne</li>
                 <li>Visage</li>
             </ul>",
-        hrefInscription:["mailto:", metadata.mailArt],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/icone/diamant.png"
     }
 ]) }}
 
@@ -173,16 +193,43 @@ Basé sur une solide formation suisse reconnue EDUQUA, ASCA et RME, je continue 
 former en continu avec des approches complémentaires venant de différentes cultures pour
 approfondir l’exploration des arts du massage et élargir la palette de soins que je vous propose.
     </p>',
-    srcImage="../images/media/massage-main.jpg",
-    hrefLien="#",
-    labelLien="Voir mes diplômes et formations",
-    inverseBloc="true"
+    srcImage="../images/media/massage/approche.jpg",
+    inverseBloc="true",
+    basculeVisibiliteId="formation",
+    basculeVisibiliteLabelOn="Voir mes diplômes et formations",
+    basculeVisibiliteLabelOff="Masquer les diplômes et formations",
+    basculeVisibiliteContenu=([
+        {
+            date: "2022 ~ MasterClass Thaï",
+            description: "Massage au sol, Simon Park - Liquid Flow Yoga, Munich-Genève (CH)"
+        },{
+            date: "2021 ~ Cervico-facial",
+            description: "Formation en massage cervico-facial, Cursos Wellness-Spa & Osteopatia, Lanzarote (Espagne)"
+        },{
+            date: "2020 ~ Ayurvédique Abhyanga",
+            description: "Stage professionnel en massage à 4 mains / Studio Spiritual & Art Massage, Genève (CH)"
+        },{
+            date: "2019 ~ Diplôme en Massage Classique",
+            description: "320 heures - formation agrée EDUQUA et ASCA<br>
+Module spécial Thaï-Yoga massage sur table avec huiles, Académie des Arts Thérapeutiques, Genève (CH)
+"
+        },{
+            date: "2018 ~ Diplôme Anatomie - Physiologie - Pathologies",
+            description: "150 heures - certificat accrédité ASCA et conforme RME , Ecole associative ONG « SOSPMM », Carouge"
+        },{
+            date: "2017 ~ Feet Massage",
+            description: "Formation en Feet Massage, Chiang-Maï (Thaïlande)"
+        },{
+            date: "2015 ~ Reiki Shodden ",
+            description: "Formation 1er degré selon Usui, Versoix (CH)"
+        }
+    ])
 ) }}
 
 
 {{ macro.temoignage([
     {
-        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        srcImage:"../images/media/icone/planete-1.png",
         contenu:"Prendre un temps pour soi, un pause détente ou dynamisante, un massage selon les envies, les
 préférences du moments. Marion est à l'écoute, soucieuse que je passe toujours le meilleur
 moment possible en passant tant par l'ambiance musicale que l'aménagement de ma position
@@ -192,12 +239,12 @@ Un grand merci pour ces beaux moments !",
         nom:"Barbara, 30 ans, enseignante à Confignon"
     },
     {
-        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        srcImage:"../images/media/icone/planete-2.png",
         contenu:"Vider son esprit un instant, un instant de nirvana absolu. C’est avec Marion que j’ai eu l’occasion d’explorer de nouvelles sensations de sérénitude pour ensuite en ressortir éveillée.",
         nom:"Margot, 14 ans, étudiante à Genève"
     },
     {
-        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        srcImage:"../images/media/icone/planete-3.png",
         contenu:"J’ai pris deux massages avec Marion. Le 1er, sans but particulier, mais je manquais de contacts physiques à cette période alors, avec surprise, lors du massage, j’ai ressenti des frissons aux premiers contacts. Marion a quelque chose dans les doigts qui met rapidement en confiance. On sent son expérience. L’intensité, la force qu’elle exerce sur le corps a été totalement parfait pour moi. Je suis revenue une 2ème fois avec un but précis. Et ça a de nouveau fonctionné très bien. Je l’ai vécu comme un voyage. Elle est accueillante, à l’écoute. Elle est préparée et elle pose l’atmosphère. Le fait de laisser son corps tout entier au massage est une expérience profonde. Depuis, je l’ai recommandée autour de moi à plusieurs personnes. J’y retournerai, c’est certains.",
         nom:"Pascaline, 44 ans, prof de yoga à Genève"
     }
