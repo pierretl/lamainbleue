@@ -4,7 +4,9 @@ const mouseWheelEvt = function (event) {
 
     //Arrêter le défilement vertical par défaut jusqu'à ce que l'horizontal soit terminé
     if ( this.scrollWidth - this.clientWidth != this.scrollLeft){
-        event.preventDefault();
+        if(this.scrollLeft > 0) {
+            event.preventDefault();
+        }
     }
 }
 
