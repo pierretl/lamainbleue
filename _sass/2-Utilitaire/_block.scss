@@ -2,6 +2,15 @@
     display: none;
 }
 
+.sst-m {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.sst-m > * {
+    scroll-snap-align: start;
+}
+
 
 @include breakpoint(medium) {
 

@@ -22,7 +22,7 @@ scriptsJs:
     contenu="<p>
                 Explorer à la fois souplesse, force, équilibre, concentration, respiration consciente, relaxation guidée. Focus spéciaux pour vos besoins, adaptation tous niveaux. Petits groupes, cours privés. Salles associatives ou plein air. 
             </p>",
-    srcImage="../images/media/yoga-mer.jpg",
+    srcImage="../images/media/yoga/marion-lake.jpg",
     inverseBloc="true"
 ) }}
 
@@ -49,7 +49,8 @@ scriptsJs:
             <br>
             Prix libre
         ",
-        hrefInscription:"https://calendly.com/fr/"
+        hrefInscription:"https://calendly.com/fr/",
+        image:"../images/media/icone/yoga-lundi.png"
     },
     {
         titre:"Mercredi 12h-13h30",
@@ -61,7 +62,8 @@ scriptsJs:
             <br>
             Prix libre
         ",
-        hrefInscription:"https://calendly.com/fr/"
+        hrefInscription:"https://calendly.com/fr/",
+        image:"../images/media/icone/yoga-mercredi.png"
     },
     {   
         titre:"Vendredi 12h-13h",
@@ -73,7 +75,8 @@ scriptsJs:
             <br>
             Prix libre
         ",
-        hrefInscription:"https://calendly.com/fr/"
+        hrefInscription:"https://calendly.com/fr/",
+        image:"../images/media/icone/yoga-vendredi.png"
     }
 ]) }}
 
@@ -89,7 +92,9 @@ scriptsJs:
             <br>
             selon météo",
         hrefInscription:"tel:0797312351",
-        labelLien:"S’inscrire au groupe Signal ou WhatsApp"
+        labelLien:"S’inscrire au groupe Signal ou WhatsApp",
+        image:"../images/media/yoga/exterieur.jpg",
+        imageLarge:"true"
     },
     {
         titre:"Privé ou entre ami.x.es",
@@ -97,19 +102,25 @@ scriptsJs:
         contenu:"
             Pour une occasion ponctuelle ou régulière
         ",
-        hrefInscription:["mailto:", metadata.mailMain],
-        labelLien:"Parlez-moi de votre envie"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Parlez-moi de votre envie",
+        image:"../images/media/yoga/prive.jpg",
+        imageLarge:"true"
     },
     {   
         titre:"Ateliers ponctuels",
         baliseTitre:"h4",
         contenu:'
-            En collaboration avec <a href="http://oliviatamponlajarriette.fr/" rel="external">ma soeur-cière</a> (voyage au tambour, soin énergétique de groupe).
+            En collaboration avec <a href="http://oliviatamponlajarriette.fr/" rel="external" target="_blank">ma soeur-cière</a> (voyage au tambour, soin énergétique de groupe).
             <br>
             Selon calendrier lunaire et évènements particuliers.
         ',
-        hrefInscription:["mailto:", metadata.mailMain],
-        labelLien:"Me contacter"
+        hrefInscription:metadata.mailMain,
+        hrefMail:"true",
+        labelLien:"Me contacter",
+        image:"../images/media/yoga/event.jpg",
+        imageLarge:"true"
     }
 ]) }}
 
@@ -122,11 +133,11 @@ scriptsJs:
 {{ macro.texteEtVisuel(
     contenu='<p>
         Je guide des cours de Hatha Vinyasa Yoga.<br> 
-        Le niveau d’intensité et les focus anatomiques s’adaptent aux besoins des personnes participantes. En effet, la pratique du yoga que je propose est influencée par l’approche thérapeutique de <a href="/massage">mes massages</a>. <br>
+        Le niveau d’intensité et les focus anatomiques s’adaptent aux besoins des personnes participantes. En effet, la pratique du yoga que je propose est influencée par l’approche thérapeutique de <a href="../massage">mes massages</a>. <br>
         <br>
         Les exercices de respiration et la relaxation y ont une place très importante, ainsi que l’harmonie et l’improvisation, inspirés par la danse. La convivialité est au coeur de ces séances dont le nombre restreint de participant.x.es permet de se sentir en confiance pour partager et expérimenter ensemble. 
     </p>',
-    srcImage="../images/media/yoga-groupe.jpg"
+    srcImage="../images/media/yoga/approche.jpg"
 ) }}
 
 <hr>
@@ -135,16 +146,21 @@ scriptsJs:
 
 {{ macro.texteEtVisuel(
     contenu='<p>
-        C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Thaïlande et aux Etats Unis, avec, notamment, Olivia Tüscher (Hatha Raja Yoga, Liquid Flow) et Yves Vandeplas (Hatha Yoga, Yoga Nidra) à Genève, Nicole Wild (Vinyasa Flow, méditation) et Nico Luce (Vinyasa, Yin Yoga) à l’international.
-    </p>',
-    srcImage="../images/media/yoga-parcours.jpg",
+        C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Thaïlande et aux Etats Unis, avec, notamment :
+    </p><ul>
+        <li><span class="text-typo2">Olivia Tüscher : </span>Hatha Raja Yoga, Liquid Flow</li>
+        <li><span class="text-typo2">Yves Vandeplas : </span>Hatha Yoga, Yoga Nidra à Genève</li>
+        <li><span class="text-typo2">Nicole Wild : </span>Vinyasa Flow, méditation</li>
+        <li><span class="text-typo2">Nico Luce : </span>Vinyasa, Yin Yoga à l’international</li>
+    </ul>',
+    srcImage="../images/media/yoga/prive-2.jpg",
     inverseBloc="true"
 ) }}
 
 
 {{ macro.temoignage([
     {
-        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        srcImage:"../images/media/icone/etoile-2.png",
         contenu:"Si j’ai eu vite confiance entre les mains de Marion lors de nos séances de massages, c’est aussi
 par ce que j’ai assistée plusieurs fois à ses cours de yoga. A l’époque, Marion n’avait pas encore
 fait de « formation classique » d’enseignante de yoga contrairement à moi qui avait largement fait
@@ -158,7 +174,7 @@ passionnée. On est sur la même longueur d’onde.",
         nom:"Pascaline, 44 ans, prof de yoga à Genève"
     },
     {
-        srcImage:"https://via.placeholder.com/150x150/375063/FFFFFF/?text=photo+profil",
+        srcImage:"../images/media/icone/etoile-3.png",
         contenu:"Les séances de yoga avec Marion sont pour moi une excellente façon de démarrer en douceur
 mes journées, un vrai cadeau pour le corps et pour l’esprit. Elle est une enseignante à l’écoute des
 besoins et des attentes des participant.e.x.s et qui apporte toujours une touche de créativité à ses

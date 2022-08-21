@@ -8,6 +8,7 @@ eleventyNavigation:
     key: Art
     order: 3
 scriptsJs: 
+    - horizontalScroll
     - basculeVisibilite
 ---
 {% import "components/macro.njk" as macro %}
@@ -19,7 +20,7 @@ scriptsJs:
     contenu="<p>
                 Plus de dix années de création plastique et numérique indépendante.<br>Installations photo, vidéo, céramique, mix media.<br>Expositions personnelles et collectives.<br>Vente en galerie ou en direct à l’atelier.<br>Collaboration avec d’autres domaines; musique, performance, danse…
             </p>",
-    srcImage="../images/media/galerie.jpg",
+    srcImage="../images/media/art/intro.jpg",
     inverseBloc="true"
 ) }}
 
@@ -57,7 +58,7 @@ aux pieds. Le souvenir du corps y laisse ses traces.
 </div>
 
 <div class="mt text-right">
-    <a href="{{metadata.instagram}}" rel="external">Suivre mon travail sur Instagram</a>
+    <a href="{{metadata.instagram}}" rel="external" target="_blank" >Suivre mon travail sur Instagram</a>
 </div>
 
 
@@ -79,7 +80,16 @@ aux pieds. Le souvenir du corps y laisse ses traces.
         ISBN 978-88-7713-868-2<br>
         Textes : Mark Lewis, Beau Rhee, Valeria Venditti, Cristòbal Barria, Lucille Ulrich
     </p>",
-    srcImage="../images/media/echos-livre.jpg",
+    galerie=([
+        {
+            src:"../images/media/art/echos-cover.jpg",
+            alt:""
+        },
+        {
+            src:"../images/media/art/echos-compo-demo.jpg",
+            alt:""
+        }
+    ]),
     hrefLien="http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html",
     labelLien="Commander le livre"
 ) }}
@@ -91,7 +101,22 @@ aux pieds. Le souvenir du corps y laisse ses traces.
         Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm<br>
         Pour les prix et plus d’infos :
     </p>",
-    srcImage="https://freight.cargo.site/w/1250/i/3d4e99c8e1caa9c017387130ba33027346d75e44159c97674642d0f456762c2d/EVENTIDE_MARION-TAMPON-LAJARRIETTERaphaelleMueller-5.jpg",
+    galerie=([
+        {
+            src:"../images/media/art/eventide-1.jpg",
+            alt:""
+        },
+        {
+            src:"../images/media/art/eventide-2.jpg",
+            alt:""
+        },
+        {
+            src:"../images/media/art/eventide-3.jpg"
+        },
+        {
+            src:"../images/media/art/eventide-4.jpg"
+        }
+    ]),
     hrefLien="https://www.galerielaurencebernard.ch/artists/marion-tampon-lajarriette/biography/",
     labelLien="Contact galerie",
     margetop="true",
@@ -106,7 +131,26 @@ aux pieds. Le souvenir du corps y laisse ses traces.
         Pour plus d’infos sur les ventes directes à l’atelier,<br>
         me contacter
     </p>",
-    srcImage="https://freight.cargo.site/w/1250/i/44f95c7767faad36e9b87a05679fd8d1f86178d0dfc28bcc71b037d61f42ee01/4U3A9645ok.jpg",
+    galerie=([
+        {
+            src:"../images/media/art/tacande-1.jpg"
+        },
+        {
+            src:"../images/media/art/tacande-2.jpg"
+        },
+        {
+            src:"../images/media/art/tacande-3.jpg"
+        },
+        {
+            src:"../images/media/art/tacande-4.jpg"
+        },
+        {
+            src:"../images/media/art/tacande-5.jpg"
+        },
+        {
+            src:"../images/media/art/tacande-6.jpg"
+        }
+    ]),
     hrefLien="mailto:marion.tamponlajarriette@gmail.com",
     labelLien="marion.tamponlajarriette@gmail.com",
     margetop="true"
@@ -121,7 +165,17 @@ aux pieds. Le souvenir du corps y laisse ses traces.
             Installation immersive son et lumière, 2019 <br>
             4 hauts-parleurs, tapis, coussins, filtres bleus sur fenêtres, projection vidéo
         </p>",
-        srcImage="../images/media/echos-livre.jpg",
+    galerie=([
+        {
+            src:"../images/media/art/the-lazy-clock-1.jpg"
+        },
+        {
+            src:"../images/media/art/the-lazy-clock-2.jpg"
+        },
+        {
+            src:"../images/media/art/the-lazy-clock-3.jpg"
+        }
+    ]),
         hrefLien="https://mariontamponlajarriette.com/",
         labelLien="https://mariontamponlajarriette.com/",
         margetop="true",
@@ -135,7 +189,20 @@ aux pieds. Le souvenir du corps y laisse ses traces.
            Installation mix media, 2019 <br>
             Son stéréo, double projection vidéo, tulle, béton, métal
         </p>",
-        srcImage="https://freight.cargo.site/w/1250/i/3d4e99c8e1caa9c017387130ba33027346d75e44159c97674642d0f456762c2d/EVENTIDE_MARION-TAMPON-LAJARRIETTERaphaelleMueller-5.jpg",
+        galerie=([
+            {
+                src:"../images/media/art/hot-marble-1.jpg"
+            },
+            {
+                src:"../images/media/art/hot-marble-2.jpg"
+            },
+            {
+                src:"../images/media/art/hot-marble-3.jpg"
+            },
+            {
+                src:"../images/media/art/hot-marble-4.jpg"
+            }
+        ]),
         hrefLien="https://vimeo.com/328250549",
         labelLien="https://vimeo.com/328250549",
         margetop="true"
@@ -176,7 +243,7 @@ ma pratique artistique individuelle en développant ses aspects spatial, corpore
     Pour découvrir mon portfolio plus détaillé :   <a href="https://mariontamponlajarriette.com/">https://mariontamponlajarriette.com/</a>
 </p>
 <p>
-    Suivre les étapes de projets en cours : <a href="{{metadata.instagram}}" rel="external">Me suivre sur Instagram</a>
+    Suivre les étapes de projets en cours : <a href="{{metadata.instagram}}" rel="external" target="_blank">Me suivre sur Instagram</a>
 </p>
 <p>
     Me contacter directement : <a href="mailto:marion.tamponlajarriette@gmail.com">marion.tamponlajarriette@gmail.com</a>

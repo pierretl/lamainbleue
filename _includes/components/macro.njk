@@ -26,9 +26,18 @@
 
 
 
-{% macro texteEtVisuel(typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteContenu) %}
+{% macro texteEtVisuel(typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteContenu) %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}">
-        <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+        
+        {% if galerie %}
+            <div class="df w-50--large sst-m{% if inverseBloc %} order-1--large{% endif %} js_scroll-x">
+                {% for image in galerie %}
+                    <img src="{{image.src}}" alt="{{image.alt}}">
+                {% endfor %}
+            </div>
+        {% else %}
+            <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+        {% endif %}
         <div class="df fd-c gap w-50--large">
             {% if titre %}
                 {% if typeHeroBanner %}
@@ -75,13 +84,18 @@
         {% for item in liste %}
             <li class="fg-1 df fd-c gap carte__item">
                 <div class="df fd-c h-100">
-                <div class="text-center">
-                    {% if item.image %}
-                        <img class="carte_img icone-dark" src="{{ item.image }}" alt="">
+                    {% if item.imageLarge %}
+                        <img class="carte_img v_large" src="{{ item.image }}" alt="">
                     {% else %}
-                        <img class="carte_img icone-dark" src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
+                        <div class="text-center">
+                            {% if item.image %}
+                                <img class="carte_img icone-dark" src="{{ item.image }}" alt="">
+                            {% else %}
+                                <img class="carte_img icone-dark" src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
+                            {% endif %}
+                        </div>
                     {% endif %}
-                </div>
+                
                     {% if item.baliseTitre == "h4" %}
                         <h4 class="text-center text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h4>
                     {% else %}

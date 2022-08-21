@@ -93,7 +93,7 @@ p + p {
     margin-top: map-get($space, m );
 }
 
-ul li{
+ul:not(.reset) li{
     list-style-type: circle;
 }
 
