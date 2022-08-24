@@ -1,8 +1,3 @@
 .temoignage__image {
-
-    @include breakpoint(mediumDown) {
-        display: none;
-    }
-
-    width: 200px;
+    width: 130px;
 }

@@ -30,6 +30,16 @@
 }
 
 
+@include breakpoint(mediumDown) {
+    .order-1--mediumDown {
+        order: 1;
+    }
+    .order-2--mediumDown {
+        order: 2;
+    }
+}
+
+
 
 @include breakpoint(large) {
     .fd-r--large {

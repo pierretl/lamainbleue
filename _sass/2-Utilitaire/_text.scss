@@ -19,18 +19,14 @@
 
 .text-size1 {
     font-size: 1.2rem;
-
-    @include breakpoint(large) {
-        font-size: 1.5rem;
-    }
 }
 
 .text-size2 {
     font-size: 1rem;
+}
 
-    @include breakpoint(large) {
-        font-size: 1.2rem;
-    }
+.text-size3 {
+    font-size: 1.5rem;
 }
 
 .text-gras {
@@ -38,6 +34,10 @@
 }
 .text-fin {
     font-weight: 200;
+}
+
+.list {
+    padding-left: 1rem;
 }
 
 .list li:not(:first-child){

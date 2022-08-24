@@ -26,7 +26,7 @@
 
 
 
-{% macro texteEtVisuel(typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteContenu) %}
+{% macro texteEtVisuel(typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteImage,basculeVisibiliteContenu) %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}">
         
         {% if galerie %}
@@ -61,11 +61,14 @@
         <ul class="list">
             {% for item in basculeVisibiliteContenu %}
                 <li>
-                    <span class="text-size1 text-typo2">{{item.date}}</span><br>
+                    <span class="text-size3 text-typo2">{{item.date}}</span><br>
                     {{item.description | safe}}
                 </li>        
             {% endfor %}
         </ul>
+        {% if basculeVisibiliteImage %}
+            <img src="{{basculeVisibiliteImage}}" alt="">
+        {% endif %}
     </div>
     <div class="text-center mt">
         <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="{{ basculeVisibiliteId }}">
@@ -97,9 +100,9 @@
                     {% endif %}
                 
                     {% if item.baliseTitre == "h4" %}
-                        <h4 class="text-center text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h4>
+                        <h4 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre }}</h4>
                     {% else %}
-                        <h3 class="text-center text-typo2 text-size1 text-fin mb-0 carte__titre">{{ item.titre }}</h3>
+                        <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre }}</h3>
                     {% endif %}
                     <div class="fg-1 carte__contenu">
                         {% for ligne in item.tableau %}
@@ -139,7 +142,7 @@
     <div class="df gap fd-c">
         {% for item in liste %}
             {% if loop.index =="1" %}
-                <div class="df ai-c gap2 mt">
+                <div class="df fd-c fd-r--large ai-c gap2 mt">
                     <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
                     <figure>
                         <blockquote>
@@ -150,7 +153,7 @@
                             </p>
                         </blockquote>
                         <figcaption>
-                            <cite class="text-size1 text-typo2">
+                            <cite class="text-typo2">
                                 {{item.nom}}
                             </cite>
                         </figcaption>
@@ -162,9 +165,9 @@
             <div class="df gap fd-c">
                 {% for item in liste %}
                     {% if loop.index !="1" %}
-                        <div class="df ai-c gap2">
+                        <div class="df fd-c fd-r--large ai-c gap2">
                             {% if loop.index % 2 == 0 %}
-                                <figure>
+                                <figure class="order-2--mediumDown">
                                     <blockquote>
                                         <p>
                                             <span class="text-size1">&laquo;</span>
@@ -173,12 +176,12 @@
                                         </p>
                                     </blockquote>
                                     <figcaption>
-                                        <cite class="text-size1 text-typo2">
+                                        <cite class="text-typo2">
                                             {{item.nom}}
                                         </cite>
                                     </figcaption>
                                 </figure>
-                                <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                                <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
                             {% else %}
                                 <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
                                 <figure>
@@ -190,7 +193,7 @@
                                         </p>
                                     </blockquote>
                                     <figcaption>
-                                        <cite class="text-size1 text-typo2">
+                                        <cite class="text-typo2">
                                             {{item.nom}}
                                         </cite>
                                     </figcaption>

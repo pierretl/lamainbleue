@@ -148,9 +148,12 @@ img {
     height: auto;
 }
 
-figure,
-blockquote {
+figure {
     margin: 0;
+}
+
+blockquote {
+    margin: 0 0 .5rem;
 }
 
 *:focus {
