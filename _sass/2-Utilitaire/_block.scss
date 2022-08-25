@@ -11,6 +11,15 @@
     scroll-snap-align: start;
 }
 
+.sst-m img {
+    max-width: 80%;
+    border: 1px solid var(--couleur5);
+}
+
+.sst-m img + img {
+    margin-left: 1rem;
+}
+
 
 @include breakpoint(medium) {
 

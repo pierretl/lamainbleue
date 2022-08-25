@@ -3,7 +3,7 @@
         {% for item in liste %}
             <li class="df jc-c ai-c sommaire__item">
                 <a href="#{{ item | slug }}">
-                    {{ item }}
+                    {{ item | safe }}
                 </a>
             </li>
          {% endfor %}
