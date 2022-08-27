@@ -57,3 +57,9 @@
         font-size: .9rem;
     }
 }
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .carte li:last-child {
+        margin-right: $main_marge-x;
+    }
+}
