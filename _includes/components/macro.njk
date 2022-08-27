@@ -2,9 +2,15 @@
     <ul class="df fw-w sommaire">
         {% for item in liste %}
             <li class="df jc-c ai-c sommaire__item">
-                <a href="#{{ item | slug }}">
-                    {{ item | safe }}
-                </a>
+                {% if item.id %}
+                    <a href="#{{ item.id | slug }}">
+                        {{ item.label | safe }}
+                    </a>
+                {% else %}
+                    <a href="#{{ item.label | slug }}">
+                        {{ item.label | safe }}
+                    </a>
+                {% endif %}
             </li>
          {% endfor %}
     </ul>
@@ -13,8 +19,8 @@
 
 
 
-{% macro h2(titre, titreSurcharger) %}
-    <h2 id="{{ titre | slug  }}">
+{% macro h2(titre, titreSurcharger, idSurcharger) %}
+    <h2 id="{% if idSurcharger %}{{ idSurcharger | slug }}{% else %}{{ titre | slug }}{% endif %}">
         {% if titreSurcharger %}
             {{ titreSurcharger | safe }}
         {% else %}

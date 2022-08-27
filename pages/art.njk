@@ -25,7 +25,21 @@ scriptsJs:
 ) }}
 
 
-{{ macro.sommaire(["A propos", '<span class="hide-for-large">Réalisations</span><span class="hide-for-small">Quelques réalisations</span>', "Perspectives", "Contact"]) }}
+{{ macro.sommaire([
+    {
+        label: 'A propos'
+    },
+    {
+        label: '<span class="hide-for-large">Réalisations</span><span class="hide-for-small">Quelques réalisations</span>',
+        id: 'Quelques réalisations'
+    },
+    {
+        label: 'Perspectives'
+    },
+    {
+        label: 'Contact'
+    }
+]) }}
 
 <hr> 
 

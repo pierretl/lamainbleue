@@ -26,12 +26,26 @@ scriptsJs:
 ) }}
 
 
-{{ macro.sommaire(["Durée & Tarifs", '<span class="hide-for-large">Massages</span><span class="hide-for-small">Types de massages</span>', "Mon approche", "Prendre RDV"]) }}
-
+{{ macro.sommaire([
+    {
+        label: 'Durée & Tarifs',
+        id: 'Durée et Tarifs'
+    },
+    {
+        label: '<span class="hide-for-large">Massages</span><span class="hide-for-small">Types de massages</span>',
+        id: 'Types de massages'
+    },
+    {
+        label: 'Mon approche'
+    },
+    {
+        label: 'Prendre RDV'
+    }
+]) }}
 
 <hr>
 
-{{ macro.h2("Durée & Tarifs") }}
+{{ macro.h2("Durée & Tarifs", "", "Durée et Tarifs") }}
 
 {{ macro.cartes([
     {

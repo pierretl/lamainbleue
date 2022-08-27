@@ -27,7 +27,17 @@ scriptsJs:
 ) }}
 
 
-{{ macro.sommaire(["Cours", "Approche", "Parcours"]) }}
+{{ macro.sommaire([
+    {
+        label: 'Cours'
+    },
+    {
+        label: 'Approche'
+    },
+    {
+        label: 'Parcours'
+    }
+]) }}
 
 
 <hr>
