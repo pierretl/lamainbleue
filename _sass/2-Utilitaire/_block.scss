@@ -5,6 +5,17 @@
 .sst-m {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+
+    @include breakpoint (mediumDown) {
+        margin-right: -($main_marge-x);
+        margin-left: -($main_marge-x);
+    }
+}
+
+.sst-m.carte {
+    @include breakpoint (mediumDown) {
+        margin-left: 0;
+    }
 }
 
 .sst-m > * {
