@@ -10,7 +10,18 @@ const mouseWheelEvt = function (event) {
     }
 }
 
+const addClass = function() {
+    this.classList.add('sst-u');
+}
+
+const removeClass = function() {
+    this.classList.remove('sst-u');
+}
+
 scrollX = Array.prototype.slice.call(scrollX);
+
 scrollX.forEach(function(element) {
     element.addEventListener("wheel", mouseWheelEvt);
+    element.addEventListener("mouseover", addClass);
+    element.addEventListener("mouseout", removeClass);
 })

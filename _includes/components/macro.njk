@@ -32,7 +32,7 @@
         {% if galerie %}
             <div class="df w-50--large sst-m{% if inverseBloc %} order-1--large{% endif %} js_scroll-x">
                 {% for image in galerie %}
-                    <img src="{{image.src}}" alt="{{image.alt}}">
+                    <img src="{{image.src}}" alt="{{image.alt}}" class="galerie-img">
                 {% endfor %}
             </div>
         {% else %}
@@ -83,7 +83,7 @@
 
 
 {% macro cartes(liste,margeTop) %}
-    <ul class="reset df jc-sb gap2 carte js_scroll-x">
+    <ul class="reset df jc-sb gap2 carte sst-m js_scroll-x">
         {% for item in liste %}
             <li class="fg-1 df fd-c gap carte__item">
                 <div class="df fd-c h-100">

@@ -11,12 +11,16 @@
     scroll-snap-align: start;
 }
 
-.sst-m img {
+.sst-u > *{
+    scroll-snap-align: unset;
+}
+
+.galerie-img {
     max-width: 80%;
     border: 1px solid var(--couleur5);
 }
 
-.sst-m img + img {
+.galerie-img + .galerie-img {
     margin-left: 1rem;
 }
 
