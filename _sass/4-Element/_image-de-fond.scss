@@ -1,0 +1,10 @@
+.accueil__apropos {
+    background-image: url(images/design/main-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+[data-color-scheme="dark"] .accueil__apropos {
+    background-image: url(images/design/main-bg--dark.png);
+}
