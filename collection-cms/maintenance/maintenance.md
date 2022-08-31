@@ -4,7 +4,7 @@ intro2: Corps, Esprit & Inspiration
 telephone: +41 79 731 23 51
 infoMail: mail
 layout: layouts/page/maintenance.njk
-permalink: /
+permalink: /maintenance/
 contactIntro: "Pour plus d'infos et pour prendre rendez-vous :"
 info: "Pour plus d'infos et pour prendre rendez-vous :
   tel/whatsapp/signal/telegrame :"
