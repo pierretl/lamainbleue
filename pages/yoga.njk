@@ -36,6 +36,9 @@ scriptsJs:
     },
     {
         label: 'Parcours'
+    },
+    {
+        label: 'Contact'
     }
 ]) }}
 
@@ -59,7 +62,7 @@ scriptsJs:
             <br>
             Prix libre
         ",
-        hrefInscription:"https://calendly.com/fr/",
+        hrefInscription:"https://calendly.com/lamainbleue/yoga-jonction",
         image:"../images/media/icone/yoga-lundi.png"
     },
     {
@@ -72,7 +75,7 @@ scriptsJs:
             <br>
             Prix libre
         ",
-        hrefInscription:"https://calendly.com/fr/",
+        hrefInscription:"https://calendly.com/lamainbleue/yoga-st-jean",
         image:"../images/media/icone/yoga-mercredi.png"
     },
     {   
@@ -85,7 +88,7 @@ scriptsJs:
             <br>
             Prix libre
         ",
-        hrefInscription:"https://calendly.com/fr/",
+        hrefInscription:"https://calendly.com/lamainbleue/yoga-jonction",
         image:"../images/media/icone/yoga-vendredi.png"
     }
 ]) }}
@@ -210,5 +213,29 @@ passionnée. On est sur la même longueur d’onde.",
         srcImage:"../images/media/icone/etoile-4.png",
         contenu:"Chaque séance avec Marion renforce mes muscles en profondeur et diminue mes douleurs chroniques les jours suivants. Un grand moment de vacances pour l'esprit aussi.",
         nom:"Sylvie, 65ans, multi-active dans la solidarité, auprès de coopératives, associations, et femmes migrantes."
+    },
+    {
+        srcImage:"../images/media/icone/etoile.png",
+        contenu:"Marion a une approche attentionnée et bienveillante dans sa pratique du yoga. Elle propose un niveau accessible à tous et toutes, les cours sont riches dans la variété de mouvements et de rythme. Chacun de ses cours sont différents et adaptés aux élèves. Je conseille ses cours à tous et à toutes !",
+        nom:"Maya, 24 ans, étudiante à l'Université de Genève"
     }
 ]) }}
+
+<hr>
+
+{{ macro.h2("Contact") }}
+
+<div class="df fd-c fd-r--large ai-fs ai-c--large gap2">
+    <img src="../images/media/yoga/contact.jpg" alt="" class="w-50--large order-1--large">
+    <div class="df fd-c gap w-50--large">
+        <p>
+            <span class="text-typo2 text-size1 text-fin">Contactez-moi pour toutes questions</span>
+            <br>
+            Marion - La Main Bleue, Genève
+            <br><br>
+            WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel}}</a>
+            <br><br>
+            Mail : <a href="mailto:{{metadata.mailMain}}">hello (at) lamainbleue (point) ch</a>
+        </p>
+    </div>
+</div>
