@@ -2,8 +2,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ renderData.title or title or metadata.title }}</title>
-  <meta name="description" content="{{ metaDescription or renderData.metaDescription or metadata.description }}">
+  {% if accueil %}
+      {% set titrePage %}{{ title }}{% endset %}
+  {% else %}
+      {% set titrePage %}{{title}} - {{ metadata.title }}{% endset %}
+  {% endif %}
+  <title>{{ titrePage | safe }}</title>
+
+  <meta name="description" content="{{ metaDescription | safe or renderData.metaDescription | safe or metadata.description | safe}}">
 
   <link rel="stylesheet" href="/style.css" />
 
