@@ -64,7 +64,10 @@ scriptsJs:
             valable 6 mois',
         tableau:[{
             duree:'1h00',
-            prix:'CH 80'
+            prix:'CH &nbsp;80'
+        },{
+            duree:'1h30',
+            prix:'CH 120'
         }],
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
@@ -134,7 +137,7 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
 
 <div class="mb">
     {{ macro.texteEtVisuel(
-        contenu='<p>Toux corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. </p>
+        contenu='<p>Tous corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. </p>
 
         <p>La palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.</p>',
         srcImage="../images/media/massage/massage.jpg"
@@ -160,7 +163,7 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
     },
     {
         titre:"Thaï-Yoga",
-        contenu:"Massage Thaï-Yoga <br>Mobilisation douce et étirements; bassin, bras, jambes",
+        contenu:"Mobilisation douce et étirements<br>Avec habits au sol, ou adapté sur table et combiné avec huiles sur peau nue",
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
@@ -171,12 +174,7 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
 {{ macro.cartes([
     {
         titre:"Étoile",
-        contenu:"
-            <ul>
-                <li>Mains</li>
-                <li>Pieds</li>
-                <li>Nuque</li>
-            </ul>",
+        contenu:"Massage des extrémités (mains, pieds, nuque) sans se déshabiller",
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
@@ -299,12 +297,12 @@ Un grand merci pour ces beaux moments !",
     <div class="df fd-c gap w-70--large">
         <p>Je vous reçois habituellement les lundi, mercredi et vendredi, en journée ou soirée. </p>
         <p>Sur rdv uniquement, dans le centre de Genève. Dates et horaires flexibles ; contactez-moi pour toutes questions et pour trouver le moment idéal.</p>
-        <p>En cas de désistement, veuillez annuler votre rendez-vous au moins 48 heures à l’avance afin que d’autres personnes puissent réserver le créneau.</p>
+        <p>En cas de désistement ou de changement d'horaires, veuillez annuler ou modifier votre rendez-vous au moins 48 heures à l'avance sinon il reste dû.<br>Merci pour votre attention.</p>
     </div>
 </div>
 
 <div class="text-center mt">
-    WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel}}</a>
+    WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel | safe}}</a>
     <br>
     Mail : <a href="mailto:{{metadata.mailMain}}">hello (at) lamainbleue (point) ch</a>
 </div>

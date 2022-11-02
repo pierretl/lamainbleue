@@ -45,7 +45,7 @@ layoutMainClass : df ai-c jc-c accueil__conteneur
         <p class="maintenance__texte">
             {{contactIntro}}
             <br>
-            {{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{telephone}}</a>
+            {{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{metadata.tel | safe }}</a>
             <br>
             {{infoMail}} : <a href="mailto:{{mail}}">{{mail}}</a>
         </p>

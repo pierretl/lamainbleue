@@ -114,7 +114,7 @@
                         {% for ligne in item.tableau %}
                             <div class="df jc-sb">
                                 <span class="text-typo2 text-size2 p0">{{ ligne.duree }}</span>
-                                <span class="text-typo2 text-size2 p0">{{ ligne.prix }}</span>
+                                <span class="text-typo2 text-size2 p0">{{ ligne.prix | safe }}</span>
                             </div>
                         {% endfor %}
                         {% if item.contenu and item.tableau %}
@@ -184,7 +184,7 @@
                                     </blockquote>
                                     <figcaption>
                                         <cite class="text-typo2">
-                                            {{item.nom}}
+                                            {{item.nom | safe}}
                                         </cite>
                                     </figcaption>
                                 </figure>
@@ -201,7 +201,7 @@
                                     </blockquote>
                                     <figcaption>
                                         <cite class="text-typo2">
-                                            {{item.nom}}
+                                            {{item.nom | safe}}
                                         </cite>
                                     </figcaption>
                                 </figure>
