@@ -1,28 +1,17 @@
-.accueil__conteneur {
-    background-image: url(images/design/main-bg.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-[data-color-scheme="dark"] .accueil__conteneur {
-    background-image: url(images/design/main-bg--dark.png);
-}
-
-.accueil__img {
+.accueil__img--large{
     display: none;
+}
+.accueil__img--md {
+    height: 200px;
 }
 
 @include breakpoint(large) {
-
-    .accueil__conteneur,
-    [data-color-scheme="dark"] .accueil__conteneur {
-        background-image: none;
+    .accueil__img--md {
+        display: none;
     }
-    
-    .accueil__img {
+    .accueil__img--large {
         display: inherit;
         width: 340px;
     }
-
 }
+

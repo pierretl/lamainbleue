@@ -20,17 +20,25 @@ layoutMainClass : df ai-c jc-c accueil__conteneur
 
 <div class="df ai-c">
 
-    <img class="accueil__img" src="../images/media/main.png" alt="">
+    <img class="accueil__img--large" src="../images/media/main.png" alt="">
     
     <section class="df fd-c ai-c">
 
-        <h1 class="text-center maintenance__titre">{{ metadata.title }}</h1>
-        <p class="text-center maintenance__baseline">
-            {{intro1}}<br>
-            {{intro2}}
-        </p>
+        <div class="df ai-c">
 
-        <ul class="reset df jc-sb maintenance__liste">
+            <img class="accueil__img--md" src="../images/media/main.png" alt="">
+
+            <div>
+                <h1 class="text-center maintenance__titre">{{ metadata.title }}</h1>
+                <p class="text-center maintenance__baseline">
+                    {{intro1}}<br>
+                    {{intro2}}
+                </p>
+            </div>
+
+        </div>
+
+        <ul class="reset df jc-sa maintenance__liste">
             <li>
                 <a href="/massage">Massage</a>
             </li>
