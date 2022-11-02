@@ -33,7 +33,7 @@ main {
     flex: 1 0 auto;
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: $height-header auto 0;
     padding: .5rem $main_marge-x;
 }
 
@@ -58,6 +58,10 @@ h3:not([class]) {
 
 h3[class] {
     margin: 0;
+}
+
+h2 {
+    scroll-margin-top: $height-header;
 }
 
 h1:not([class]) {
