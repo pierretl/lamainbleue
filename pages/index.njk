@@ -22,23 +22,14 @@ layoutMainClass : df ai-c jc-c accueil__conteneur
 
     <img class="accueil__img--large" src="../images/media/main.png" alt="">
     
-    <section class="df fd-c ai-c">
+    <div>
+        <h1 class="text-center maintenance__titre ts-1">{{ metadata.title }}</h1>
+        <p class="text-center maintenance__baseline ts-2">
+            {{intro1}}<br>
+            {{intro2}}
+        </p>
 
-        <div class="df ai-c">
-
-            <img class="accueil__img--md" src="../images/media/main.png" alt="">
-
-            <div>
-                <h1 class="text-center maintenance__titre">{{ metadata.title }}</h1>
-                <p class="text-center maintenance__baseline">
-                    {{intro1}}<br>
-                    {{intro2}}
-                </p>
-            </div>
-
-        </div>
-
-        <ul class="reset df jc-sa maintenance__liste">
+        <ul class="reset df jc-sa maintenance__liste ts-2">
             <li>
                 <a href="/massage">Massage</a>
             </li>
@@ -49,15 +40,6 @@ layoutMainClass : df ai-c jc-c accueil__conteneur
                 <a href="/art">Art</a>
             </li>
         </ul>
-
-        <p class="maintenance__texte">
-            {{contactIntro}}
-            <br>
-            {{infoTelephone}} : <a href="tel:{{telephoneHref}}">{{metadata.tel | safe }}</a>
-            <br>
-            {{infoMail}} : <a href="mailto:{{mail}}">{{mail}}</a>
-        </p>
-        
-    </section>
+    </div>
 
 </div>
