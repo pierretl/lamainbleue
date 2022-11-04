@@ -2,7 +2,10 @@
     <small>
         Design and Development by <a href="https://www.pierre.tl" target="_blank">Pierre TL</a>.
     </small>
-	<a class="retour-top" href="#">Retour en haut de page</a>
+	{% if accueil %}
+	{% else %}
+		<a class="retour-top" href="#">Retour en haut de page</a>
+	{% endif %}
 </footer>
 
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
