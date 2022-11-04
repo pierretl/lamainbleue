@@ -47,10 +47,10 @@
     .carte {
         margin-right: -$main_marge-x ;
     }
-    .carte li {
+    .carte > li {
         min-width:70vw;
     }
-    .carte li:last-child {
+    .carte > li:last-child {
         margin-right: $main_marge-x ;
     }
     .carte__contenu {
@@ -59,7 +59,7 @@
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
-    .carte li:last-child {
+    .carte > li:last-child {
         margin-right: $main_marge-x;
     }
 }
