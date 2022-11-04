@@ -302,9 +302,7 @@ Un grand merci pour ces beaux moments !",
 </div>
 
 <div class="text-center mt">
-    WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel | safe}}</a>
-    <br>
-    Mail : <a href="mailto:{{metadata.mailMain}}">hello (at) lamainbleue (point) ch</a>
+    {{ macro.contact(metadata,"<br>") }}
 </div>
 
 <hr>

@@ -219,3 +219,14 @@
         </div>
     </div>
 {% endmacro %}
+
+
+
+
+{% macro contact(metadata, espacement) %}
+    WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel | safe}}</a>
+    {{ espacement | safe }}
+    Mail : <a href="mailto:{{metadata.mailMain}}">hello (at) lamainbleue (point) ch</a>
+    {{ espacement | safe }}
+    Instagram : <a href="https://www.instagram.com/lamainbleue.ch/" target="_blank" rel="external">@lamainbleue.ch</a>
+{% endmacro %}

@@ -239,9 +239,7 @@ Je me réjouis de savoir que le yoga continue à l'inspirer, pour le bien de tou
             <br>
             Marion - La Main Bleue, Genève
             <br><br>
-            WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel | safe}}</a>
-            <br><br>
-            Mail : <a href="mailto:{{metadata.mailMain}}">hello (at) lamainbleue (point) ch</a>
+            {{ macro.contact(metadata, "<br><br>") }}
         </p>
     </div>
 </div>
