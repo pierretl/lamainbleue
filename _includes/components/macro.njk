@@ -106,9 +106,9 @@
                     {% endif %}
                 
                     {% if item.baliseTitre == "h4" %}
-                        <h4 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre }}</h4>
+                        <h4 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h4>
                     {% else %}
-                        <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre }}</h3>
+                        <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h3>
                     {% endif %}
                     <div class="fg-1 carte__contenu">
                         {% for ligne in item.tableau %}
