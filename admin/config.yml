@@ -11,6 +11,27 @@ media_folder: "images/media" # Media files will be stored in the repo under imag
 local_backend: true
 
 collections:
+  - label: "Configuration"
+    name: "configuration"   
+    files:
+      - name: "contact"
+        label: "Contact"
+        editor:
+          preview: false
+        file: "_data/contact.json"
+        fields:
+              - { label: "Téléphone avec '&nbsp;' entre chaque groupe de nombre'", name: "telephone", widget: "string" }
+              - { label: "Email principal", name: "mailMain", widget: "string" }
+              - { label: "Email Art", name: "mailArt", widget: "string" }
+              - { label: "URL Instagram", name: "instagram", widget: "string" }
+      - name: "accueil"
+        label: "Page d'accueil"
+        editor:
+          preview: false
+        file: "_data/accueil.json"
+        fields:
+              - { label: "Baseline ligne 1", name: "baseline1", widget: "string" }
+              - { label: "Baseline ligne 2", name: "baseline2", widget: "string" }
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI

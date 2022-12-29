@@ -223,10 +223,10 @@
 
 
 
-{% macro contact(metadata, espacement) %}
-    WhatsApp, Signal, Telegram : <a href="tel:{{metadata.telHref}}">{{metadata.tel | safe}}</a>
+{% macro contact(contact, espacement) %}
+    WhatsApp, Signal, Telegram : <a href="tel:{{ contact.telephone | replace("&nbsp;", "") }}">{{contact.telephone | safe }}</a>
     {{ espacement | safe }}
-    Mail : <a href="mailto:{{metadata.mailMain}}">hello (at) lamainbleue (point) ch</a>
+    Mail : <a href="mailto:{{contact.mailMain}}">{{ contact.mailMain | replace("@", " (at) ") | replace(".", " (point) ") }}</a>
     {{ espacement | safe }}
-    Instagram : <a href="https://www.instagram.com/lamainbleue.ch/" target="_blank" rel="external">@lamainbleue.ch</a>
+    Instagram : <a href="{{contact.instagram}}" target="_blank" rel="external">@lamainbleue.ch</a>  
 {% endmacro %}
