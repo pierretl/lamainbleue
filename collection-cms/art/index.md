@@ -1,16 +1,11 @@
 ---
 layout: layouts/page/art.njk
-#permalink: /art/index.html
 permalink: /art-cms/index.html
 intro: intro
 date: 2017-01-01T00:00:00.000Z
 introContact: contact fdsf sdf ds fsd fds
 metaDescription: null
 title: Art
-introProjet: projet futur blabla
-#eleventyNavigation:
-  #key: Art
-  #order: 2
 exempleRealisation:
   - label: Livre archi
     description: introduction dolor sit amet, consectetur adipiscing elit. Maecenas
@@ -20,5 +15,6 @@ exempleRealisation:
       sed efficitur nulla, eu vehicula leo.
   - label: série photos
     description: blabla
+introProjet: projet futur blabla
 introAPropos: a propos bnlablabfedfsd fdf sdf s
 ---
