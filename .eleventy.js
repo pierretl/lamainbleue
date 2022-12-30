@@ -122,6 +122,9 @@ eleventyConfig.on("beforeBuild", () => {
   // Copie le dossier "media/image" dans "_site/media/image"
   eleventyConfig.addPassthroughCopy({"media/image": "media/image"});
 
+  // Copie le dossier "media/favicon" dans "_site/media/favicon"
+  eleventyConfig.addPassthroughCopy({"media/favicon": "media/favicon"});
+
   // Copie le dossier "media/font" dans "_site/media/fonts"
   eleventyConfig.addPassthroughCopy({"media/font": "media/font"});
 
