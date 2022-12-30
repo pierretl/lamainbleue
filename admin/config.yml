@@ -20,7 +20,7 @@ collections:
           preview: false
         file: "_data/contact.json"
         fields:
-              - { label: "Téléphone avec '&nbsp;' entre chaque groupe de nombre'", name: "telephone", widget: "string" }
+              - { label: "Téléphone", name: "telephone", widget: "string" }
               - { label: "Email principal", name: "mailMain", widget: "string" }
               - { label: "Email Art", name: "mailArt", widget: "string" }
               - { label: "URL Instagram", name: "instagram", widget: "string" }

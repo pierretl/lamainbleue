@@ -224,7 +224,7 @@
 
 
 {% macro contact(contact, espacement) %}
-    WhatsApp, Signal, Telegram : <a href="tel:{{ contact.telephone | replace("&nbsp;", "") }}">{{contact.telephone | safe }}</a>
+    WhatsApp, Signal, Telegram : <a href="tel:{{ contact.telephone | replace(" ", "")}}">{{contact.telephone | replace(" ", "&nbsp;") | safe }}</a>
     {{ espacement | safe }}
     Mail : <a href="mailto:{{contact.mailMain}}">{{ contact.mailMain | replace("@", " (at) ") | replace(".", " (point) ") }}</a>
     {{ espacement | safe }}
