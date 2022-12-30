@@ -11,6 +11,7 @@ media_folder: "media/image" # Media files will be stored in the repo under image
 local_backend: true
 
 collections:
+  # Configuration
   - label: "Configuration"
     name: "configuration"   
     files:
@@ -46,55 +47,3 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Body", name: "body", widget: "markdown" }
-  # Our pages e.g. About
-  - name: "pages"
-    label: "Page"
-    folder: "pages"
-    create: false # Change to true to allow editors to create new pages
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-        name: "eleventyNavigation"
-        widget: "object"
-        fields:
-          - { label: "Key", name: "key", widget: "string" }
-          - { label: "Order", name: "order", widget: "number", default: 0 }
-      - { label: "Body", name: "body", widget: "markdown" }
-  # Pages Maintenance
-  - name: "maintenance"
-    label: "Maintenance"
-    folder: "collection-cms/maintenance"
-    create: false
-    slug: "{{slug}}"
-    fields:
-      - { label: "Intro ligne 1", name: "intro1", widget: "string" }
-      - { label: "Intro ligne 2", name: "intro2", widget: "string" }
-      - { label: "Intro contact", name: "contactIntro", widget: "string" }
-      - { label: "Info téléphone", name: "infoTelephone", widget: "string" }
-      - { label: "Téléphone", name: "telephone", widget: "string" }
-      - { label: "Téléphone (sans espace)", name: "telephoneHref", widget: "string" }
-      - { label: "Info mail", name: "infoMail", widget: "string" }
-      - { label: "Mail", name: "mail", widget: "string" }
-  # Pages Art
-  - name: "art"
-    label: "Art"
-    folder: "collection-cms/art"
-    create: false
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Intro", name: "intro", widget: "string" }
-      - label: "Exemple réalisation"
-        name: "exempleRealisation"
-        widget: "list"
-        allow_add: true
-        fields:
-          - { label: "Label", name: "label", widget: "string" }
-          - { label: "Photo", name: "photo", widget: "image", required: false }
-          - { label: "Description", name: "description", widget: "markdown" }
-      - { label: "Projet futur", name: "introProjet", widget: "string" }
-      - { label: "A propos", name: "introAPropos", widget: "string" }
-      - { label: "Contact", name: "introContact", widget: "string" }
