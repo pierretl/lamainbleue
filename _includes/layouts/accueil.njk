@@ -4,22 +4,23 @@ layoutMainClass : df ai-c accueil__conteneur
 ---
 
 <div class="df ai-c">
-    <img class="main__img" src="{{metadata.urlImage}}main.png" alt="">
-    <section>
+
+    <img class="accueil__img--large" src="{{metadata.urlImage}}main.png" alt="">
+
+    <div>
         {{ layoutContent | safe }}
-        <nav>
-            <ul>
-                <li>
-                    <a href="/art">Art</a>
-                </li>
-                <li>
-                    <a href="/yoga">Yoga</a>
-                </li>
-                <li>
-                    <a href="/massage">Massage</a>
-                </li>
-            </ul>
-        </nav>
-        
-    </section>
+
+        <ul class="reset df jc-sa accueil__liste ts-2">
+            <li>
+                <a href="/massage">Massage</a>
+            </li>
+            <li>
+                <a href="/yoga">Yoga</a>
+            </li>
+            <li>
+                <a href="/art">Art</a>
+            </li>
+        </ul>
+
+    </div>
 </div>

@@ -46,3 +46,42 @@
     }
 }
 
+.accueil__titre {
+    @include typo2;
+    font-size: 3rem;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include breakpoint(large) {
+        font-size: 3.5rem;
+    }
+}
+
+.accueil__baseline {
+    @include typo2;
+    margin-top: map-get($space, xxl);
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    font-style: normal;
+
+    @include breakpoint(large) {
+        font-size: 1.5rem;
+    }
+
+}
+
+ul.accueil__liste {
+    @include typo2;
+    width: 100%;
+    margin-top: map-get($space, xxxl);
+    margin-bottom: map-get($space, xxl);
+    position: relative;
+    gap: map-get($space, s);
+    padding: 0;
+    font-size: 1.1rem;
+
+    @include breakpoint(large) {
+        font-size: 1.3rem;
+    }
+}

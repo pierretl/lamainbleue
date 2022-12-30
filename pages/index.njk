@@ -1,43 +1,12 @@
 ---
-layout: layouts/page.njk
+layout: layouts/accueil.njk
 title: La Main Bleue
 metaDescription: Studio basé à Genève où se rencontrent les diverses approches de Marion Tampon-Lajarriette liées au corps et au sensible via le massage,le yoga,les arts visuels 
 permalink: /
 accueil: "true"
-
-telephone: +41 79 731 23 51
-infoMail: mail
-contactIntro: "Pour plus d'infos et pour prendre rendez-vous :"
-info: "Pour plus d'infos et pour prendre rendez-vous :
-  tel/whatsapp/signal/telegrame :"
-infoTelephone: tel/whatsapp/signal/telegram
-telephoneHref: "41797312351"
-mail: hello@lamainbleue.ch
 layoutMainClass : df ai-c jc-c accueil__conteneur
 ---
+{% import "components/macro.njk" as macro %}
 
-<div class="df ai-c">
-
-    <img class="accueil__img--large" src="{{metadata.urlImage}}main.png" alt="">
-    
-    <div>
-        <h1 class="text-center maintenance__titre ts-1">{{ metadata.title }}</h1>
-        <p class="text-center maintenance__baseline ts-2">
-            {{accueil.baseline1}}<br>
-            {{accueil.baseline2}}
-        </p>
-
-        <ul class="reset df jc-sa maintenance__liste ts-2">
-            <li>
-                <a href="/massage">Massage</a>
-            </li>
-            <li>
-                <a href="/yoga">Yoga</a>
-            </li>
-            <li>
-                <a href="/art">Art</a>
-            </li>
-        </ul>
-    </div>
-
-</div>
+{{ macro.accueilH1(metadata.title) }}
+{{ macro.accueilBaseline(accueil.baseline1, accueil.baseline2) }}

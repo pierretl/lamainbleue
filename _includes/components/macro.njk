@@ -232,7 +232,26 @@
         Instagram : <a href="{{contact.instagram}}" target="_blank" rel="external">@mariontamponlajarriette</a>  
     {% else %}
         Instagram : <a href="{{contact.instagramBleue}}" target="_blank" rel="external">@lamainbleue.ch</a>
-    {% endif %} 
+    {% endif %}
+{% endmacro %}
 
-    
+
+
+
+{% macro accueilH1(titre) %}
+    <h1 class="text-center accueil__titre ts-1">
+        {{ titre | safe }}
+    </h1>
+{% endmacro %}
+
+
+
+
+{% macro accueilBaseline(ligne1, ligne2) %}
+    <p class="text-center accueil__baseline ts-2">
+        {{ ligne1 | safe }}
+        {% if ligne2 %}
+            <br>{{ ligne2 | safe }}
+        {% endif %}
+    </p>
 {% endmacro %}
