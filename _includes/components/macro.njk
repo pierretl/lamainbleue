@@ -32,17 +32,17 @@
 
 
 
-{% macro texteEtVisuel(typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteImage,basculeVisibiliteContenu) %}
+{% macro texteEtVisuel(metadata,typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteImage,basculeVisibiliteContenu) %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}">
         
         {% if galerie %}
             <div class="df w-50--large sst-m{% if inverseBloc %} order-1--large{% endif %} js_scroll-x">
                 {% for image in galerie %}
-                    <img src="{{image.src}}" alt="{{image.alt}}" class="galerie-img">
+                    <img src="{{metadata.urlImage}}{{image.src}}" alt="{{image.alt}}" class="galerie-img">
                 {% endfor %}
             </div>
         {% else %}
-            <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+            <img src="{{metadata.urlImage}}{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
         {% endif %}
         <div class="df fd-c gap w-50--large">
             {% if titre %}
@@ -73,7 +73,7 @@
             {% endfor %}
         </ul>
         {% if basculeVisibiliteImage %}
-            <img src="{{basculeVisibiliteImage}}" alt="">
+            <img src="{{metadata.urlImage}}{{basculeVisibiliteImage}}" alt="">
         {% endif %}
     </div>
     <div class="text-center mt">
@@ -88,17 +88,17 @@
 
 
 
-{% macro cartes(liste,margeTop) %}
+{% macro cartes(metadata,liste,margeTop) %}
     <ul class="reset df jc-sb gap2 carte sst-m js_scroll-x">
         {% for item in liste %}
             <li class="fg-1 df fd-c gap carte__item">
                 <div class="df fd-c h-100">
                     {% if item.imageLarge %}
-                        <img class="carte_img v_large" src="{{ item.image }}" alt="">
+                        <img class="carte_img v_large" src="{{metadata.urlImage}}{{ item.image }}" alt="">
                     {% else %}
                         <div class="text-center">
                             {% if item.image %}
-                                <img class="carte_img icone-dark" src="{{ item.image }}" alt="">
+                                <img class="carte_img icone-dark" src="{{metadata.urlImage}}{{ item.image }}" alt="">
                             {% else %}
                                 <img class="carte_img icone-dark" src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
                             {% endif %}
@@ -144,12 +144,12 @@
 
 
 
-{% macro temoignage(liste) %}
+{% macro temoignage(metadata,liste) %}
     <div class="df gap fd-c">
         {% for item in liste %}
             {% if loop.index =="1" %}
                 <div class="df fd-c fd-r--large ai-c gap2 mt">
-                    <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
                     <figure>
                         <h3>Témoignages</h3>
                         <blockquote>
@@ -188,9 +188,9 @@
                                         </cite>
                                     </figcaption>
                                 </figure>
-                                <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
+                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
                             {% else %}
-                                <img src="{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
                                 <figure>
                                     <blockquote>
                                         <p>

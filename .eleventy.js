@@ -119,11 +119,11 @@ eleventyConfig.on("beforeBuild", () => {
   // trigger a rebuild if sass changes
   eleventyConfig.addWatchTarget("_sass/");
 
-  // Copie le dossier "images" dans "_site/images"
-  eleventyConfig.addPassthroughCopy({"images": "images"});
+  // Copie le dossier "media/image" dans "_site/media/image"
+  eleventyConfig.addPassthroughCopy({"media/image": "media/image"});
 
-  // Copie le dossier "fonts" dans "_site/fonts"
-  eleventyConfig.addPassthroughCopy({"fonts": "fonts"});
+  // Copie le dossier "media/font" dans "_site/media/fonts"
+  eleventyConfig.addPassthroughCopy({"media/font": "media/font"});
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],

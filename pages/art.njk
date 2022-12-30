@@ -15,11 +15,12 @@ scriptsJs:
 <h1>Art</h1>
 
 {{ macro.texteEtVisuel(
+    metadata,
     typeHeroBanner="true",
     contenu="<p>
                 Plus de dix années de création plastique et numérique indépendante.<br>Installations photo, vidéo, céramique, mix media.<br>Expositions personnelles et collectives.<br>Vente en galerie ou en direct à l’atelier.<br>Collaboration avec d’autres domaines; musique, performance, danse…
             </p>",
-    srcImage="../images/media/art/intro.jpg",
+    srcImage="art/intro.jpg",
     inverseBloc="true"
 ) }}
 
@@ -85,6 +86,7 @@ aux pieds. Le souvenir du corps y laisse ses traces.
 
 
 {{ macro.texteEtVisuel(
+    metadata,
     titre="Echos",
     titreArt="true",
     contenu="<p>
@@ -95,23 +97,23 @@ aux pieds. Le souvenir du corps y laisse ses traces.
     </p>",
     galerie=([
         {
-            src:"../images/media/art/echos-cover.jpg",
+            src:"art/echos-cover.jpg",
             alt:""
         },
         {
-            src:"../images/media/art/echos-1.jpg",
+            src:"art/echos-1.jpg",
             alt:""
         },
         {
-            src:"../images/media/art/echos-2.jpg",
+            src:"art/echos-2.jpg",
             alt:""
         },
         {
-            src:"../images/media/art/echos-3.jpg",
+            src:"art/echos-3.jpg",
             alt:""
         },
         {
-            src:"../images/media/art/echos-4.jpg",
+            src:"art/echos-4.jpg",
             alt:""
         }
     ]),
@@ -120,6 +122,7 @@ aux pieds. Le souvenir du corps y laisse ses traces.
 ) }}
 
 {{ macro.texteEtVisuel(
+    metadata,
     titre="Eventide",
     titreArt="true",
     contenu="<p>
@@ -128,18 +131,18 @@ aux pieds. Le souvenir du corps y laisse ses traces.
     </p>",
     galerie=([
         {
-            src:"../images/media/art/eventide-1.jpg",
+            src:"art/eventide-1.jpg",
             alt:""
         },
         {
-            src:"../images/media/art/eventide-2.jpg",
+            src:"art/eventide-2.jpg",
             alt:""
         },
         {
-            src:"../images/media/art/eventide-3.jpg"
+            src:"art/eventide-3.jpg"
         },
         {
-            src:"../images/media/art/eventide-4.jpg"
+            src:"art/eventide-4.jpg"
         }
     ]),
     hrefLien="https://www.galerielaurencebernard.ch/artists/marion-tampon-lajarriette/biography/",
@@ -149,6 +152,7 @@ aux pieds. Le souvenir du corps y laisse ses traces.
 ) }}
 
 {{ macro.texteEtVisuel(
+    metadata,
     titre="Tacande",
     titreArt="true",
     contenu="<p>
@@ -158,22 +162,22 @@ aux pieds. Le souvenir du corps y laisse ses traces.
     </p>",
     galerie=([
         {
-            src:"../images/media/art/tacande-1.jpg"
+            src:"art/tacande-1.jpg"
         },
         {
-            src:"../images/media/art/tacande-2.jpg"
+            src:"art/tacande-2.jpg"
         },
         {
-            src:"../images/media/art/tacande-3.jpg"
+            src:"art/tacande-3.jpg"
         },
         {
-            src:"../images/media/art/tacande-4.jpg"
+            src:"art/tacande-4.jpg"
         },
         {
-            src:"../images/media/art/tacande-5.jpg"
+            src:"art/tacande-5.jpg"
         },
         {
-            src:"../images/media/art/tacande-6.jpg"
+            src:"art/tacande-6.jpg"
         }
     ]),
     hrefLien="mailto:marion.tamponlajarriette@gmail.com",
@@ -184,6 +188,7 @@ aux pieds. Le souvenir du corps y laisse ses traces.
 <div class="js_bascule-visibilite__zone hide" data-zone="quelques-realisations">
     
     {{ macro.texteEtVisuel(
+        metadata,
         titre="The Lazy Clock",
         titreArt="true",
         contenu="<p>
@@ -192,13 +197,13 @@ aux pieds. Le souvenir du corps y laisse ses traces.
         </p>",
     galerie=([
         {
-            src:"../images/media/art/the-lazy-clock-1.jpg"
+            src:"art/the-lazy-clock-1.jpg"
         },
         {
-            src:"../images/media/art/the-lazy-clock-2.jpg"
+            src:"art/the-lazy-clock-2.jpg"
         },
         {
-            src:"../images/media/art/the-lazy-clock-3.jpg"
+            src:"art/the-lazy-clock-3.jpg"
         }
     ]),
         hrefLien="https://mariontamponlajarriette.com/",
@@ -208,6 +213,7 @@ aux pieds. Le souvenir du corps y laisse ses traces.
     ) }}
 
     {{ macro.texteEtVisuel(
+        metadata,
         titre="Hot Marble",
         titreArt="true",
         contenu="<p>
@@ -216,16 +222,16 @@ aux pieds. Le souvenir du corps y laisse ses traces.
         </p>",
         galerie=([
             {
-                src:"../images/media/art/hot-marble-1.jpg"
+                src:"art/hot-marble-1.jpg"
             },
             {
-                src:"../images/media/art/hot-marble-2.jpg"
+                src:"art/hot-marble-2.jpg"
             },
             {
-                src:"../images/media/art/hot-marble-3.jpg"
+                src:"art/hot-marble-3.jpg"
             },
             {
-                src:"../images/media/art/hot-marble-4.jpg"
+                src:"art/hot-marble-4.jpg"
             }
         ]),
         hrefLien="https://vimeo.com/328250549",
@@ -277,7 +283,7 @@ ma pratique artistique individuelle en développant ses aspects spatial, corpore
         </p>
     </div>
     <div class="w-30--large text-center">
-        <img src="../images/media/art/atelier.jpg" alt="" class="w-50pct--md">
+        <img src="{{metadata.urlImage}}art/atelier.jpg" alt="" class="w-50pct--md">
     </div>  
 </div>
 

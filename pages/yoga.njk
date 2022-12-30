@@ -16,12 +16,13 @@ scriptsJs:
 
 
 {{ macro.texteEtVisuel(
+    metadata,
     typeHeroBanner="true",
     titre="Des cours de Yoga Hatha Vinyasa pour toutes toux tous !",
     contenu="<p>
                 Explorer le mouvement et la pause, le feu de l'énergie et la profonde relaxation de l'eau. Aborder à la fois équilibre et ancrage, force et souplesse, concentration et respiration consciente. Focus spéciaux pour vos besoins, adaptation pour tous niveaux. Petits groupes ou cours privés. Salles associatives ou en plein air. Sur donations libres, dans le centre de Genève.
             </p>",
-    srcImage="../images/media/yoga/marion-lake.jpg",
+    srcImage="yoga/marion-lake.jpg",
     inverseBloc="true"
 ) }}
 
@@ -50,7 +51,8 @@ scriptsJs:
 <h3>Cours réguliers</h3>
 
 
-{{ macro.cartes([
+{{ macro.cartes(
+    metadata,[
     {
         titre:"Lundi 18h30-19h30",
         baliseTitre:"h4",
@@ -62,7 +64,7 @@ scriptsJs:
             Prix libre
         ",
         hrefInscription:"https://calendly.com/lamainbleue/yoga-jonction-2023",
-        image:"../images/media/icone/yoga-lundi.png"
+        image:"icone/yoga-lundi.png"
     },
     {
         titre:"Mercredi<br>12h-12h45 et 13h-13h45",
@@ -75,7 +77,7 @@ scriptsJs:
             Prix libre
         ",
         hrefInscription:"https://calendly.com/lamainbleue/yoga-st-jean-2023",
-        image:"../images/media/icone/yoga-mercredi.png"
+        image:"icone/yoga-mercredi.png"
     },
     {   
         titre:"Vendredi 12h-13h",
@@ -88,14 +90,15 @@ scriptsJs:
             Prix libre
         ",
         hrefInscription:"https://calendly.com/lamainbleue/yoga-jonction-2023",
-        image:"../images/media/icone/yoga-vendredi.png"
+        image:"icone/yoga-vendredi.png"
     }
 ]) }}
 
 
 <h3>Cours et ateliers ponctuels</h3>
 
-{{ macro.cartes([
+{{ macro.cartes(
+    metadata,[
     {
         titre:"En extérieur",
         baliseTitre:"h4",
@@ -105,7 +108,7 @@ scriptsJs:
             selon météo",
         hrefInscription:"tel:0797312351",
         labelLien:"S’inscrire au groupe Signal ou WhatsApp",
-        image:"../images/media/yoga/exterieur.jpg",
+        image:"yoga/exterieur.jpg",
         imageLarge:"true"
     },
     {
@@ -117,7 +120,7 @@ scriptsJs:
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Parlez-moi de votre envie",
-        image:"../images/media/yoga/prive.jpg",
+        image:"yoga/prive.jpg",
         imageLarge:"true"
     },
     {   
@@ -131,7 +134,7 @@ scriptsJs:
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/yoga/event.jpg",
+        image:"yoga/event.jpg",
         imageLarge:"true"
     }
 ]) }}
@@ -143,13 +146,14 @@ scriptsJs:
 
 
 {{ macro.texteEtVisuel(
+    metadata,
     contenu='<p>
         Je guide des cours de Hatha Vinyasa Yoga.<br> 
         Le niveau d’intensité et les focus anatomiques s’adaptent aux besoins des personnes participantes. En effet, la pratique du yoga que je propose est influencée par l’approche thérapeutique de <a href="../massage">mes massages</a>. <br>
         <br>
         Les exercices de respiration et la relaxation y ont une place très importante, ainsi que l’harmonie et l’improvisation, inspirés par la danse. La convivialité est au coeur de ces séances dont le nombre restreint de participant.x.es permet de se sentir en confiance pour partager et expérimenter ensemble. 
     </p>',
-    srcImage="../images/media/yoga/approche.jpg"
+    srcImage="yoga/approche.jpg"
 ) }}
 
 <hr>
@@ -157,6 +161,7 @@ scriptsJs:
 {{ macro.h2("Parcours") }}
 
 {{ macro.texteEtVisuel(
+    metadata,
     contenu='<p>
         C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Asie et aux Etats Unis, avec, notamment :
     </p><ul>
@@ -165,7 +170,7 @@ scriptsJs:
         <li><span class="text-typo2">Nico Luce : </span>Hatha, Vinyasa, Yoga Philosophy</li>
         <li><span class="text-typo2">Nicole Wild : </span>Vinyasa Flow, méditation</li>
     </ul>',
-    srcImage="../images/media/yoga/prive-2.jpg",
+    srcImage="yoga/prive-2.jpg",
     inverseBloc="true",
     basculeVisibiliteId="formation",
     basculeVisibiliteLabelOn="Voir mes formations",
@@ -188,9 +193,10 @@ scriptsJs:
 ) }}
 
 
-{{ macro.temoignage([
+{{ macro.temoignage(
+    metadata,[
     {
-        srcImage:"../images/media/icone/etoile-3.png",
+        srcImage:"icone/etoile-3.png",
         contenu:"Les séances de yoga avec Marion sont pour moi une excellente façon de démarrer en douceur
 mes journées, un vrai cadeau pour le corps et pour l’esprit. Elle est une enseignante à l’écoute des
 besoins et des attentes des participant.e.x.s et qui apporte toujours une touche de créativité à ses
@@ -198,12 +204,12 @@ cours.",
         nom:"Silvia, 48 ans, enseignante à Genève"
     },
     {
-        srcImage:"../images/media/icone/etoile-4.png",
+        srcImage:"icone/etoile-4.png",
         contenu:"Chaque séance avec Marion renforce mes muscles en profondeur et diminue mes douleurs chroniques les jours suivants. Un grand moment de vacances pour l'esprit aussi.",
         nom:"Sylvie, 65 ans, multi-active dans la solidarité, auprès de coopératives, associations, et femmes migrantes."
     },
     {
-        srcImage:"../images/media/icone/etoile-2.png",
+        srcImage:"icone/etoile-2.png",
         contenu:"Si j’ai eu vite confiance entre les mains de Marion lors de nos séances de massages, c’est aussi
 par ce que j’ai assistée plusieurs fois à ses cours de yoga. A l’époque, Marion n’avait pas encore
 fait de « formation classique » d’enseignante de yoga contrairement à moi qui avait largement fait
@@ -217,12 +223,12 @@ passionnée. On est sur la même longueur d’onde.",
         nom:"Pascaline, 44 ans, prof de yoga à Genève"
     },
     {
-        srcImage:"../images/media/icone/etoile.png",
+        srcImage:"icone/etoile.png",
         contenu:"Marion a une approche attentionnée et bienveillante dans sa pratique du yoga. Elle propose un niveau accessible à tous et toutes, les cours sont riches dans la variété de mouvements et de rythme. Chacun de ses cours sont différents et adaptés aux élèves. Je conseille ses cours à tous et à toutes !",
         nom:"Maya, 23 ans, Programmatrice pour une société de production de cinéma"
     },
     {
-        srcImage:"../images/media/icone/planete-1.png",
+        srcImage:"icone/planete-1.png",
         contenu:"J'ai rencontré Marion à travers le yoga. Elle venait suivre mes cours de hatha yoga et avait déjà une pratique bien établie. Tout semblait facile et fluide, en la regardant tenir les postures, passer de l'une à l'autre. Elle s'est intéressée et à suivi mon atelier de Yoga Nidra (5x2h). C'est pendant et à la suite de ce cours que je l'ai vraiment rencontrée. Sa créativité et son sens artistique s'invitent volontiers dans sa pratique de yoga. Elle explore les jumelages possibles entre ses différents domaines d'expression, avec sa connaissance du corps et de la façon dont il s'exprime. Danseuse, joyeuse, inspirée par le mouvement, elle est à la recherche d'une sensation de bien être, de joie, d'une forme d'expression thérapeutique. J'ai pu lui transmettre certaines pratiques de pranayama que je dois moi-même à une certain Rodolphe Milliat. Elle les à acquises avec facilité et je suis certain que, si elle les partage, c'est avec la rigueur adéquate.
 J'ai aussi eu le plaisir de recevoir de sa part un massage, inspiré, original, délicat. Des mains magiques qui transmettent toute l'intention.
 Je me réjouis de savoir que le yoga continue à l'inspirer, pour le bien de toutes et tous.",
@@ -235,7 +241,7 @@ Je me réjouis de savoir que le yoga continue à l'inspirer, pour le bien de tou
 {{ macro.h2("Contact") }}
 
 <div class="df fd-c fd-r--large ai-fs ai-c--large gap2">
-    <img src="../images/media/yoga/contact.jpg" alt="" class="w-50--large order-1--large">
+    <img src="{{metadata.urlImage}}yoga/contact.jpg" alt="" class="w-50--large order-1--large">
     <div class="df fd-c gap w-50--large">
         <p>
             <span class="text-typo2 text-size1 text-fin">Contactez-moi pour toutes questions</span>

@@ -15,12 +15,13 @@ scriptsJs:
 <h1>Massage</h1>
 
 {{ macro.texteEtVisuel(
+    metadata,
     typeHeroBanner="true",
     titre="Le massage est un voyage passionnant. L’occasion d’une reconnexion avec notre corps, nos intuitions et nos émotions enfouies, mais aussi une reconnexion avec les bienfaits du soin et de l’attention.",
     contenu="<p>
                  Le flux des pensées se ralentit, les tensions et fatigues sont reconnues, écoutées et peuvent enfin lâcher prise. La circulation sanguine est stimulée, un sentiment profond de relaxation s’installe. De nouvelles bonnes habitudes s’ancrent petit à petit en nous, amenant plus de conscience dans notre corps et nos postures, et dans l’importance de prendre soin de nous-même au quotidien. 
             </p>",
-    srcImage="../images/media/massage/accueil-credit.jpg",
+    srcImage="massage/accueil-credit.jpg",
     inverseBloc="true"
 ) }}
 
@@ -46,7 +47,8 @@ scriptsJs:
 
 {{ macro.h2("Durée & Tarifs", "", "Durée et Tarifs") }}
 
-{{ macro.cartes([
+{{ macro.cartes(
+    metadata,[
     {
         titre:"Découverte",
         tableau:[{
@@ -56,7 +58,7 @@ scriptsJs:
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/main-etoile.png"
+        image:"icone/main-etoile.png"
     },
     {
         titre:"Bon cadeau",
@@ -72,7 +74,7 @@ scriptsJs:
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/main-cadeau.png"
+        image:"icone/main-cadeau.png"
     },
     {
         titre:"Tarifs habituels",
@@ -89,7 +91,7 @@ scriptsJs:
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/main-horloge.png"
+        image:"icone/main-horloge.png"
     },
     {
         titre:"Tarifs réduit",
@@ -102,14 +104,14 @@ scriptsJs:
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/main-plante.png"
+        image:"icone/main-plante.png"
     }
 ]) }}
 
 <br>
 
 <div class="df fd-c fd-r--large ai-fs ai-c--large gap">
-    <img src="../images/media/icone/main-cadeau.png" alt="" class="carte_img icone-dark">
+    <img src="{{metadata.urlImage}}icone/main-cadeau.png" alt="" class="carte_img icone-dark">
     <div>
         <h3 class="text-typo3 text-fin">Bon cadeau</h3>
         <p class="mt-0">La plus belle des idées de cadeau, pour toute.x.s, valable 6 mois. <br>
@@ -120,7 +122,7 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
 
 
 <div class="df fd-c fd-r--large ai-fs ai-c--large gap">
-    <img src="../images/media/icone/main-coeur.png" alt="" class="carte_img icone-dark">
+    <img src="{{metadata.urlImage}}icone/main-coeur.png" alt="" class="carte_img icone-dark">
     <div>
         <h3 class="text-typo3 text-fin">Offre Régularité</h3>
         <p class="mt-0">Après 7 séances sur 4 mois maximum; la 8ème est offerte!<br>Offre renouvelable :)</p>
@@ -137,21 +139,23 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
 
 <div class="mb">
     {{ macro.texteEtVisuel(
+        metadata,
         contenu='<p>Tous corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. </p>
 
         <p>La palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.</p>',
-        srcImage="../images/media/massage/massage.jpg"
+        srcImage="massage/massage.jpg"
     ) }}
 </div>
 
-{{ macro.cartes([
+{{ macro.cartes(
+    metadata,[
     {
         titre:"Classique",
         contenu:"Suédois-californien<br>Massage complet du corps aux huiles",
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/yoga.png"
+        image:"icone/yoga.png"
     },
     {
         titre:"Soin",
@@ -159,7 +163,7 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/flacon.png"
+        image:"icone/flacon.png"
     },
     {
         titre:"Thaï-Yoga",
@@ -167,18 +171,19 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/lotus.png"
+        image:"icone/lotus.png"
     }
 ]) }}
 
-{{ macro.cartes([
+{{ macro.cartes(
+    metadata,[
     {
         titre:"Étoile",
         contenu:"Massage des extrémités (mains, pieds, nuque) sans se déshabiller",
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/etoile.png"
+        image:"icone/etoile.png"
     },
     {
         titre:"Focus Dos",
@@ -190,7 +195,7 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/pierre.png"
+        image:"icone/pierre.png"
     },
     {
         titre:"Stress & maux de tête",
@@ -203,16 +208,16 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
         hrefInscription:metadata.mailMain,
         hrefMail:"true",
         labelLien:"Me contacter",
-        image:"../images/media/icone/diamant.png"
+        image:"icone/diamant.png"
     }
 ]) }}
 
 <!--
 <div class="mt">
     <ul class="df gap2 reset hide-for-small">
-        <li><img src="../images/media/massage/massage-1-667.jpg" alt=""></li>
-        <li><img src="../images/media/massage/massage-2-667.jpg" alt=""></li>
-        <li><img src="../images/media/massage/massage-3.jpg" alt=""></li>
+        <li><img src="{{metadata.urlImage}}massage/massage-1-667.jpg" alt=""></li>
+        <li><img src="{{metadata.urlImage}}massage/massage-2-667.jpg" alt=""></li>
+        <li><img src="{{metadata.urlImage}}massage/massage-3.jpg" alt=""></li>
     </ul>
 </div>
 -->
@@ -222,15 +227,16 @@ Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par v
 {{ macro.h2("Mon approche") }}
 
 {{ macro.texteEtVisuel(
+    metadata,
     contenu='<p>
         Je propose toujours un moment de massage sur mesure et en pleine présence, élaboré en fonction de chaque personne; son histoire, son profil, et ses envies du moment. Basé sur une solide formation suisse reconnue EDUQUA, ASCA et RME, je me forme en continu avec des approches complémentaires venant de différentes cultures pour approfondir l’exploration des arts du massage et élargir la palette de soins que je vous propose.
     </p>',
-    srcImage="../images/media/massage/approche-credit.jpg",
+    srcImage="massage/approche-credit.jpg",
     inverseBloc="true",
     basculeVisibiliteId="formation",
     basculeVisibiliteLabelOn="Voir mes diplômes et formations",
     basculeVisibiliteLabelOff="Masquer les diplômes et formations",
-    basculeVisibiliteImage="../images/media/massage/formation.jpg",
+    basculeVisibiliteImage="massage/formation.jpg",
     basculeVisibiliteContenu=([
         {
             date: "2022 ~ Thaï Yoga Massage",
@@ -260,9 +266,10 @@ Module spécial Thaï-Yoga massage sur table avec huiles, Académie des Arts Th�
 ) }}
 
 
-{{ macro.temoignage([
+{{ macro.temoignage(
+    metadata,[
     {
-        srcImage:"../images/media/icone/planete-1.png",
+        srcImage:"icone/planete-1.png",
         contenu:"Prendre un temps pour soi, un pause détente ou dynamisante, un massage selon les envies, les
 préférences du moments. Marion est à l'écoute, soucieuse que je passe toujours le meilleur
 moment possible en passant tant par l'ambiance musicale que l'aménagement de ma position
@@ -272,17 +279,17 @@ Un grand merci pour ces beaux moments !",
         nom:"Barbara, 30 ans, enseignante à Confignon"
     },
     {
-        srcImage:"../images/media/icone/planete-2.png",
+        srcImage:"icone/planete-2.png",
         contenu:"Vider son esprit un instant, un instant de nirvana absolu. C’est avec Marion que j’ai eu l’occasion d’explorer de nouvelles sensations de sérénité pour ensuite en ressortir éveillée.",
         nom:"Margot, 14 ans, étudiante à Genève"
     },
     {
-        srcImage:"../images/media/icone/planete-3.png",
+        srcImage:"icone/planete-3.png",
         contenu:"J’ai pris deux massages avec Marion. Le 1er, sans but particulier, mais je manquais de contacts physiques à cette période alors, avec surprise, lors du massage, j’ai ressenti des frissons aux premiers contacts. Marion a quelque chose dans les doigts qui met rapidement en confiance. On sent son expérience. L’intensité, la force qu’elle exerce sur le corps a été totalement parfait pour moi. Je suis revenue une 2ème fois avec un but précis. Et ça a de nouveau fonctionné très bien. Je l’ai vécu comme un voyage. Elle est accueillante, à l’écoute. Elle est préparée et elle pose l’atmosphère. Le fait de laisser son corps tout entier au massage est une expérience profonde. Depuis, je l’ai recommandée autour de moi à plusieurs personnes. J’y retournerai, c’est certains.",
         nom:"Pascaline, 44 ans, prof de yoga à Genève"
     },
     {
-        srcImage:"../images/media/icone/planete-4.png",
+        srcImage:"icone/planete-4.png",
         contenu:"J'ai commencé ces massages cosmiques il y a 8 mois grâce à un bon cadeau de copinexs, et j'ai décidé de continuer régulièrement, 2 fois par mois, avec pour objectif de traiter une addiction et de prendre soin de moi. Je suis super contente des soins que propose Marion. Elle est très à l'écoute de mes besoins et propose une ambiance qui permet un état méditatif profond. On en ressort détendue et rechargée. Le choix de ses musiques, ses huiles ainsi que ses petites cloches annonçant le début et la fin du soin font du bien et permettent un lâcher-prise total. Mention spéciale pour les lingettes de fraîcheur déposées sur les yeux au début du soin. Le paradis cosmique. J'ai tellement adoré que j'ai commencé à offrir autour de moi des bons de massages aux personnes proches ayant besoin urgent de self-care. Merci Marion pour ta dévotion ♡.",
         nom:"Leïla, 37 ans, djette et artiste"
     }
@@ -293,7 +300,7 @@ Un grand merci pour ces beaux moments !",
 {{ macro.h2("Prendre RDV", "Prendre un rendez-vous") }}
 
 <div class="df fd-c fd-r--large ai-fs ai-c--large gap2">
-    <img class="w-30--large" src="../images/media/massage/massage-2-667.jpg" alt="">
+    <img class="w-30--large" src="{{metadata.urlImage}}massage/massage-2-667.jpg" alt="">
     <div class="df fd-c gap w-70--large">
         <p>Je vous reçois habituellement les lundi, mercredi et vendredi, en journée ou soirée. </p>
         <p>Sur rdv uniquement, dans le centre de Genève. Dates et horaires flexibles ; contactez-moi pour toutes questions et pour trouver le moment idéal.</p>

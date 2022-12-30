@@ -2,14 +2,14 @@
     display: none;
 }
 .accueil__conteneur {
-    background-image: url(images/media/main.png);
+    background-image: url(media/image/main.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 [data-color-scheme="dark"] .accueil__conteneur {
-    background-image: url(images/design/main-bg--dark.png);
+    background-image: url(media/image/main-bg--dark.png);
 }
 
 @include breakpoint(mediumDown) {
