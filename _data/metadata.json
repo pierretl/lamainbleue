@@ -3,11 +3,6 @@
   "title": "La Main Bleue",
   "description": "Massage, yoga et art à Genève",
   "url": "https://lamainbleue.ch",
-  "faviconUrl": "/images/favicon/",
-  "tel":"+41&nbsp;79&nbsp;731&nbsp;23&nbsp;51",
-  "telHref":"+41797312351",
-  "mailMain":"hello@lamainbleue.ch",
-  "mailArt":"marion.tamponlajarriette@gmail.com",
-  "instagram":"https://www.instagram.com/mariontamponlajarriette/",
+  "faviconUrl": "/media/favicon/",
   "urlImage":"../media/image/"
 }
