@@ -223,10 +223,16 @@
 
 
 
-{% macro contact(contact, espacement) %}
+{% macro contact(contact, espacement, principal) %}
     WhatsApp, Signal, Telegram : <a href="tel:{{ contact.telephone | replace(" ", "")}}">{{contact.telephone | replace(" ", "&nbsp;") | safe }}</a>
     {{ espacement | safe }}
     Mail : <a href="mailto:{{contact.mailMain}}">{{ contact.mailMain | replace("@", " (at) ") | replace(".", " (point) ") }}</a>
     {{ espacement | safe }}
-    Instagram : <a href="{{contact.instagram}}" target="_blank" rel="external">@lamainbleue.ch</a>  
+    {% if principal %}
+        Instagram : <a href="{{contact.instagram}}" target="_blank" rel="external">@mariontamponlajarriette</a>  
+    {% else %}
+        Instagram : <a href="{{contact.instagramBleue}}" target="_blank" rel="external">@lamainbleue.ch</a>
+    {% endif %} 
+
+    
 {% endmacro %}
