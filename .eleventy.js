@@ -117,11 +117,12 @@ eleventyConfig.on("beforeBuild", () => {
     .use(markdownItAnchor, opts)
   );
 
-  // Markdown in Nunjucks -> https://github.com/11ty/eleventy/issues/658
+  // Markdown in Nunjucks with custom filter
   const md = new markdownIt({
     html: true
   });
-  eleventyConfig.addPairedShortcode("markdown", (content) => {
+  //exemple {{ foobar | markdown | safe }}
+  eleventyConfig.addNunjucksFilter("markdown", function(content) { 
     return md.render(content);
   });
 
