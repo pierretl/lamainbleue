@@ -17,10 +17,8 @@ scriptsJs:
 {{ macro.texteEtVisuel(
     metadata,
     typeHeroBanner="true",
-    titre="Le massage est un voyage passionnant. L’occasion d’une reconnexion avec notre corps, nos intuitions et nos émotions enfouies, mais aussi une reconnexion avec les bienfaits du soin et de l’attention.",
-    contenu="<p>
-                 Le flux des pensées se ralentit, les tensions et fatigues sont reconnues, écoutées et peuvent enfin lâcher prise. La circulation sanguine est stimulée, un sentiment profond de relaxation s’installe. De nouvelles bonnes habitudes s’ancrent petit à petit en nous, amenant plus de conscience dans notre corps et nos postures, et dans l’importance de prendre soin de nous-même au quotidien. 
-            </p>",
+    titre=massage.introduction.citation,
+    contenu=["<p>", massage.introduction.introduction, "</p>"] | join,
     srcImage="massage/accueil-credit.jpg",
     inverseBloc="true"
 ) }}
@@ -110,24 +108,19 @@ scriptsJs:
 
 <br>
 
-<div class="df fd-c fd-r--large ai-fs ai-c--large gap">
-    <img src="{{metadata.urlImage}}icone/main-cadeau.png" alt="" class="carte_img icone-dark">
-    <div>
-        <h3 class="text-typo3 text-fin">Bon cadeau</h3>
-        <p class="mt-0">La plus belle des idées de cadeau, pour toute.x.s, valable 6 mois. <br>
-Jolis bons cadeaux en version papier à disposition au cabinet ou envoyés par voie postale suite à
-<a href="mailto:{{contact.mailMain}}" rel="external">votre commande en ligne</a> ou sur TWINT.</p>
+{% for item in massage.tarif.informations %}
+    <div class="df fd-c fd-r--large ai-fs ai-c--large gap">
+        {% if loop.index0 == 0 %}
+            <img src="{{metadata.urlImage}}icone/main-cadeau.png" alt="" class="carte_img icone-dark">
+        {% else %}
+            <img src="{{metadata.urlImage}}icone/main-coeur.png" alt="" class="carte_img icone-dark">
+        {% endif %}
+        <div>
+            <h3 class="text-typo3 text-fin">{{item.titre | safe}}</h3>
+            {% markdown %}{{ item.texte }}{% endmarkdown %}
+        </div>
     </div>
-</div>
-
-
-<div class="df fd-c fd-r--large ai-fs ai-c--large gap">
-    <img src="{{metadata.urlImage}}icone/main-coeur.png" alt="" class="carte_img icone-dark">
-    <div>
-        <h3 class="text-typo3 text-fin">Offre Régularité</h3>
-        <p class="mt-0">Après 7 séances sur 4 mois maximum; la 8ème est offerte!<br>Offre renouvelable :)</p>
-    </div>
-</div>
+{% endfor %}
 
 
 
@@ -302,9 +295,9 @@ Un grand merci pour ces beaux moments !",
 <div class="df fd-c fd-r--large ai-fs ai-c--large gap2">
     <img class="w-30--large" src="{{metadata.urlImage}}massage/massage-2-667.jpg" alt="">
     <div class="df fd-c gap w-70--large">
-        <p>Je vous reçois habituellement les lundi, mercredi et vendredi, en journée ou soirée. </p>
-        <p>Sur rdv uniquement, dans le centre de Genève. Dates et horaires flexibles ; contactez-moi pour toutes questions et pour trouver le moment idéal.</p>
-        <p>En cas de désistement ou de changement d'horaires, veuillez annuler ou modifier votre rendez-vous au moins 48 heures à l'avance sinon il reste dû.<br>Merci pour votre attention.</p>
+        <p>{{ massage.prendreRdv.p1}}</p>
+        <p>{{ massage.prendreRdv.p2}}</p>
+        <p>{{ massage.prendreRdv.p3}}</p>
     </div>
 </div>
 

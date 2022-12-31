@@ -11,21 +11,26 @@ media_folder: "media/image" # Media files will be stored in the repo under image
 local_backend: true
 
 collections:
-  # Configuration
-  - label: "Configuration"
-    name: "configuration"   
+  # Contact
+  - name: "general"
+    label: "Général"
     files:
-      - name: "contact"
-        label: "Contact"
-        editor:
-          preview: false
-        file: "_data/contact.json"
-        fields:
-              - { label: "Téléphone", name: "telephone", widget: "string" }
-              - { label: "Email : Principal", name: "mailMain", widget: "string" }
-              - { label: "Email : Art", name: "mailArt", widget: "string" }
-              - { label: "URL Instagram : Principal", name: "instagram", widget: "string" }
-              - { label: "URL Instagram : La main bleue", name: "instagramBleue", widget: "string" }
+    - name: "contact"
+      label: "Contact"
+      editor:
+        preview: false
+      file: "_data/contact.json"
+      slug: "{{slug}}"
+      fields:
+            - { label: "Téléphone", name: "telephone", widget: "string", hint: 'Mettre des espaces pour une meilleure lisibilité' }
+            - { label: "Email : La main bleue", name: "mailMain", widget: "string" }
+            - { label: "Email : Art", name: "mailArt", widget: "string" }
+            - { label: "URL Instagram : Principal", name: "instagram", widget: "string" }
+            - { label: "URL Instagram : La main bleue", name: "instagramBleue", widget: "string" }
+  # Accueil
+  - label: "Accueil"
+    name: "accueil"   
+    files:
       - name: "accueil"
         label: "Page d'accueil"
         editor:
@@ -34,6 +39,41 @@ collections:
         fields:
               - { label: "Baseline ligne 1", name: "baseline1", widget: "string" }
               - { label: "Baseline ligne 2", name: "baseline2", widget: "string" }
+    # Massage
+  - label: "Massage"
+    name: "massage"   
+    files:
+      - name: "introduction"
+        label: "Introduction"
+        editor:
+          preview: false
+        file: "_data/massage/introduction.json"
+        fields:
+              - { label: "Citation", name: "citation", widget: "text" }
+              - { label: "Introduction", name: "introduction", widget: "text" }
+      - name: "tarif"
+        label: "Durée & Tarifs"
+        editor:
+          preview: false
+        file: "_data/massage/tarif.json"
+        description: 'demo description'
+        fields:
+          - name: informations
+            label: Informations
+            label_singular: 'Information'
+            widget: list
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+      - name: "prendreRdv"
+        label: "Prendre un rendez-vous"
+        editor:
+          preview: false
+        file: "_data/massage/prendreRdv.json"
+        fields:
+              - { label: "Phrase 1", name: "p1", widget: "text" }
+              - { label: "Phrase 2", name: "p2", widget: "text" }
+              - { label: "Phrase 3", name: "p3", widget: "text" }
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
