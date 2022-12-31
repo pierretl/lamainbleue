@@ -20,13 +20,20 @@ collections:
       editor:
         preview: false
       file: "_data/contact.json"
-      slug: "{{slug}}"
       fields:
-            - { label: "Téléphone", name: "telephone", widget: "string", hint: 'Mettre des espaces pour une meilleure lisibilité' }
-            - { label: "Email : La main bleue", name: "mailMain", widget: "string" }
-            - { label: "Email : Art", name: "mailArt", widget: "string" }
-            - { label: "URL Instagram : Principal", name: "instagram", widget: "string" }
-            - { label: "URL Instagram : La main bleue", name: "instagramBleue", widget: "string" }
+        - { label: "Téléphone", name: "telephone", widget: "string", hint: 'Mettre des espaces pour une meilleure lisibilité' }
+        - name: bleue
+          label: La main bleue
+          widget: 'object'
+          fields:
+            - { label: "Email", name: "mail", widget: "string" }
+            - { label: "Instagram", name: "instagram", widget: "string" }
+        - name: mtl
+          label: Marion Tampon-lajarriette
+          widget: 'object'
+          fields:
+            - { label: "Email", name: "mail", widget: "string" }
+            - { label: "Instagram", name: "instagram", widget: "string" }
   # Accueil
   - label: "Accueil"
     name: "accueil"   
