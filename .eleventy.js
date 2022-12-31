@@ -6,6 +6,7 @@ const fs = require("fs-extra");
 const sass = require("sass");
 const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
+const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
 
@@ -115,6 +116,14 @@ eleventyConfig.on("beforeBuild", () => {
   eleventyConfig.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)
   );
+
+  // Markdown in Nunjucks -> https://github.com/11ty/eleventy/issues/658
+  const md = new markdownIt({
+    html: true
+  });
+  eleventyConfig.addPairedShortcode("markdown", (content) => {
+    return md.render(content);
+  });
 
   // trigger a rebuild if sass changes
   eleventyConfig.addWatchTarget("_sass/");
