@@ -19,7 +19,7 @@ scriptsJs:
     typeHeroBanner="true",
     titre=massage.introduction.citation,
     contenu=massage.introduction.introduction | markdown | safe,
-    srcImage="massage/accueil-credit.jpg",
+    srcImage=massage.introduction.image,
     inverseBloc="true"
 ) }}
 
@@ -136,7 +136,7 @@ scriptsJs:
         contenu='<p>Tous corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. </p>
 
         <p>La palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.</p>',
-        srcImage="massage/massage.jpg"
+        srcImage=[metadata.urlImage, "massage/massage.jpg"] | join
     ) }}
 </div>
 
@@ -224,7 +224,7 @@ scriptsJs:
     contenu='<p>
         Je propose toujours un moment de massage sur mesure et en pleine présence, élaboré en fonction de chaque personne; son histoire, son profil, et ses envies du moment. Basé sur une solide formation suisse reconnue EDUQUA, ASCA et RME, je me forme en continu avec des approches complémentaires venant de différentes cultures pour approfondir l’exploration des arts du massage et élargir la palette de soins que je vous propose.
     </p>',
-    srcImage="massage/approche-credit.jpg",
+    srcImage=[metadata.urlImage, "massage/approche-credit.jpg"] | join,
     inverseBloc="true",
     basculeVisibiliteId="formation",
     basculeVisibiliteLabelOn="Voir mes diplômes et formations",

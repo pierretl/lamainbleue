@@ -22,7 +22,7 @@ scriptsJs:
     contenu="<p>
                 Explorer le mouvement et la pause, le feu de l'énergie et la profonde relaxation de l'eau. Aborder à la fois équilibre et ancrage, force et souplesse, concentration et respiration consciente. Focus spéciaux pour vos besoins, adaptation pour tous niveaux. Petits groupes ou cours privés. Salles associatives ou en plein air. Sur donations libres, dans le centre de Genève.
             </p>",
-    srcImage="yoga/marion-lake.jpg",
+    srcImage= [metadata.urlImage, "yoga/marion-lake.jpg"] | join,
     inverseBloc="true"
 ) }}
 
@@ -153,7 +153,7 @@ scriptsJs:
         <br>
         Les exercices de respiration et la relaxation y ont une place très importante, ainsi que l’harmonie et l’improvisation, inspirés par la danse. La convivialité est au coeur de ces séances dont le nombre restreint de participant.x.es permet de se sentir en confiance pour partager et expérimenter ensemble. 
     </p>',
-    srcImage="yoga/approche.jpg"
+    srcImage=[metadata.urlImage, "yoga/approche.jpg"] | join
 ) }}
 
 <hr>
@@ -170,7 +170,7 @@ scriptsJs:
         <li><span class="text-typo2">Nico Luce : </span>Hatha, Vinyasa, Yoga Philosophy</li>
         <li><span class="text-typo2">Nicole Wild : </span>Vinyasa Flow, méditation</li>
     </ul>',
-    srcImage="yoga/prive-2.jpg",
+    srcImage=[metadata.urlImage, "yoga/prive-2.jpg"] | join,
     inverseBloc="true",
     basculeVisibiliteId="formation",
     basculeVisibiliteLabelOn="Voir mes formations",

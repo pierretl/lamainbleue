@@ -5,7 +5,7 @@ backend:
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
 
-media_folder: "media/image" # Media files will be stored in the repo under images/uploads
+media_folder: "media/image/upload" # Media files will be stored in the repo
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -59,6 +59,7 @@ collections:
         fields:
               - { label: "Citation", name: "citation", widget: "text" }
               - { label: "Introduction", name: "introduction", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
       # Durée & Tarifs
       - name: "tarif"
         label: "Durée & Tarifs"
