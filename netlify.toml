@@ -2,6 +2,14 @@
   publish = "_site"
   command = "eleventy"
 
+# Production context: all deploys from the Production branch
+# set in your site’s Branches settings in the UI will inherit
+# these settings. You can define environment variables
+# here but we recommend using the Netlify UI for sensitive
+# values to keep them out of your source repository.
+[context.production]
+  environment = { NODE_VERSION = "16.13.1" }
+
 # REDIRECT and HEADERS examples
 
 # Redirect rule example
