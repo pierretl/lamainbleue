@@ -14,7 +14,18 @@ scriptsJs:
 
 <h1>Massage</h1>
 
+<!--
+https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates
+
+Asynchronous Shortcode dont work with macro
+{% image "carte", "./media/image/upload/massage-accueil-credit.jpg", "", "(max-width: 599px) 420px, 290px" %}
+{% image "texteEtVisuel", [".", massage.introduction.image] | join, "", "(max-width: 599px) 866px, 459px" %}
+
+Synchronous Shortcode
+{% image2 "texteEtVisuel", [".", massage.introduction.image] | join, "", "(max-width: 599px) 866px, 459px" %}
+-->
 {{ macro.texteEtVisuel(
+    typeResponsive="texteEtVisuel",
     metadata,
     typeHeroBanner="true",
     titre=massage.introduction.citation,

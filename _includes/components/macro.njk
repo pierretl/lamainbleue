@@ -32,7 +32,7 @@
 
 
 
-{% macro texteEtVisuel(metadata,typeHeroBanner,titre,titreArt,contenu,srcImage,altImage,galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteImage,basculeVisibiliteContenu) %}
+{% macro texteEtVisuel(typeResponsive='false',metadata,typeHeroBanner,titre,titreArt,contenu,srcImage,altImage='',galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteImage,basculeVisibiliteContenu) %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}">
         
         {% if galerie %}
@@ -42,7 +42,13 @@
                 {% endfor %}
             </div>
         {% else %}
-            <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+            {% if typeResponsive != "false" %}
+                <div class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+                    {% image2 typeResponsive, [".", srcImage] | join, altImage, "(max-width: 899px) 866px, 459px" %}
+                </div>
+            {% else %}
+                <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+            {% endif %}
         {% endif %}
         <div class="df fd-c gap w-50--large">
             {% if titre %}

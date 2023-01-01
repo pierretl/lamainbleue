@@ -7,6 +7,66 @@ const sass = require("sass");
 const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
 const markdownIt = require("markdown-it");
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(type, src, alt, sizes) {
+  switch (type) {
+    case 'carte':
+      var widthType = [420, 290];
+      break;
+    default:
+      //texteEtVisuel
+      var widthType = [866, 459];
+  }
+
+  let metadata = await Image(src, {
+    widths: widthType,
+    formats: ["avif", "webp", "jpeg"],
+    urlPath: "/media/generate/",
+    outputDir: "_site/media/generate/",
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
+function imageShortcodeSync(type, src, alt, sizes) {
+  switch (type) {
+    case 'carte':
+      var widthType = [420, 290];
+      break;
+    default:
+      //texteEtVisuel
+      var widthType = [866, 459];
+  }
+
+  let options = {
+    widths: widthType,
+    formats: ["avif", "webp", "jpeg"],
+    urlPath: "/media/generate/",
+    outputDir: "_site/media/generate/",
+  };
+
+  // generate images, while this is async we don’t wait
+  Image(src, options);
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+  // get metadata even the images are not fully generated
+  let metadata = Image.statsSync(src, options);
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function(eleventyConfig) {
 
@@ -102,7 +162,6 @@ eleventyConfig.on("beforeBuild", () => {
   eleventyConfig.addPassthroughCopy("admin");
 
   /* Markdown Plugins */
-  let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
   let options = {
     html: true,
@@ -125,6 +184,11 @@ eleventyConfig.on("beforeBuild", () => {
   eleventyConfig.addNunjucksFilter("markdown", function(content) { 
     return md.render(content);
   });
+
+  //Shortcode image
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode); // dont work with macros
+  eleventyConfig.addNunjucksShortcode("image2", imageShortcodeSync);
+
 
   // trigger a rebuild if sass changes
   eleventyConfig.addWatchTarget("_sass/");
