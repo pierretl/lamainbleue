@@ -9,7 +9,7 @@ const autoprefixer = require("autoprefixer");
 const markdownIt = require("markdown-it");
 const Image = require("@11ty/eleventy-img");
 
-async function imageShortcode(type, src, alt, sizes) {
+function imageShortcodeSync(type, src, alt, sizes, classe="") { 
   switch (type) {
     case 'carte':
       var widthType = [420, 290];
@@ -19,37 +19,20 @@ async function imageShortcode(type, src, alt, sizes) {
       var widthType = [866, 459];
   }
 
-  let metadata = await Image(src, {
-    widths: widthType,
-    formats: ["avif", "webp", "jpeg"],
-    urlPath: "/media/generate/",
-    outputDir: "_site/media/generate/",
-  });
-
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
-}
-
-function imageShortcodeSync(type, src, alt, sizes) {
-  switch (type) {
-    case 'carte':
-      var widthType = [420, 290];
+  let extentionSrc = src.split(/[#?]/)[0].split('.').pop().trim();
+  // le avif ne fonctionne pas sur certaine image, why ??
+  switch (extentionSrc) {
+    case 'png':
+      var formatType = ["webp", "png"];
       break;
     default:
-      //texteEtVisuel
-      var widthType = [866, 459];
+      //jpg
+      var formatType = ["webp", "jpg"];
   }
 
   let options = {
     widths: widthType,
-    formats: ["avif", "webp", "jpeg"],
+    formats: formatType,
     urlPath: "/media/generate/",
     outputDir: "_site/media/generate/",
   };
@@ -58,7 +41,8 @@ function imageShortcodeSync(type, src, alt, sizes) {
   Image(src, options);
 
   let imageAttributes = {
-    alt,
+    class: classe,
+    alt ,
     sizes,
     loading: "lazy",
     decoding: "async",
@@ -186,8 +170,7 @@ eleventyConfig.on("beforeBuild", () => {
   });
 
   //Shortcode image
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode); // dont work with macros
-  eleventyConfig.addNunjucksShortcode("image2", imageShortcodeSync);
+  eleventyConfig.addNunjucksShortcode("image", imageShortcodeSync); // Nunjucks macros cannot use asynchronous shortcodes
 
 
   // trigger a rebuild if sass changes
