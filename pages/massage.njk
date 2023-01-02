@@ -14,16 +14,6 @@ scriptsJs:
 
 <h1>Massage</h1>
 
-<!--
-https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates
-
-Asynchronous Shortcode dont work with macro
-{% image "carte", "./media/image/upload/massage-accueil-credit.jpg", "", "(max-width: 599px) 420px, 290px" %}
-{% image "texteEtVisuel", [".", massage.introduction.image] | join, "", "(max-width: 599px) 866px, 459px" %}
-
-Synchronous Shortcode
-{% image2 "texteEtVisuel", [".", massage.introduction.image] | join, "", "(max-width: 599px) 866px, 459px" %}
--->
 {{ macro.texteEtVisuel(
     typeResponsive="texteEtVisuel",
     metadata,
@@ -56,76 +46,15 @@ Synchronous Shortcode
 
 {{ macro.h2("Durée & Tarifs", "", "Durée et Tarifs") }}
 
-{{ macro.cartes(
-    metadata,[
-    {
-        titre:"Découverte",
-        tableau:[{
-            duree:'1h15',
-            prix:'CH 100'
-        }],
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/main-etoile.png"
-    },
-    {
-        titre:"Bon cadeau",
-        contenu:'
-            valable 6 mois',
-        tableau:[{
-            duree:'1h00',
-            prix:'CH &nbsp;80'
-        },{
-            duree:'1h30',
-            prix:'CH 120'
-        }],
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/main-cadeau.png"
-    },
-    {
-        titre:"Tarifs habituels",
-        tableau:[{
-            duree:'1h15',
-            prix:'CH 130'
-        },{
-            duree:'1h30',
-            prix:'CH 160'
-        },{
-            duree:'1h45',
-            prix:'CH 180'
-        }],
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/main-horloge.png"
-    },
-    {
-        titre:"Tarifs réduit",
-        contenu:'
-            Tarif petits revenus, étudiant.x.e, chômage',
-        tableau:[{
-            duree:'1h15',
-            prix:'CH 100'
-        }],
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/main-plante.png"
-    }
-]) }}
+{{ macro.cartes2(metadata,contact,massage.tarif.cartes) }}
 
 <br>
 
 {% for item in massage.tarif.informations %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap">
-        {% if loop.index0 == 0 %}
-            <img src="{{metadata.urlImage}}icone/main-cadeau.png" alt="" class="carte_img icone-dark">
-        {% else %}
-            <img src="{{metadata.urlImage}}icone/main-coeur.png" alt="" class="carte_img icone-dark">
-        {% endif %}
+        <div class="fs-0">
+            {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte_img icone-dark" %}
+        </div>
         <div>
             <h3 class="text-typo3 text-fin">{{item.titre | safe}}</h3>
             {{ item.texte | markdown | safe }}

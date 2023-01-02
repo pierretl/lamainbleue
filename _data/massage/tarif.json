@@ -2,11 +2,78 @@
   "informations": [
     {
       "titre": "Bon cadeau",
-      "texte": "La plus belle des idées de cadeau, pour toute.x.s, valable 6 mois.\\\nJolis bons cadeaux en version papier à disposition au cabinet ou envoyés par voie postale suite à [votre commande en ligne](mailto:hello@lamainbleue.ch) ou sur TWINT."
+      "texte": "La plus belle des idées de cadeau, pour toute.x.s, valable 6 mois.\\\nJolis bons cadeaux en version papier à disposition au cabinet ou envoyés par voie postale suite à [votre commande en ligne](mailto:hello@lamainbleue.ch) ou sur TWINT.",
+      "image": "/media/image/upload/main-cadeau.png"
     },
     {
       "titre": "Offre Régularité",
-      "texte": "Après 7 séances sur 4 mois maximum; la 8ème est offerte!\\\nOffre renouvelable :)"
+      "texte": "Après 7 séances sur 4 mois maximum; la 8ème est offerte!\\\nOffre renouvelable :)",
+      "image": "/media/image/upload/main-coeur.png"
+    }
+  ],
+  "cartes": [
+    {
+      "titre": "Découverte",
+      "image": "/media/image/upload/main-etoile.png",
+      "lienLabel": "Me contacter",
+      "lienHref": "https://www.netlifycms.org/docs/widgets",
+      "tarifs": [
+        {
+          "duree": "1h15",
+          "prix": "CH 100"
+        }
+      ],
+      "lien": true
+    },
+    {
+      "titre": "Bon cadeau",
+      "lienHref": "",
+      "lienLabel": "Me contacter",
+      "image": "/media/image/upload/main-cadeau.png",
+      "information": "valable 6 mois",
+      "tarifs": [
+        {
+          "duree": "1h00",
+          "prix": "CH  80"
+        },
+        {
+          "duree": "1h30",
+          "prix": "CH 120"
+        }
+      ]
+    },
+    {
+      "titre": "Tarifs habituels",
+      "lienHref": "",
+      "lienLabel": "Me contacter",
+      "image": "/media/image/upload/main-horloge.png",
+      "tarifs": [
+        {
+          "duree": "1h15",
+          "prix": "CH 130"
+        },
+        {
+          "duree": "1h30",
+          "prix": "CH 160"
+        },
+        {
+          "duree": "1h45",
+          "prix": "CH 180"
+        }
+      ]
+    },
+    {
+      "titre": "Tarifs réduit",
+      "lienHref": "",
+      "lienLabel": "Me contacter",
+      "image": "/media/image/upload/main-plante.png",
+      "information": "Tarif petits revenus, étudiant.x.e, chômage",
+      "tarifs": [
+        {
+          "duree": "1h15",
+          "prix": "CH 100"
+        }
+      ]
     }
   ]
 }

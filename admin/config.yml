@@ -66,13 +66,35 @@ collections:
         editor:
           preview: false
         file: "_data/massage/tarif.json"
-        description: 'demo description'
         fields:
+          # Carte
+          - name: cartes
+            label: Cartes
+            label_singular: 'Carte'
+            widget: list
+            max: 4
+            summary: '{{fields.titre}}'
+            fields:
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Tarifs", name: "tarifs", label_singular: 'Tarif', widget: list, fields: 
+                    [
+                      { label: "Durée", name: "duree", widget: "string" },
+                      { label: "Prix", name: "prix", widget: "string" }
+                    ]
+                }
+              - { label: "Information complémentaire", name: "information", widget: "string", required: false }
+              - { label: "Label du lien", name: "lienLabel", widget: "string" }
+              - { label: "Ajouter un lien personnalisé", name: "lien", widget: "boolean", required: false }
+              - { label: "URL", name: "lienHref", widget: "string", required: false }
+          # Information complémentaire
           - name: informations
             label: Informations
             label_singular: 'Information'
             widget: list
+            summary: '{{fields.titre}}'
             fields:
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
               - { label: "Titre", name: "titre", widget: "string" }
               - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
       # Prendre un rendez-vous

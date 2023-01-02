@@ -44,7 +44,7 @@
         {% else %}
             {% if typeResponsive != "false" %}
                 <div class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
-                    {% image2 typeResponsive, [".", srcImage] | join, altImage, "(max-width: 899px) 866px, 459px" %}
+                    {% image typeResponsive, [".", srcImage] | join, altImage, "(max-width: 899px) 866px, 459px" %}
                 </div>
             {% else %}
                 <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
@@ -141,6 +141,47 @@
                             {% endif %}
                         </p>
                     {% endif %}
+                </div>
+            </li>
+         {% endfor %}
+    </ul>
+{% endmacro %}
+
+
+
+
+{% macro cartes2(metadata,contact,liste) %}
+    <ul class="reset df jc-sb gap2 carte sst-m js_scroll-x">
+        {% for item in liste %}
+            <li class="fg-1 df fd-c gap carte__item">
+                <div class="df fd-c h-100">
+                    <div class="text-center">
+                        {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte_img icone-dark" %}
+                    </div>
+                    <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h3>
+                    <div class="fg-1 carte__contenu">
+                        {% for tarif in item.tarifs %}
+                            <div class="df jc-sb">
+                                <span class="text-typo2 text-size2 p0">{{ tarif.duree }}</span>
+                                <span class="text-typo2 text-size2 p0">{{ tarif.prix | safe }}</span>
+                            </div>
+                        {% endfor %}
+                        {% if item.information and item.tarifs %}
+                            <br>
+                        {% endif %}
+                        {{ item.information | safe }}
+                    </div>
+                    <p class="text-center carte__contenu">
+                        {% if item.lien %}
+                            <a href="{{ item.lienHref | safe }}" target="_blank" rel="external">
+                                {{ item.lienLabel }}
+                            </a>
+                        {% else %}
+                            <a href="mailto:{{ contact.bleue.mail | safe }}" target="_blank" rel="external">
+                                {{ item.lienLabel }}
+                            </a>
+                        {% endif %}
+                    </p>
                 </div>
             </li>
          {% endfor %}
