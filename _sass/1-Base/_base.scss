@@ -159,6 +159,16 @@ figure {
 blockquote {
     margin: 0 0 .5rem;
 }
+blockquote p:before {
+    content: '« ';
+}
+blockquote p:after {
+    content: ' »';
+}
+blockquote p:before,
+blockquote p:after {
+    @include size1;
+}
 
 *:focus {
     outline: none;
