@@ -46,14 +46,14 @@ scriptsJs:
 
 {{ macro.h2("Durée & Tarifs", "", "Durée et Tarifs") }}
 
-{{ macro.cartes2(metadata,contact,massage.tarif.cartes) }}
+{{ macro.cartes2(metadata,contact,massage.tarif.cartes, "4") }}
 
 <br>
 
 {% for item in massage.tarif.informations %}
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap">
         <div class="fs-0">
-            {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte_img icone-dark" %}
+            {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte__img icone-dark" %}
         </div>
         <div>
             <h3 class="text-typo3 text-fin">{{item.titre | safe}}</h3>
@@ -72,88 +72,16 @@ scriptsJs:
 
 <div class="mb">
     {{ macro.texteEtVisuel(
+        typeResponsive="texteEtVisuel",
         metadata,
-        contenu='<p>Tous corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce. </p>
-
-        <p>La palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.</p>',
-        srcImage=[metadata.urlImage, "massage/massage.jpg"] | join
+        contenu=massage.typesMassages.introduction | markdown | safe,
+        srcImage=massage.typesMassages.image
     ) }}
 </div>
 
-{{ macro.cartes(
-    metadata,[
-    {
-        titre:"Classique",
-        contenu:"Suédois-californien<br>Massage complet du corps aux huiles",
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/yoga.png"
-    },
-    {
-        titre:"Soin",
-        contenu:"Massage et soin visage & nuque",
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/flacon.png"
-    },
-    {
-        titre:"Thaï-Yoga",
-        contenu:"Mobilisation douce et étirements<br>Avec habits au sol, ou adapté sur table et combiné avec huiles sur peau nue",
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/lotus.png"
-    }
-]) }}
+{{ macro.cartes2(metadata,contact,massage.typesMassages.cartes) }}
 
-{{ macro.cartes(
-    metadata,[
-    {
-        titre:"Étoile",
-        contenu:"Massage des extrémités (mains, pieds, nuque) sans se déshabiller",
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/etoile.png"
-    },
-    {
-        titre:"Focus Dos",
-        contenu:"
-            <ul>
-                <li>Tonique et apaisant</li>
-                <li>Tissus profonds</li>
-            </ul>",
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/pierre.png"
-    },
-    {
-        titre:"Stress & maux de tête",
-        contenu:"
-            <ul>
-                <li>Épaules</li>
-                <li>Crâne</li>
-                <li>Visage</li>
-            </ul>",
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Me contacter",
-        image:"icone/diamant.png"
-    }
-]) }}
 
-<!--
-<div class="mt">
-    <ul class="df gap2 reset hide-for-small">
-        <li><img src="{{metadata.urlImage}}massage/massage-1-667.jpg" alt=""></li>
-        <li><img src="{{metadata.urlImage}}massage/massage-2-667.jpg" alt=""></li>
-        <li><img src="{{metadata.urlImage}}massage/massage-3.jpg" alt=""></li>
-    </ul>
-</div>
--->
 
 <hr>
 

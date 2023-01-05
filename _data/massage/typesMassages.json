@@ -1,0 +1,42 @@
+{
+  "image": "/media/image/upload/massage-dos.jpg",
+  "introduction": "Tous corps et leurs histoires sont bienvenuexs! Séance massage sur mesure; relaxante, sportive, intuitive… Différents tarifs et durées au choix, dans le centre de Genève. Formation reconnue comme pratique complémentaire en médecine douce.  \n\nLa palette de soins proposés se combine selon vos envies. Nous choisissons ensemble les techniques et la musique les plus adaptées à vos besoins, ainsi que l’intensité des mouvements et de la pression. Tous les soins sont réalisés avec des huiles biologiques suisses et des produits ayurvédiques médicinaux.",
+  "cartes": [
+    {
+      "information": "Suédois-californien\nMassage complet du corps aux huiles",
+      "titre": "Classique",
+      "image": "/media/image/upload/yoga.png",
+      "lienLabel": "Me contacter"
+    },
+    {
+      "titre": "Soin",
+      "information": "Massage et soin visage & nuque",
+      "image": "/media/image/upload/flacon.png",
+      "lienLabel": "Me contacter"
+    },
+    {
+      "titre": "Thaï-Yoga",
+      "lienLabel": "Me contacter",
+      "information": "Mobilisation douce et étirements\nAvec habits au sol, ou adapté sur table et combiné avec huiles sur peau nue",
+      "image": "/media/image/upload/lotus.png"
+    },
+    {
+      "lienLabel": "Me contacter",
+      "titre": "Étoile",
+      "image": "/media/image/upload/etoile.png",
+      "information": "Massage des extrémités (mains, pieds, nuque) sans se déshabiller"
+    },
+    {
+      "lienLabel": "Me contacter",
+      "titre": "Focus Dos",
+      "image": "/media/image/upload/pierre.png",
+      "information": "<ul>\n<li>Tonique et apaisant</li>\n<li>Tissus profonds</li>\n</ul>"
+    },
+    {
+      "lienLabel": "Me contacter",
+      "titre": "Stress & maux de tête",
+      "image": "/media/image/upload/diamant.png",
+      "information": "<ul>\n<li>Épaules</li>\n<li>Crâne</li>\n<li>Visage</li>\n</ul>"
+    }
+  ]
+}

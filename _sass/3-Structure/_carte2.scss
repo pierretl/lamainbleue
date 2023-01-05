@@ -1,0 +1,24 @@
+.carte2 {
+    display: flex;
+}
+
+.carte2__item {
+    background-color: var(--couleur4);
+    border-radius: .5rem;
+}
+
+@media (max-width: 779px) {
+    .carte2 {
+        overflow: auto;
+    }
+    .carte2__item {
+        min-width: 70vw;
+    }
+}
+
+@media (min-width: 780px) {
+    .carte2 {
+        display:grid;
+        grid-template-columns: repeat(var(--item-par-ligne, 3), 1fr);
+    }
+}

@@ -100,13 +100,13 @@
             <li class="fg-1 df fd-c gap carte__item">
                 <div class="df fd-c h-100">
                     {% if item.imageLarge %}
-                        <img class="carte_img v_large" src="{{metadata.urlImage}}{{ item.image }}" alt="">
+                        <img class="carte__img v_large" src="{{metadata.urlImage}}{{ item.image }}" alt="">
                     {% else %}
                         <div class="text-center">
                             {% if item.image %}
-                                <img class="carte_img icone-dark" src="{{metadata.urlImage}}{{ item.image }}" alt="">
+                                <img class="carte__img icone-dark" src="{{metadata.urlImage}}{{ item.image }}" alt="">
                             {% else %}
-                                <img class="carte_img icone-dark" src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
+                                <img class="carte__img icone-dark" src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
                             {% endif %}
                         </div>
                     {% endif %}
@@ -150,13 +150,18 @@
 
 
 
-{% macro cartes2(metadata,contact,liste) %}
-    <ul class="reset df jc-sb gap2 carte sst-m js_scroll-x">
+{% macro cartes2(metadata,contact,liste, carteParLigne) %}
+
+    {% if carteParLigne == "4" %}
+        {% set itemParLigne = " style=--item-par-ligne:4" %}
+    {% endif %}
+    
+    <ul class="reset carte2 gap2 js_scroll-x"{{itemParLigne}}>
         {% for item in liste %}
-            <li class="fg-1 df fd-c gap carte__item">
+            <li class="fg-1 df fd-c gap carte2__item">
                 <div class="df fd-c h-100">
                     <div class="text-center">
-                        {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte_img icone-dark" %}
+                        {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte__img icone-dark" %}
                     </div>
                     <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h3>
                     <div class="fg-1 carte__contenu">
@@ -169,10 +174,10 @@
                         {% if item.information and item.tarifs %}
                             <br>
                         {% endif %}
-                        {{ item.information | safe }}
+                        {{ item.information | replace("\n<li>", "<li>") | replace("</li>\n", "</li>") | replace("\n", "<br>" ) | safe }}
                     </div>
                     <p class="text-center carte__contenu">
-                        {% if item.lien %}
+                        {% if item.lienHref %}
                             <a href="{{ item.lienHref | safe }}" target="_blank" rel="external">
                                 {{ item.lienLabel }}
                             </a>

@@ -12,37 +12,6 @@
     border-radius: .5rem;
 }
 
-.carte_img {
-    width: 130px;
-    margin-top: 1rem;
-}
-
-.carte_img.v_large {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    border-radius: .5rem .5rem 0 0;
-}
-
-.carte__titre {
-    margin-top: 0;
-    padding: 0 .5rem .5rem;
-}
-
-.carte__contenu {
-    padding: .5rem 1rem;
-    text-align: center;
-}
-
-.carte__contenu:last-child {
-    margin-bottom: .5rem;
-}
-
-.carte__contenu ul {
-    list-style-type: disc;
-    padding-left: 1rem;
-}
-
 @media (max-width: 600px) {
     .carte {
         margin-right: -$main_marge-x ;
@@ -52,9 +21,6 @@
     }
     .carte > li:last-child {
         margin-right: $main_marge-x ;
-    }
-    .carte__contenu {
-        font-size: .9rem;
     }
 }
 
