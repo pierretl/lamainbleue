@@ -73,13 +73,18 @@
         <ul class="list">
             {% for item in basculeVisibiliteContenu %}
                 <li>
-                    <span class="text-size3 text-typo2">{{item.date}}</span><br>
+                    <span class="text-size3 text-typo2">
+                        {{item.date}}
+                        {% if item.label %}
+                            ~ {{item.label}}
+                        {% endif %}
+                    </span><br>
                     {{item.description | safe}}
                 </li>        
             {% endfor %}
         </ul>
         {% if basculeVisibiliteImage %}
-            <img src="{{metadata.urlImage}}{{basculeVisibiliteImage}}" alt="">
+            <img src="{{basculeVisibiliteImage}}" alt="">
         {% endif %}
     </div>
     <div class="text-center mt">
@@ -150,7 +155,7 @@
 
 
 
-{% macro cartes2(metadata,contact,liste, carteParLigne) %}
+{% macro cartes2(metadata,contact,liste,carteParLigne) %}
 
     {% if carteParLigne == "4" %}
         {% set itemParLigne = " style=--item-par-ligne:4" %}
@@ -174,7 +179,7 @@
                         {% if item.information and item.tarifs %}
                             <br>
                         {% endif %}
-                        {{ item.information | replace("\n<li>", "<li>") | replace("</li>\n", "</li>") | replace("\n", "<br>" ) | safe }}
+                        {{ item.information | safe }}
                     </div>
                     <p class="text-center carte__contenu">
                         {% if item.lienHref %}
@@ -201,7 +206,11 @@
         {% for item in liste %}
             {% if loop.index =="1" %}
                 <div class="df fd-c fd-r--large ai-c gap2 mt">
-                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                    {% if item.image %}
+                        <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                    {% else %}
+                        <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                    {% endif %}
                     <figure>
                         <h3>Témoignages</h3>
                         <blockquote>
@@ -236,9 +245,17 @@
                                         </cite>
                                     </figcaption>
                                 </figure>
-                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
+                                {% if item.image %}
+                                    <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
+                                {% else %}
+                                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
+                                {% endif %}
                             {% else %}
-                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                                {% if item.image %}
+                                    <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                                {% else %}
+                                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                                {% endif %}
                                 <figure>
                                     <blockquote>
                                         <p>

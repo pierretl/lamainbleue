@@ -88,84 +88,30 @@ scriptsJs:
 {{ macro.h2("Mon approche") }}
 
 {{ macro.texteEtVisuel(
+    typeResponsive="texteEtVisuel",
     metadata,
-    contenu='<p>
-        Je propose toujours un moment de massage sur mesure et en pleine présence, élaboré en fonction de chaque personne; son histoire, son profil, et ses envies du moment. Basé sur une solide formation suisse reconnue EDUQUA, ASCA et RME, je me forme en continu avec des approches complémentaires venant de différentes cultures pour approfondir l’exploration des arts du massage et élargir la palette de soins que je vous propose.
-    </p>',
-    srcImage=[metadata.urlImage, "massage/approche-credit.jpg"] | join,
+    typeHeroBanner="true",
+    contenu=massage.monApproche.texte | markdown | safe,
+    srcImage=massage.monApproche.image,
     inverseBloc="true",
     basculeVisibiliteId="formation",
-    basculeVisibiliteLabelOn="Voir mes diplômes et formations",
-    basculeVisibiliteLabelOff="Masquer les diplômes et formations",
-    basculeVisibiliteImage="massage/formation.jpg",
-    basculeVisibiliteContenu=([
-        {
-            date: "2022 ~ Thaï Yoga Massage",
-            description: "Master Class avec Simon Park / Liquid Flow Yoga, Munich-Genève (CH)"
-        },{
-            date: "2021 ~ Cervico-facial",
-            description: "Formation en massage cervico-facial, Cursos Wellness-Spa & Osteopatia, Lanzarote (Espagne)"
-        },{
-            date: "2020 ~ Ayurvédique Abhyanga",
-            description: "Stage professionnel en massage à 4 mains / Studio Spiritual & Art Massage, Genève (CH)"
-        },{
-            date: "2019 ~ Diplôme en Massage Classique",
-            description: "320 heures - formation agrée EDUQUA et ASCA<br>
-Module spécial Thaï-Yoga massage sur table avec huiles, Académie des Arts Thérapeutiques, Genève (CH)
-"
-        },{
-            date: "2018 ~ Diplôme Anatomie - Physiologie - Pathologies",
-            description: "150 heures - certificat accrédité ASCA et conforme RME , Ecole associative ONG « SOSPMM », Carouge"
-        },{
-            date: "2017 ~ Feet Massage",
-            description: "Formation en Feet Massage, Chiang-Maï (Thaïlande)"
-        },{
-            date: "2015 ~ Reiki Shodden ",
-            description: "Formation 1er degré selon Usui, Versoix (CH)"
-        }
-    ])
+    basculeVisibiliteLabelOn=massage.monApproche.labelCollapse,
+    basculeVisibiliteLabelOff=massage.monApproche.labelCollapseExpanded,
+    basculeVisibiliteImage=massage.monApproche.imageCollapse,
+    basculeVisibiliteContenu=massage.monApproche.formations
 ) }}
 
 
-{{ macro.temoignage(
-    metadata,[
-    {
-        srcImage:"icone/planete-1.png",
-        contenu:"Prendre un temps pour soi, un pause détente ou dynamisante, un massage selon les envies, les
-préférences du moments. Marion est à l'écoute, soucieuse que je passe toujours le meilleur
-moment possible en passant tant par l'ambiance musicale que l'aménagement de ma position
-pendant le massage, le choix des huiles et les styles de massage proposés. Je ressors de ces
-moments relaxée ou reboostée, toujours selon ce que je recherche le jour même.
-Un grand merci pour ces beaux moments !",
-        nom:"Barbara, 30 ans, enseignante à Confignon"
-    },
-    {
-        srcImage:"icone/planete-2.png",
-        contenu:"Vider son esprit un instant, un instant de nirvana absolu. C’est avec Marion que j’ai eu l’occasion d’explorer de nouvelles sensations de sérénité pour ensuite en ressortir éveillée.",
-        nom:"Margot, 14 ans, étudiante à Genève"
-    },
-    {
-        srcImage:"icone/planete-3.png",
-        contenu:"J’ai pris deux massages avec Marion. Le 1er, sans but particulier, mais je manquais de contacts physiques à cette période alors, avec surprise, lors du massage, j’ai ressenti des frissons aux premiers contacts. Marion a quelque chose dans les doigts qui met rapidement en confiance. On sent son expérience. L’intensité, la force qu’elle exerce sur le corps a été totalement parfait pour moi. Je suis revenue une 2ème fois avec un but précis. Et ça a de nouveau fonctionné très bien. Je l’ai vécu comme un voyage. Elle est accueillante, à l’écoute. Elle est préparée et elle pose l’atmosphère. Le fait de laisser son corps tout entier au massage est une expérience profonde. Depuis, je l’ai recommandée autour de moi à plusieurs personnes. J’y retournerai, c’est certains.",
-        nom:"Pascaline, 44 ans, prof de yoga à Genève"
-    },
-    {
-        srcImage:"icone/planete-4.png",
-        contenu:"J'ai commencé ces massages cosmiques il y a 8 mois grâce à un bon cadeau de copinexs, et j'ai décidé de continuer régulièrement, 2 fois par mois, avec pour objectif de traiter une addiction et de prendre soin de moi. Je suis super contente des soins que propose Marion. Elle est très à l'écoute de mes besoins et propose une ambiance qui permet un état méditatif profond. On en ressort détendue et rechargée. Le choix de ses musiques, ses huiles ainsi que ses petites cloches annonçant le début et la fin du soin font du bien et permettent un lâcher-prise total. Mention spéciale pour les lingettes de fraîcheur déposées sur les yeux au début du soin. Le paradis cosmique. J'ai tellement adoré que j'ai commencé à offrir autour de moi des bons de massages aux personnes proches ayant besoin urgent de self-care. Merci Marion pour ta dévotion ♡.",
-        nom:"Leïla, 37 ans, djette et artiste"
-    }
-]) }}
+{{ macro.temoignage(metadata,massage.monApproche.temoignages) }}
 
 <hr>
 
 {{ macro.h2("Prendre RDV", "Prendre un rendez-vous") }}
 
 <div class="df fd-c fd-r--large ai-fs ai-c--large gap2">
-    <img class="w-30--large" src="{{metadata.urlImage}}massage/massage-2-667.jpg" alt="">
+    <img class="w-30--large" src="{{ massage.prendreRdv.image }}" alt="">
     <div class="df fd-c gap w-70--large">
-        <p>{{ massage.prendreRdv.p1}}</p>
-        <p>{{ massage.prendreRdv.p2}}</p>
-        <p>{{ massage.prendreRdv.p3}}</p>
+        {{ massage.prendreRdv.texte | markdown | safe }}
     </div>
 </div>
 

@@ -109,11 +109,37 @@ collections:
                     [
                       { label: "Image", name: "image", widget: "image", choose_url: false },
                       { label: "Titre", name: "titre", widget: "string" },
-                      { label: "Texte", name: "information", widget: "text" },
+                      { label: "Texte", name: "information", widget: "text", hint: "Balise HTML pris en compte" },
                       { label: "Label du lien", name: "lienLabel", widget: "string" },
                       { label: "URL", name: "lienHref", widget: "string", hint: "Laissez vide pour l'email" , required: false }
                     ]
                 }
+      # Mon approche
+      - name: "monApproche"
+        label: "Mon approche"
+        editor:
+          preview: false
+        file: "_data/massage/monApproche.json"
+        fields:
+          - { label: "Image", name: "image", widget: "image", choose_url: false }
+          - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+          - { label: "Label du lien formation : Fermer", name: "labelCollapse", widget: "string" }
+          - { label: "Label du lien formation : Ouvert", name: "labelCollapseExpanded", widget: "string" }
+          - { label: "Formations", name: "formations", label_singular: 'Formation', widget: list, summary: '{{fields.annee}} - {{fields.label}}', fields: 
+                [
+                  { label: "Date", name: "date", widget: "string" },
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" }
+                ]
+            }
+          - { label: "Image formation", name: "imageCollapse", widget: "image", choose_url: false }
+          - { label: "Témoignages", name: "temoignages", label_singular: 'Témoignage', widget: list, summary: '{{fields.nom}}', fields: 
+                [
+                  { label: "Image", name: "image", widget: "image", choose_url: false },
+                  { label: "Citation", name: "contenu", widget: "text" },
+                  { label: "Nom", name: "nom", widget: "string" }
+                ]
+            }
       # Prendre un rendez-vous
       - name: "prendreRdv"
         label: "Prendre un rendez-vous"
@@ -121,9 +147,8 @@ collections:
           preview: false
         file: "_data/massage/prendreRdv.json"
         fields:
-              - { label: "Phrase 1", name: "p1", widget: "text" }
-              - { label: "Phrase 2", name: "p2", widget: "text" }
-              - { label: "Phrase 3", name: "p3", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
+              - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
