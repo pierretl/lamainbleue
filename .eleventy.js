@@ -14,6 +14,9 @@ function imageShortcodeSync(type, src, alt, sizes, classe="") {
     case 'carte':
       var widthType = [420, 290];
       break;
+    case 'formation':
+      var widthType = [420, 600, 866, 968];
+      break;
     default:
       //texteEtVisuel
       var widthType = [866, 459];
@@ -172,6 +175,10 @@ eleventyConfig.on("beforeBuild", () => {
   //Shortcode image
   eleventyConfig.addNunjucksShortcode("image", imageShortcodeSync); // Nunjucks macros cannot use asynchronous shortcodes
 
+  //log
+  eleventyConfig.addNunjucksFilter("log", value => {
+    console.log(value);
+  });
 
   // trigger a rebuild if sass changes
   eleventyConfig.addWatchTarget("_sass/");

@@ -84,7 +84,7 @@
             {% endfor %}
         </ul>
         {% if basculeVisibiliteImage %}
-            <img src="{{basculeVisibiliteImage}}" alt="">
+            {% image "formation", [".", basculeVisibiliteImage] | join, "", "(max-width: 599px) 420px, 600px, 866px, 968px" %}
         {% endif %}
     </div>
     <div class="text-center mt">
