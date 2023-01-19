@@ -79,7 +79,7 @@
                             ~ {{item.label}}
                         {% endif %}
                     </span><br>
-                    {{item.description | safe}}
+                    {{item.description | replace("\n", "<br>") | safe}}
                 </li>        
             {% endfor %}
         </ul>
