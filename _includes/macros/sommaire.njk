@@ -1,0 +1,15 @@
+<ul class="df fw-w sommaire">
+    {% for item in liste %}
+        <li class="df jc-c ai-c sommaire__item">
+            {% if item.id %}
+                <a href="#{{ item.id | slug }}">
+                    {{ item.label | safe }}
+                </a>
+            {% else %}
+                <a href="#{{ item.label | slug }}">
+                    {{ item.label | safe }}
+                </a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

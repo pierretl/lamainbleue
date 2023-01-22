@@ -1,0 +1,24 @@
+<div class="js_bascule-visibilite__zone mt hide" data-zone="{{ id }}">
+    <ul class="list">
+        {% for item in contenu %}
+            <li>
+                <span class="text-size3 text-typo2">
+                    {{item.date}}
+                    {% if item.label %}
+                        ~ {{item.label}}
+                    {% endif %}
+                </span><br>
+                {{item.description | replace("\n", "<br>") | safe}}
+            </li>        
+        {% endfor %}
+    </ul>
+    {% if image %}
+        {% image "formation", [".", image] | join, "", "(max-width: 599px) 420px, 600px, 866px, 968px" %}
+    {% endif %}
+</div>
+<div class="text-center mt">
+    <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="{{ id }}">
+        <span class="js_bascule-visibilite__passif">{{ labelOn }}</span>
+        <span class="js_bascule-visibilite__actif hide">{{ labelOff }}</span>
+    </button>
+</div>

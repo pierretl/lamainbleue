@@ -1,0 +1,39 @@
+{% if carteParLigne == "4" %}
+    {% set itemParLigne = " style=--item-par-ligne:4" %}
+{% endif %}
+
+<ul class="reset carte2 gap2 js_scroll-x"{{itemParLigne}}>
+    {% for item in liste %}
+        <li class="fg-1 df fd-c gap carte2__item">
+            <div class="df fd-c h-100">
+                <div class="text-center">
+                    {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte__img icone-dark" %}
+                </div>
+                <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h3>
+                <div class="fg-1 carte__contenu">
+                    {% for tarif in item.tarifs %}
+                        <div class="df jc-sb">
+                            <span class="text-typo2 text-size2 p0">{{ tarif.duree }}</span>
+                            <span class="text-typo2 text-size2 p0">{{ tarif.prix | safe }}</span>
+                        </div>
+                    {% endfor %}
+                    {% if item.information and item.tarifs %}
+                        <br>
+                    {% endif %}
+                    {{ item.information | safe }}
+                </div>
+                <p class="text-center carte__contenu">
+                    {% if item.lienHref %}
+                        <a href="{{ item.lienHref | safe }}" target="_blank" rel="external">
+                            {{ item.lienLabel }}
+                        </a>
+                    {% else %}
+                        <a href="mailto:{{ contact.bleue.mail | safe }}" target="_blank" rel="external">
+                            {{ item.lienLabel }}
+                        </a>
+                    {% endif %}
+                </p>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

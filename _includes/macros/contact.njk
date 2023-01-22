@@ -1,0 +1,9 @@
+WhatsApp, Signal, Telegram : <a href="tel:{{ contact.telephone | replace(" ", "")}}">{{contact.telephone | replace(" ", "&nbsp;") | safe }}</a>
+{{ espacement | safe }}
+Mail : <a href="mailto:{{contact.bleue.mail}}">{{ contact.bleue.mail | replace("@", " (at) ") | replace(".", " (point) ") }}</a>
+{{ espacement | safe }}
+{% if principal %}
+    Instagram : <a href="{{contact.mtl.instagram}}" target="_blank" rel="external">@mariontamponlajarriette</a>  
+{% else %}
+    Instagram : <a href="{{contact.bleue.instagram}}" target="_blank" rel="external">@lamainbleue.ch</a>
+{% endif %}

@@ -1,0 +1,70 @@
+{% if typeResponsive == "rdv" %}
+    {% set colImage = "w-30--large" %}
+    {% set colTexte = "w-70--large" %}
+{% else %}
+    {% set colImage = "w-50--large" %}
+    {% set colTexte = "w-50--large" %}
+{% endif %}
+
+<div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}"> 
+    {% if galerie %}
+        <div class="df w-50--large sst-m{% if inverseBloc %} order-1--large{% endif %} js_scroll-x">
+            {% for image in galerie %}
+                <img src="{{metadata.urlImage}}{{image.src}}" alt="{{image.alt}}" class="galerie-img">
+            {% endfor %}
+        </div>
+    {% else %}
+        {% if typeResponsive != "false" %}
+            <div class="{{colImage}}{% if inverseBloc %} order-1--large{% endif %}">
+                {% image typeResponsive, [".", srcImage] | join, altImage, "(max-width: 899px) 866px, 459px" %}
+            </div>
+        {% else %}
+            <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
+        {% endif %}
+    {% endif %}
+    <div class="df fd-c gap {{colTexte}}">
+        {% if titre %}
+            {% if typeHeroBanner %}
+                <h2 class="text-typo2 text-size1 text-fin">&laquo;&nbsp;{{titre}}&nbsp;&raquo;</h2>
+            {% elif titreArt %}
+                <h3 class="text-typo2 text-size1 text-fin"><em>{{titre}}</em></h3>
+            {% else %}
+                <h3 class="text-typo2 text-size1 text-fin">&laquo;&nbsp;{{titre}}&nbsp;&raquo;</h3>
+            {% endif %}
+        {% endif %}
+        <div{% if typeHeroBanner %} class="text-size2"{% endif %}>
+            {{contenu | safe}}
+        </div>
+        {% if hrefLien and labelLien %}
+            <a href="{{hrefLien}}" rel="external">{{labelLien}}</a>
+        {% endif %}
+    </div>
+</div>
+
+
+{% if basculeVisibiliteId and basculeVisibiliteLabelOn and basculeVisibiliteLabelOff and basculeVisibiliteContenu %}
+    <div class="js_bascule-visibilite__zone mt hide" data-zone="{{ basculeVisibiliteId }}">
+        <ul class="list">
+            {% for item in basculeVisibiliteContenu %}
+                <li>
+                    <span class="text-size3 text-typo2">
+                        {{item.date}}
+                        {% if item.label %}
+                            ~ {{item.label}}
+                        {% endif %}
+                    </span><br>
+                    {{item.description | replace("\n", "<br>") | safe}}
+                </li>        
+            {% endfor %}
+        </ul>
+        {% if basculeVisibiliteImage %}
+            {% image "formation", [".", basculeVisibiliteImage] | join, "", "(max-width: 599px) 420px, 600px, 866px, 968px" %}
+        {% endif %}
+    </div>
+    <div class="text-center mt">
+        <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="{{ basculeVisibiliteId }}">
+            <span class="js_bascule-visibilite__passif">{{ basculeVisibiliteLabelOn }}</span>
+            <span class="js_bascule-visibilite__actif hide">{{ basculeVisibiliteLabelOff }}</span>
+        </button>
+    </div>
+{% endif %}

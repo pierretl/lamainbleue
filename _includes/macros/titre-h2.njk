@@ -1,0 +1,7 @@
+<h2 id="{% if idSurcharger %}{{ idSurcharger | slug }}{% else %}{{ titre | slug }}{% endif %}">
+    {% if titreSurcharger %}
+        {{ titreSurcharger | safe }}
+    {% else %}
+        {{ titre | safe }}
+    {% endif %}
+</h2>

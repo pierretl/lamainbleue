@@ -17,6 +17,9 @@ function imageShortcodeSync(type, src, alt, sizes, classe="") {
     case 'formation':
       var widthType = [420, 600, 866, 968];
       break;
+    case 'rdv':
+      var widthType = [420, 265];
+      break;
     default:
       //texteEtVisuel
       var widthType = [866, 459];

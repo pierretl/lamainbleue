@@ -1,99 +1,26 @@
 {% macro sommaire(liste) %}
-    <ul class="df fw-w sommaire">
-        {% for item in liste %}
-            <li class="df jc-c ai-c sommaire__item">
-                {% if item.id %}
-                    <a href="#{{ item.id | slug }}">
-                        {{ item.label | safe }}
-                    </a>
-                {% else %}
-                    <a href="#{{ item.label | slug }}">
-                        {{ item.label | safe }}
-                    </a>
-                {% endif %}
-            </li>
-         {% endfor %}
-    </ul>
+    {% include "macros/sommaire.njk" %}
 {% endmacro %}
 
 
 
 
 {% macro h2(titre, titreSurcharger, idSurcharger) %}
-    <h2 id="{% if idSurcharger %}{{ idSurcharger | slug }}{% else %}{{ titre | slug }}{% endif %}">
-        {% if titreSurcharger %}
-            {{ titreSurcharger | safe }}
-        {% else %}
-            {{ titre | safe }}
-        {% endif %}
-    </h2>
+    {% include "macros/titre-h2.njk" %}
 {% endmacro %}
 
 
 
 
 {% macro texteEtVisuel(typeResponsive='false',metadata,typeHeroBanner,titre,titreArt,contenu,srcImage,altImage='',galerie,hrefLien,labelLien,margetop,inverseBloc,basculeVisibiliteId,basculeVisibiliteLabelOn,basculeVisibiliteLabelOff,basculeVisibiliteImage,basculeVisibiliteContenu) %}
-    <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if margetop %} mt{% endif %}">
-        
-        {% if galerie %}
-            <div class="df w-50--large sst-m{% if inverseBloc %} order-1--large{% endif %} js_scroll-x">
-                {% for image in galerie %}
-                    <img src="{{metadata.urlImage}}{{image.src}}" alt="{{image.alt}}" class="galerie-img">
-                {% endfor %}
-            </div>
-        {% else %}
-            {% if typeResponsive != "false" %}
-                <div class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
-                    {% image typeResponsive, [".", srcImage] | join, altImage, "(max-width: 899px) 866px, 459px" %}
-                </div>
-            {% else %}
-                <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}">
-            {% endif %}
-        {% endif %}
-        <div class="df fd-c gap w-50--large">
-            {% if titre %}
-                {% if typeHeroBanner %}
-                    <h2 class="text-typo2 text-size1 text-fin">&laquo;&nbsp;{{titre}}&nbsp;&raquo;</h2>
-                {% elif titreArt %}
-                    <h3 class="text-typo2 text-size1 text-fin"><em>{{titre}}</em></h3>
-                {% else %}
-                    <h3 class="text-typo2 text-size1 text-fin">&laquo;&nbsp;{{titre}}&nbsp;&raquo;</h3>
-                {% endif %}
-            {% endif %}
-            <div{% if typeHeroBanner %} class="text-size2"{% endif %}>
-                {{contenu | safe}}
-            </div>
-            {% if hrefLien and labelLien %}
-                <a href="{{hrefLien}}" rel="external">{{labelLien}}</a>
-            {% endif %}
-        </div>
-    </div>
-    {% if basculeVisibiliteId and basculeVisibiliteLabelOn and basculeVisibiliteLabelOff and basculeVisibiliteContenu %}
-    <div class="js_bascule-visibilite__zone mt hide" data-zone="{{ basculeVisibiliteId }}">
-        <ul class="list">
-            {% for item in basculeVisibiliteContenu %}
-                <li>
-                    <span class="text-size3 text-typo2">
-                        {{item.date}}
-                        {% if item.label %}
-                            ~ {{item.label}}
-                        {% endif %}
-                    </span><br>
-                    {{item.description | replace("\n", "<br>") | safe}}
-                </li>        
-            {% endfor %}
-        </ul>
-        {% if basculeVisibiliteImage %}
-            {% image "formation", [".", basculeVisibiliteImage] | join, "", "(max-width: 599px) 420px, 600px, 866px, 968px" %}
-        {% endif %}
-    </div>
-    <div class="text-center mt">
-        <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="{{ basculeVisibiliteId }}">
-            <span class="js_bascule-visibilite__passif">{{ basculeVisibiliteLabelOn }}</span>
-            <span class="js_bascule-visibilite__actif hide">{{ basculeVisibiliteLabelOff }}</span>
-        </button>
-    </div>
-    {% endif %}
+    {% include "macros/texte-et-visuel.njk" %}
+{% endmacro %}
+
+
+
+
+{% macro collapse(id,labelOn,labelOff,image,contenu) %}
+    {% include "macros/collapse.njk" %}
 {% endmacro %}
 
 
@@ -156,146 +83,21 @@
 
 
 {% macro cartes2(metadata,contact,liste,carteParLigne) %}
-
-    {% if carteParLigne == "4" %}
-        {% set itemParLigne = " style=--item-par-ligne:4" %}
-    {% endif %}
-    
-    <ul class="reset carte2 gap2 js_scroll-x"{{itemParLigne}}>
-        {% for item in liste %}
-            <li class="fg-1 df fd-c gap carte2__item">
-                <div class="df fd-c h-100">
-                    <div class="text-center">
-                        {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte__img icone-dark" %}
-                    </div>
-                    <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h3>
-                    <div class="fg-1 carte__contenu">
-                        {% for tarif in item.tarifs %}
-                            <div class="df jc-sb">
-                                <span class="text-typo2 text-size2 p0">{{ tarif.duree }}</span>
-                                <span class="text-typo2 text-size2 p0">{{ tarif.prix | safe }}</span>
-                            </div>
-                        {% endfor %}
-                        {% if item.information and item.tarifs %}
-                            <br>
-                        {% endif %}
-                        {{ item.information | safe }}
-                    </div>
-                    <p class="text-center carte__contenu">
-                        {% if item.lienHref %}
-                            <a href="{{ item.lienHref | safe }}" target="_blank" rel="external">
-                                {{ item.lienLabel }}
-                            </a>
-                        {% else %}
-                            <a href="mailto:{{ contact.bleue.mail | safe }}" target="_blank" rel="external">
-                                {{ item.lienLabel }}
-                            </a>
-                        {% endif %}
-                    </p>
-                </div>
-            </li>
-         {% endfor %}
-    </ul>
+    {% include "macros/cartes.njk" %}
 {% endmacro %}
 
 
 
 
 {% macro temoignage(metadata,liste) %}
-    <div class="df gap fd-c">
-        {% for item in liste %}
-            {% if loop.index =="1" %}
-                <div class="df fd-c fd-r--large ai-c gap2 mt">
-                    {% if item.image %}
-                        <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                    {% else %}
-                        <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                    {% endif %}
-                    <figure>
-                        <h3>Témoignages</h3>
-                        <blockquote>
-                            <p>
-                                {{item.contenu}}
-                            </p>
-                        </blockquote>
-                        <figcaption>
-                            <cite class="text-typo2">
-                                {{item.nom}}
-                            </cite>
-                        </figcaption>
-                    </figure>
-                </div>
-            {% endif %}   
-        {% endfor %}
-        <div class="js_bascule-visibilite__zone hide" data-zone="temoignage">
-            <div class="df gap fd-c">
-                {% for item in liste %}
-                    {% if loop.index !="1" %}
-                        <div class="df fd-c fd-r--large ai-c gap2">
-                            {% if loop.index % 2 == 0 %}
-                                <figure class="order-2--mediumDown">
-                                    <blockquote>
-                                        <p>
-                                            {{item.contenu}}
-                                        </p>
-                                    </blockquote>
-                                    <figcaption>
-                                        <cite class="text-typo2">
-                                            {{item.nom | safe}}
-                                        </cite>
-                                    </figcaption>
-                                </figure>
-                                {% if item.image %}
-                                    <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
-                                {% else %}
-                                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
-                                {% endif %}
-                            {% else %}
-                                {% if item.image %}
-                                    <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                                {% else %}
-                                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                                {% endif %}
-                                <figure>
-                                    <blockquote>
-                                        <p>
-                                            {{item.contenu}}
-                                        </p>
-                                    </blockquote>
-                                    <figcaption>
-                                        <cite class="text-typo2">
-                                            {{item.nom | safe}}
-                                        </cite>
-                                    </figcaption>
-                                </figure>
-                            {% endif %}
-                        </div>
-                    {% endif %} 
-                {% endfor %}
-            </div>
-        </div>
-        <div class="text-center">
-            <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="temoignage">
-                <span class="js_bascule-visibilite__passif">Voir plus de témoignages</span>
-                <span class="js_bascule-visibilite__actif hide">Voir moins de témoignages</span>
-            </button>
-        </div>
-    </div>
+    {% include "macros/temoignage.njk" %}
 {% endmacro %}
 
 
 
 
 {% macro contact(contact, espacement, principal) %}
-    WhatsApp, Signal, Telegram : <a href="tel:{{ contact.telephone | replace(" ", "")}}">{{contact.telephone | replace(" ", "&nbsp;") | safe }}</a>
-    {{ espacement | safe }}
-    Mail : <a href="mailto:{{contact.bleue.mail}}">{{ contact.bleue.mail | replace("@", " (at) ") | replace(".", " (point) ") }}</a>
-    {{ espacement | safe }}
-    {% if principal %}
-        Instagram : <a href="{{contact.mtl.instagram}}" target="_blank" rel="external">@mariontamponlajarriette</a>  
-    {% else %}
-        Instagram : <a href="{{contact.bleue.instagram}}" target="_blank" rel="external">@lamainbleue.ch</a>
-    {% endif %}
+    {% include "macros/contact.njk" %}
 {% endmacro %}
 
 

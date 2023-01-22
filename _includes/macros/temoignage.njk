@@ -1,0 +1,79 @@
+<div class="df gap fd-c">
+    {% for item in liste %}
+        {% if loop.index =="1" %}
+            <div class="df fd-c fd-r--large ai-c gap2 mt">
+                {% if item.image %}
+                    <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                {% else %}
+                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                {% endif %}
+                <figure>
+                    <h3>Témoignages</h3>
+                    <blockquote>
+                        <p>
+                            {{item.contenu}}
+                        </p>
+                    </blockquote>
+                    <figcaption>
+                        <cite class="text-typo2">
+                            {{item.nom}}
+                        </cite>
+                    </figcaption>
+                </figure>
+            </div>
+        {% endif %}   
+    {% endfor %}
+    <div class="js_bascule-visibilite__zone hide" data-zone="temoignage">
+        <div class="df gap fd-c">
+            {% for item in liste %}
+                {% if loop.index !="1" %}
+                    <div class="df fd-c fd-r--large ai-c gap2">
+                        {% if loop.index % 2 == 0 %}
+                            <figure class="order-2--mediumDown">
+                                <blockquote>
+                                    <p>
+                                        {{item.contenu}}
+                                    </p>
+                                </blockquote>
+                                <figcaption>
+                                    <cite class="text-typo2">
+                                        {{item.nom | safe}}
+                                    </cite>
+                                </figcaption>
+                            </figure>
+                            {% if item.image %}
+                                <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
+                            {% else %}
+                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
+                            {% endif %}
+                        {% else %}
+                            {% if item.image %}
+                                <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                            {% else %}
+                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
+                            {% endif %}
+                            <figure>
+                                <blockquote>
+                                    <p>
+                                        {{item.contenu}}
+                                    </p>
+                                </blockquote>
+                                <figcaption>
+                                    <cite class="text-typo2">
+                                        {{item.nom | safe}}
+                                    </cite>
+                                </figcaption>
+                            </figure>
+                        {% endif %}
+                    </div>
+                {% endif %} 
+            {% endfor %}
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="js_panneau-depliant js_bascule-visibilite__btn" data-zone="temoignage">
+            <span class="js_bascule-visibilite__passif">Voir plus de témoignages</span>
+            <span class="js_bascule-visibilite__actif hide">Voir moins de témoignages</span>
+        </button>
+    </div>
+</div>
