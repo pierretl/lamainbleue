@@ -16,7 +16,7 @@
       "titre": "Découverte",
       "image": "/media/image/upload/main-etoile.png",
       "lienLabel": "Me contacter",
-      "lienHref": "https://www.netlifycms.org/docs/widgets",
+      "lienHref": "",
       "tarifs": [
         {
           "duree": "1h15",
