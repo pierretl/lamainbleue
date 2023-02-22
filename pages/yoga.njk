@@ -14,15 +14,13 @@ scriptsJs:
 
 <h1>Yoga</h1>
 
-
 {{ macro.texteEtVisuel(
+    typeResponsive="texteEtVisuel",
     metadata,
     typeHeroBanner="true",
-    titre="Des cours de Yoga Hatha Vinyasa pour toutes toux tous !",
-    contenu="<p>
-                Explorer le mouvement et la pause, le feu de l'énergie et la profonde relaxation de l'eau. Aborder à la fois équilibre et ancrage, force et souplesse, concentration et respiration consciente. Focus spéciaux pour vos besoins, adaptation pour tous niveaux. Petits groupes ou cours privés. Salles associatives ou en plein air. Sur donations libres, dans le centre de Genève.
-            </p>",
-    srcImage= [metadata.urlImage, "yoga/marion-lake.jpg"] | join,
+    titre=yoga.introduction.citation,
+    contenu=yoga.introduction.introduction | markdown | safe,
+    srcImage=yoga.introduction.image,
     inverseBloc="true"
 ) }}
 
@@ -112,7 +110,7 @@ scriptsJs:
         contenu:'
             Découverte de pratiques méditatives, en collaboration avec différents guests
         ',
-        hrefInscription:"https://calendly.com/lamainbleue/meditation",
+        hrefInscription:"https://calendly.com/lamainbleue/blue-new-full-moons-clone",
         labelLien:"Détails et calendrier",
         image:"yoga/atelier-meditation.jpg",
         imageLarge:"true"
