@@ -3,9 +3,9 @@
         {% for item in contenu %}
             <li>
                 <span class="text-size3 text-typo2">
-                    {{item.date}}
-                    {% if item.label %}
-                        ~ {{item.label}}
+                    {{item.avantTilde}}
+                    {% if item.apresTilde %}
+                        ~ {{item.apresTilde}}
                     {% endif %}
                 </span><br>
                 {{item.description | replace("\n", "<br>") | safe}}

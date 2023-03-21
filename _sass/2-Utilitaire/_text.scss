@@ -5,8 +5,10 @@
     text-align: right
 }
 
-.text-typo2 {
+.text-typo2,
+em {
     @include typo2;
+    font-style: normal
 }
 
 .text-typo3 {

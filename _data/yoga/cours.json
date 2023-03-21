@@ -1,0 +1,51 @@
+{
+  "reguliers": {
+    "cartes": [
+      {
+        "titre": "Lundi 18h30-19h30",
+        "information": "Espace de Quartier Jonction<br>\nRue Michel-Simon 7, 1205 Genève<br>\n(interphone - 1er étage)<br>\nPrix libre",
+        "lienLabel": "Inscription",
+        "lienHref": "https://calendly.com/lamainbleue/yoga-jonction-2023",
+        "image": "/media/image/upload/yoga-lundi.png"
+      },
+      {
+        "titre": "Mercredi 12h30-13h30",
+        "information": "Espace de Quartier Saint-Jean<br>\nQuai du Seujet 32, 1201 Genève<br>\n(interphone - 1er étage)<br>\nPrix libre",
+        "lienLabel": "Inscription",
+        "lienHref": "https://calendly.com/lamainbleue/yoga-st-jean-2023",
+        "image": "/media/image/upload/yoga-mercredi.png"
+      },
+      {
+        "image": "/media/image/upload/yoga-vendredi.png",
+        "titre": "Vendredi 12h-13h",
+        "information": "Espace de Quartier Jonction<br>\nRue Michel-Simon 7, 1205 Genève<br>\n(interphone - 1er étage)<br>\nPrix libre",
+        "lienLabel": "Inscription",
+        "lienHref": "https://calendly.com/lamainbleue/yoga-jonction-2023"
+      }
+    ]
+  },
+  "ponctuel": {
+    "cartes": [
+      {
+        "image": "/media/image/upload/atelier-meditation.jpg",
+        "titre": "Ateliers méditation",
+        "information": "Découverte de pratiques méditatives, en collaboration avec différents guests",
+        "lienLabel": "Détails et calendrier",
+        "lienHref": "https://calendly.com/lamainbleue/blue-new-full-moons-clone"
+      },
+      {
+        "image": "/media/image/upload/event-prive.jpg",
+        "titre": "Evénements privés",
+        "information": "Pour une occasion ponctuelle ou régulière",
+        "lienLabel": "Parlez-moi de votre envie"
+      },
+      {
+        "image": "/media/image/upload/yoga-exterieur.jpg",
+        "titre": "Yoga en extérieur",
+        "information": "Au parc ou au bord de l’eau,\nselon météo",
+        "lienLabel": "S’inscrire au groupe Signal ou WhatsApp",
+        "lienHref": "tel:0797312351"
+      }
+    ]
+  }
+}

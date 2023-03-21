@@ -1,0 +1,55 @@
+{
+  "image": "/media/image/upload/prive-2.jpg",
+  "texte": "C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Asie et aux Etats Unis, avec, notamment :\n\n* *Olivia Tüscher* : Hatha Raja Yoga, Liquid Flow\n* *Yves Vandeplas* : Hatha Yoga, Yoga Nidra\n* *Nico Luce* : Hatha, Vinyasa, Yoga Philosophy\n* *Nicole Wild* : Vinyasa Flow, méditation",
+  "formations": [
+    {
+      "avantTilde": "Yoga Teacher Training",
+      "apresTilde": "200h",
+      "description": "Yoga Alliance YTT avec Nicole Wilde, Mahakala, Montenegro"
+    },
+    {
+      "avantTilde": "Skill in Action",
+      "apresTilde": "60h",
+      "description": "Advanced Vinyasa teacher training avec Nico Luce, L’Equilibre Yoga, Nyon"
+    },
+    {
+      "avantTilde": "Liquid Flow",
+      "apresTilde": "10h",
+      "description": "Vinyasa Masterclass + Therapeutic assists & Thaï massage avec Simon Park, Soham, Genève"
+    },
+    {
+      "avantTilde": "Yoga Nidra",
+      "apresTilde": "10h",
+      "description": "Yoga Nidra training with Yves Vandeplas, Genève"
+    }
+  ],
+  "labelCollapse": "Voir mes formations",
+  "labelCollapseExpanded": "Masquer mes formations",
+  "temoignages": [
+    {
+      "image": "/media/image/upload/etoile-3.png",
+      "contenu": "Les séances de yoga avec Marion sont pour moi une excellente façon de démarrer en douceur mes journées, un vrai cadeau pour le corps et pour l’esprit. Elle est une enseignante à l’écoute des besoins et des attentes des participant.e.x.s et qui apporte toujours une touche de créativité à ses cours",
+      "nom": "Silvia, 48 ans, enseignante à Genève"
+    },
+    {
+      "image": "/media/image/upload/etoile-4.png",
+      "contenu": "Chaque séance avec Marion renforce mes muscles en profondeur et diminue mes douleurs chroniques les jours suivants. Un grand moment de vacances pour l'esprit aussi.",
+      "nom": "Sylvie, 65 ans, multi-active dans la solidarité, auprès de coopératives, associations, et femmes migrantes."
+    },
+    {
+      "image": "/media/image/upload/etoile-2.png",
+      "contenu": "Si j’ai eu vite confiance entre les mains de Marion lors de nos séances de massages, c’est aussi par ce que j’ai assistée plusieurs fois à ses cours de yoga. A l’époque, Marion n’avait pas encore fait de « formation classique » d’enseignante de yoga contrairement à moi qui avait largement fait 400 heures de formation! Mais avec sa pratique personnelle persévérante depuis un bon nombre d’années, avec sa passion et surtout sa sensibilité fine, aigüe, sa créativité artistique, Marion guide les pratiques de yoga avec douceur, aisance et amour de la discipline qu’est le yoga. En tant qu’enseignante, je l’ai sentie très vite et cela m’a même impressionnée de voir quelqu’un être si juste sans parcours classique de formation. Depuis, Marion m’a remplacée plusieurs fois et mes élèves se sont sentis très bien et m’ont fait d’excellents retours. Marion est sans prétentions, vraie, passionnée. On est sur la même longueur d’onde.",
+      "nom": "Pascaline, 44 ans, prof de yoga à Genève"
+    },
+    {
+      "image": "/media/image/upload/etoile.png",
+      "contenu": "Marion a une approche attentionnée et bienveillante dans sa pratique du yoga. Elle propose un niveau accessible à tous et toutes, les cours sont riches dans la variété de mouvements et de rythme. Chacun de ses cours sont différents et adaptés aux élèves. Je conseille ses cours à tous et à toutes !",
+      "nom": "Maya, 23 ans, Programmatrice pour une société de production de cinéma"
+    },
+    {
+      "image": "/media/image/upload/planete-1.png",
+      "contenu": "J'ai rencontré Marion à travers le yoga. Elle venait suivre mes cours de hatha yoga et avait déjà une pratique bien établie. Tout semblait facile et fluide, en la regardant tenir les postures, passer de l'une à l'autre. Elle s'est intéressée et à suivi mon atelier de Yoga Nidra (5x2h). C'est pendant et à la suite de ce cours que je l'ai vraiment rencontrée. Sa créativité et son sens artistique s'invitent volontiers dans sa pratique de yoga. Elle explore les jumelages possibles entre ses différents domaines d'expression, avec sa connaissance du corps et de la façon dont il s'exprime. Danseuse, joyeuse, inspirée par le mouvement, elle est à la recherche d'une sensation de bien être, de joie, d'une forme d'expression thérapeutique. J'ai pu lui transmettre certaines pratiques de pranayama que je dois moi-même à une certain Rodolphe Milliat. Elle les à acquises avec facilité et je suis certain que, si elle les partage, c'est avec la rigueur adéquate. J'ai aussi eu le plaisir de recevoir de sa part un massage, inspiré, original, délicat. Des mains magiques qui transmettent toute l'intention. Je me réjouis de savoir que le yoga continue à l'inspirer, pour le bien de toutes et tous.",
+      "nom": "Yves, 54 ans, enseignant yoga (CH, US) www.yogyves.com"
+    }
+  ]
+}

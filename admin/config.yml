@@ -125,10 +125,10 @@ collections:
           - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
           - { label: "Label du lien formation : Fermer", name: "labelCollapse", widget: "string" }
           - { label: "Label du lien formation : Ouvert", name: "labelCollapseExpanded", widget: "string" }
-          - { label: "Formations", name: "formations", label_singular: 'Formation', widget: list, summary: '{{fields.annee}} - {{fields.label}}', fields: 
+          - { label: "Formations", name: "formations", label_singular: 'Formation', widget: list, summary: '{{fields.avantTilde}} - {{fields.apresTilde}}', fields: 
                 [
-                  { label: "Date", name: "date", widget: "string" },
-                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Date", name: "avantTilde", widget: "string" },
+                  { label: "Label", name: "apresTilde", widget: "string" },
                   { label: "Description", name: "description", widget: "text" }
                 ]
             }
@@ -146,6 +146,96 @@ collections:
         editor:
           preview: false
         file: "_data/massage/prendreRdv.json"
+        fields:
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
+              - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+  # Yoga
+  - label: "Yoga"
+    name: "yoga"   
+    files:
+      # Introduction
+      - name: "introduction"
+        label: "Introduction"
+        editor:
+          preview: false
+        file: "_data/yoga/introduction.json"
+        fields:
+              - { label: "Citation", name: "citation", widget: "text" }
+              - { label: "Introduction", name: "introduction", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
+      # Cours
+      - name: "cours"
+        label: "Cours"
+        editor:
+          preview: false
+        file: "_data/yoga/cours.json"
+        fields:
+          - name: reguliers
+            label: Cours réguliers
+            widget: 'object'
+            fields:
+              - { label: "Cartes", name: "cartes", label_singular: 'Carte', widget: list, summary: '{{fields.titre}}', fields: 
+                    [
+                      { label: "Image", name: "image", widget: "image", choose_url: false },
+                      { label: "Titre", name: "titre", widget: "string" },
+                      { label: "Texte", name: "information", widget: "text", hint: "Balise HTML pris en compte" },
+                      { label: "Label du lien", name: "lienLabel", widget: "string" },
+                      { label: "URL", name: "lienHref", widget: "string", hint: "Laissez vide pour l'email" , required: false }
+                    ]
+                }
+          - name: ponctuel
+            label: Cours et ateliers ponctuels
+            widget: 'object'
+            fields:
+              - { label: "Cartes", name: "cartes", label_singular: 'Carte', widget: list, summary: '{{fields.titre}}', fields: 
+                    [
+                      { label: "Image", name: "image", widget: "image", choose_url: false },
+                      { label: "Titre", name: "titre", widget: "string" },
+                      { label: "Texte", name: "information", widget: "text", hint: "Balise HTML pris en compte" },
+                      { label: "Label du lien", name: "lienLabel", widget: "string" },
+                      { label: "URL", name: "lienHref", widget: "string", hint: "Laissez vide pour l'email" , required: false }
+                    ]
+                }
+      # Approche
+      - name: "approche"
+        label: "Approche"
+        editor:
+          preview: false
+        file: "_data/yoga/approche.json"
+        fields:
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
+              - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+      # Parcours
+      - name: "parcours"
+        label: "Parcours"
+        editor:
+          preview: false
+        file: "_data/yoga/parcours.json"
+        fields:
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
+              - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Label du lien formation : Fermer", name: "labelCollapse", widget: "string" }
+              - { label: "Label du lien formation : Ouvert", name: "labelCollapseExpanded", widget: "string" }
+              - { label: "Formations", name: "formations", label_singular: 'Formation', widget: list, summary: '{{fields.avantTilde}} - {{fields.apresTilde}}', fields: 
+                    [
+                      { label: "Label", name: "avantTilde", widget: "string" },
+                      { label: "Nombre d'heure", name: "apresTilde", widget: "string" },
+                      { label: "Description", name: "description", widget: "text" }
+                    ]
+                }
+              - { label: "Témoignages", name: "temoignages", label_singular: 'Témoignage', widget: list, summary: '{{fields.nom}}', fields: 
+                [
+                  { label: "Image", name: "image", widget: "image", choose_url: false },
+                  { label: "Citation", name: "contenu", widget: "text" },
+                  { label: "Nom", name: "nom", widget: "string" }
+                ]
+              }
+      # Contact
+      - name: "contact"
+        label: "Contact"
+        editor:
+          preview: false
+        file: "_data/yoga/contact.json"
         fields:
               - { label: "Image", name: "image", widget: "image", choose_url: false }
               - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }

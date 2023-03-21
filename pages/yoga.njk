@@ -48,97 +48,13 @@ scriptsJs:
 
 <h3>Cours réguliers</h3>
 
+{{ macro.cartes2(metadata,contact,yoga.cours.reguliers.cartes) }}
 
-{{ macro.cartes(
-    metadata,[
-    {
-        titre:"Lundi 18h30-19h30",
-        baliseTitre:"h4",
-        contenu:"
-            Espace de Quartier Jonction
-            <br>
-            Rue Michel-Simon 7, 1205 Genève
-            <br>
-            (interphone - 1er étage)
-            <br>
-            Prix libre
-        ",
-        hrefInscription:"https://calendly.com/lamainbleue/yoga-jonction-2023",
-        image:"icone/yoga-lundi.png"
-    },
-    {
-        titre:"Mercredi<br>12h30-13h30",
-        baliseTitre:"h4",
-        contenu:"
-            Espace de Quartier Saint-Jean
-            <br>
-            Quai du Seujet 32, 1201 Genève
-            <br>
-            (interphone - 1er étage)
-            <br>
-            Prix libre
-        ",
-        hrefInscription:"https://calendly.com/lamainbleue/yoga-st-jean-2023",
-        image:"icone/yoga-mercredi.png"
-    },
-    {   
-        titre:"Vendredi 12h-13h",
-        baliseTitre:"h4",
-        contenu:"
-            Espace de Quartier Jonction
-            <br>
-            Rue Michel-Simon 7, 1205 Genève
-            <br>
-            (interphone - 1er étage)
-            <br>
-            Prix libre
-        ",
-        hrefInscription:"https://calendly.com/lamainbleue/yoga-jonction-2023",
-        image:"icone/yoga-vendredi.png"
-    }
-]) }}
 
 
 <h3>Cours et ateliers ponctuels</h3>
 
-{{ macro.cartes(
-    metadata,[
-    {   
-        titre:"Ateliers méditation",
-        baliseTitre:"h4",
-        contenu:'
-            Découverte de pratiques méditatives, en collaboration avec différents guests
-        ',
-        hrefInscription:"https://calendly.com/lamainbleue/blue-new-full-moons-clone",
-        labelLien:"Détails et calendrier",
-        image:"yoga/atelier-meditation.jpg",
-        imageLarge:"true"
-    },
-    {
-        titre:"Evénements privés",
-        baliseTitre:"h4",
-        contenu:"
-            Pour une occasion ponctuelle ou régulière
-        ",
-        hrefInscription:contact.bleue.mail,
-        hrefMail:"true",
-        labelLien:"Parlez-moi de votre envie",
-        image:"yoga/event-prive.jpg",
-        imageLarge:"true"
-    },
-    {
-        titre:"Yoga en extérieur",
-        baliseTitre:"h4",
-        contenu:"
-            Au parc ou au bord de l’eau,
-            <br>
-            selon météo",
-        hrefInscription:"tel:0797312351",
-        labelLien:"S’inscrire au groupe Signal ou WhatsApp",
-        image:"yoga/yoga-exterieur.jpg",
-        imageLarge:"true"
-    }
-]) }}
+{{ macro.cartes2(metadata,contact,yoga.cours.ponctuel.cartes) }}
 
 
 <hr>
@@ -147,14 +63,11 @@ scriptsJs:
 
 
 {{ macro.texteEtVisuel(
+    typeResponsive="texteEtVisuel",
     metadata,
-    contenu='<p>
-        Je guide des cours de Hatha Vinyasa Yoga.<br> 
-        Le niveau d’intensité et les focus anatomiques s’adaptent aux besoins des personnes participantes. En effet, la pratique du yoga que je propose est influencée par l’approche thérapeutique de <a href="../massage">mes massages</a>. <br>
-        <br>
-        Les exercices de respiration et la relaxation y ont une place très importante, ainsi que l’harmonie et l’improvisation, inspirés par la danse. La convivialité est au coeur de ces séances dont le nombre restreint de participant.x.es permet de se sentir en confiance pour partager et expérimenter ensemble. 
-    </p>',
-    srcImage=[metadata.urlImage, "yoga/approche.jpg"] | join
+    typeHeroBanner="true",
+    contenu=yoga.approche.texte | markdown | safe,
+    srcImage=yoga.approche.image
 ) }}
 
 <hr>
@@ -162,94 +75,34 @@ scriptsJs:
 {{ macro.h2("Parcours") }}
 
 {{ macro.texteEtVisuel(
+    typeResponsive="texteEtVisuel",
     metadata,
-    contenu='<p>
-        C’est ma pratique de longue date de la danse qui m’a naturellement menée vers le yoga. J’ai suivie diverses formations en continu depuis 2010 en Suisse, en Asie et aux Etats Unis, avec, notamment :
-    </p><ul>
-        <li><span class="text-typo2">Olivia Tüscher : </span>Hatha Raja Yoga, Liquid Flow</li>
-        <li><span class="text-typo2">Yves Vandeplas : </span>Hatha Yoga, Yoga Nidra</li>
-        <li><span class="text-typo2">Nico Luce : </span>Hatha, Vinyasa, Yoga Philosophy</li>
-        <li><span class="text-typo2">Nicole Wild : </span>Vinyasa Flow, méditation</li>
-    </ul>',
-    srcImage=[metadata.urlImage, "yoga/prive-2.jpg"] | join,
-    inverseBloc="true",
-    basculeVisibiliteId="formation",
-    basculeVisibiliteLabelOn="Voir mes formations",
-    basculeVisibiliteLabelOff="Masquer mes formations",
-    basculeVisibiliteContenu=([
-        {
-            date: "Yoga Teacher Training ~ 200h",
-            description: "Yoga Alliance YTT avec Nicole Wilde, Mahakala, Montenegro"
-        },{
-            date: "Skill in Action ~ 60h",
-            description: "Advanced Vinyasa teacher training avec Nico Luce, L’Equilibre Yoga, Nyon"
-        },{
-            date: "Liquid Flow ~ 10h",
-            description: "Vinyasa Masterclass + Therapeutic assists & Thaï massage avec Simon Park, Soham, Genève"
-        },{
-            date: "Yoga Nidra ~ 10h",
-            description: "Yoga Nidra training with Yves Vandeplas, Genève"
-        }
-    ])
+    typeHeroBanner="true",
+    contenu=yoga.parcours.texte | markdown | safe,
+    srcImage=yoga.parcours.image,
+    inverseBloc="true"
 ) }}
 
+{{ macro.collapse(
+    id="formationYoga",
+    labelOn=yoga.parcours.labelCollapse,
+    labelOff=yoga.parcours.labelCollapseExpanded,
+    image=yoga.parcours.imageCollapse,
+    contenu=yoga.parcours.formations
+) }}
 
-{{ macro.temoignage(
-    metadata,[
-    {
-        srcImage:"icone/etoile-3.png",
-        contenu:"Les séances de yoga avec Marion sont pour moi une excellente façon de démarrer en douceur
-mes journées, un vrai cadeau pour le corps et pour l’esprit. Elle est une enseignante à l’écoute des
-besoins et des attentes des participant.e.x.s et qui apporte toujours une touche de créativité à ses
-cours.",
-        nom:"Silvia, 48 ans, enseignante à Genève"
-    },
-    {
-        srcImage:"icone/etoile-4.png",
-        contenu:"Chaque séance avec Marion renforce mes muscles en profondeur et diminue mes douleurs chroniques les jours suivants. Un grand moment de vacances pour l'esprit aussi.",
-        nom:"Sylvie, 65 ans, multi-active dans la solidarité, auprès de coopératives, associations, et femmes migrantes."
-    },
-    {
-        srcImage:"icone/etoile-2.png",
-        contenu:"Si j’ai eu vite confiance entre les mains de Marion lors de nos séances de massages, c’est aussi
-par ce que j’ai assistée plusieurs fois à ses cours de yoga. A l’époque, Marion n’avait pas encore
-fait de « formation classique » d’enseignante de yoga contrairement à moi qui avait largement fait
-400 heures de formation! Mais avec sa pratique personnelle persévérante depuis un bon nombre
-d’années, avec sa passion et surtout sa sensibilité fine, aigüe, sa créativité artistique, Marion guide
-les pratiques de yoga avec douceur, aisance et amour de la discipline qu’est le yoga. En tant
-qu’enseignante, je l’ai sentie très vite et cela m’a même impressionnée de voir quelqu’un être si
-juste sans parcours classique de formation. Depuis, Marion m’a remplacée plusieurs fois et mes
-élèves se sont sentis très bien et m’ont fait d’excellents retours. Marion est sans prétentions, vraie,
-passionnée. On est sur la même longueur d’onde.",
-        nom:"Pascaline, 44 ans, prof de yoga à Genève"
-    },
-    {
-        srcImage:"icone/etoile.png",
-        contenu:"Marion a une approche attentionnée et bienveillante dans sa pratique du yoga. Elle propose un niveau accessible à tous et toutes, les cours sont riches dans la variété de mouvements et de rythme. Chacun de ses cours sont différents et adaptés aux élèves. Je conseille ses cours à tous et à toutes !",
-        nom:"Maya, 23 ans, Programmatrice pour une société de production de cinéma"
-    },
-    {
-        srcImage:"icone/planete-1.png",
-        contenu:"J'ai rencontré Marion à travers le yoga. Elle venait suivre mes cours de hatha yoga et avait déjà une pratique bien établie. Tout semblait facile et fluide, en la regardant tenir les postures, passer de l'une à l'autre. Elle s'est intéressée et à suivi mon atelier de Yoga Nidra (5x2h). C'est pendant et à la suite de ce cours que je l'ai vraiment rencontrée. Sa créativité et son sens artistique s'invitent volontiers dans sa pratique de yoga. Elle explore les jumelages possibles entre ses différents domaines d'expression, avec sa connaissance du corps et de la façon dont il s'exprime. Danseuse, joyeuse, inspirée par le mouvement, elle est à la recherche d'une sensation de bien être, de joie, d'une forme d'expression thérapeutique. J'ai pu lui transmettre certaines pratiques de pranayama que je dois moi-même à une certain Rodolphe Milliat. Elle les à acquises avec facilité et je suis certain que, si elle les partage, c'est avec la rigueur adéquate.
-J'ai aussi eu le plaisir de recevoir de sa part un massage, inspiré, original, délicat. Des mains magiques qui transmettent toute l'intention.
-Je me réjouis de savoir que le yoga continue à l'inspirer, pour le bien de toutes et tous.",
-        nom:"Yves, 54 ans, enseignant yoga (CH, US)<br><a href='https://www.yogyves.com/' target='_blank' rel='external'>www.yogyves.com</a>"
-    }
-]) }}
+{{ macro.temoignage(metadata,yoga.parcours.temoignages) }}
+
 
 <hr>
 
 {{ macro.h2("Contact") }}
 
-<div class="df fd-c fd-r--large ai-fs ai-c--large gap2">
-    <img src="{{metadata.urlImage}}yoga/contact.jpg" alt="" class="w-50--large order-1--large">
-    <div class="df fd-c gap w-50--large">
-        <p>
-            <span class="text-typo2 text-size1 text-fin">Contactez-moi pour toutes questions</span>
-            <br>
-            Marion - La Main Bleue, Genève
-            <br><br>
-            {{ macro.contact(contact, "<br><br>") }}
-        </p>
-    </div>
-</div>
+{{ macro.texteEtVisuel(
+    typeResponsive="texteEtVisuel",
+    metadata,
+    typeHeroBanner="true",
+    contenu=[yoga.contact.texte | markdown | safe, macro.contact(contact, "<br><br>")] | join("<br>"),
+    srcImage=yoga.contact.image,
+    inverseBloc="true"
+) }}

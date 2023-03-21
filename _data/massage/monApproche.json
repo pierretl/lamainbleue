@@ -6,38 +6,38 @@
   "imageCollapse": "/media/image/upload/formation.jpg",
   "formations": [
     {
-      "date": "2022",
-      "label": "Thaï Yoga Massage",
+      "avantTilde": "2022",
+      "apresTilde": "Thaï Yoga Massage",
       "description": "Master Class avec Simon Park / Liquid Flow Yoga, Munich-Genève (CH)"
     },
     {
-      "date": "2021",
-      "label": "Cervico-facial",
+      "avantTilde": "2021",
+      "apresTilde": "Cervico-facial",
       "description": "Formation en massage cervico-facial, Cursos Wellness-Spa & Osteopatia, Lanzarote (Espagne)"
     },
     {
-      "date": "2020",
-      "label": "Ayurvédique Abhyanga",
+      "avantTilde": "2020",
+      "apresTilde": "Ayurvédique Abhyanga",
       "description": "Stage professionnel en massage à 4 mains / Studio Spiritual & Art Massage, Genève (CH)"
     },
     {
-      "date": "2019",
-      "label": "Diplôme en Massage Classique",
+      "avantTilde": "2019",
+      "apresTilde": "Diplôme en Massage Classique",
       "description": "320 heures - formation agrée EDUQUA et ASCA\nModule spécial Thaï-Yoga massage sur table avec huiles, Académie des Arts Thérapeutiques, Genève (CH)"
     },
     {
-      "date": "2018",
-      "label": "Diplôme Anatomie - Physiologie - Pathologies",
+      "avantTilde": "2018",
+      "apresTilde": "Diplôme Anatomie - Physiologie - Pathologies",
       "description": "150 heures - certificat accrédité ASCA et conforme RME , Ecole associative ONG « SOSPMM », Carouge"
     },
     {
-      "date": "2017",
-      "label": "Feet Massage",
+      "avantTilde": "2017",
+      "apresTilde": "Feet Massage",
       "description": "Formation en Feet Massage, Chiang-Maï (Thaïlande)"
     },
     {
-      "date": "2015",
-      "label": "Reiki Shodden",
+      "avantTilde": "2015",
+      "apresTilde": "Reiki Shodden",
       "description": "Formation 1er degré selon Usui, Versoix (CH)"
     }
   ],
