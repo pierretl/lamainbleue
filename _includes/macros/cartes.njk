@@ -6,9 +6,13 @@
     {% for item in liste %}
         <li class="fg-1 df fd-c gap carte2__item">
             <div class="df fd-c h-100">
-                <div class="text-center">
-                    {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte__img icone-dark" %}
-                </div>
+                {% if imageLarge == "true" %}
+                    {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte__img v_large" %}
+                {% else %}
+                    <div class="text-center">
+                        {% image "carte", [".", item.image] | join, "", "(max-width: 599px) 420px, 290px", "carte__img icone-dark" %}
+                    </div>
+                {% endif %}
                 <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h3>
                 <div class="fg-1 carte__contenu">
                     {% for tarif in item.tarifs %}
