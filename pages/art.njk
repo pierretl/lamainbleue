@@ -15,12 +15,11 @@ scriptsJs:
 <h1>Art</h1>
 
 {{ macro.texteEtVisuel(
+    typeResponsive="texteEtVisuel",
     metadata,
     typeHeroBanner="true",
-    contenu="<p>
-                Plus de dix années de création plastique et numérique indépendante.<br>Installations photo, vidéo, céramique, mix media.<br>Expositions personnelles et collectives.<br>Vente en galerie ou en direct à l’atelier.<br>Collaboration avec d’autres domaines; musique, performance, danse…
-            </p>",
-    srcImage=[metadata.urlImage, "art/intro.jpg"] | join,
+    contenu=art.introduction.introduction | markdown | safe,
+    srcImage=art.introduction.image,
     inverseBloc="true"
 ) }}
 
@@ -46,33 +45,11 @@ scriptsJs:
 {{ macro.h2("A propos") }}
 
 <div class="cc-2 cc-gap">
-    <p>
-        Issue d’un parcours scolaire qui a commencé aux Beaux Arts dès 2001, je mène ma carrière d’artiste visuelle en indépendante depuis l’obtention de mes master dans les Hautes écoles d’Art de Genève et Lyon en 2008.
-    </p>
-    <p>
-        Le livre « Echos » qui reparcourt en mots et en images mes dix dernières années de création a été
-publié en 2020 chez CasaGrande. Il est disponible en ligne et dans une sélection de librairies d’art
-en Suisse et en Europe.
-    </p>
-
-    <p>
-        J’utilise divers medium tels que la photographie et la vidéo, souvent incluses dans des installations
-immersives associant sons, lumière, impressions et/ou projections sur divers supports (tissu, bois,
-collages, etc).
-    </p>
-    <p>
-        Le corps est de plus en plus central dans l’évolution de mon travail artistique. La figure de la main
-y est récurrente ; sa chaleur (filmée en caméra thermique), ses tâtonnements (dans une série
-utilisant d’anciennes techniques photo), et toute la symbolique qu’elle charrie de relation à soi, à
-l’autre et au monde. <br>
-Récemment, je développe de nouvelles séries de céramiques intimement liées au corps. Inspiré
-de traditions insulaires, je modèle à la main une terre volcanique d’abord préparée par le foulage
-aux pieds. Le souvenir du corps y laisse ses traces.
-    </p>
+    {{ art.introduction.apropos | markdown | safe }}
 </div>
 
 <div class="mt text-right">
-    <a href="{{contact.mtl.instagram}}" rel="external" target="_blank" >Suivre mon travail sur Instagram</a>
+    <a href="{{contact.mtl.instagram}}" rel="external" target="_blank" >{{ art.introduction.lien | safe }}</a>
 </div>
 
 
@@ -83,73 +60,7 @@ aux pieds. Le souvenir du corps y laisse ses traces.
 
 {{ macro.h2("Quelques réalisations") }}
 
-
-
-{{ macro.texteEtVisuel(
-    metadata,
-    titre="Echos",
-    titreArt="true",
-    contenu="<p>
-        Livre d’artiste, 2020<br>
-        Editions Casa Grande, 331pages, En/Fr/It/Es <br>
-        ISBN 978-88-7713-868-2<br>
-        Textes : Mark Lewis, Beau Rhee, Valeria Venditti, Cristòbal Barria, Lucille Ulrich
-    </p>",
-    galerie=([
-        {
-            src:"art/echos-cover.jpg",
-            alt:""
-        },
-        {
-            src:"art/echos-1.jpg",
-            alt:""
-        },
-        {
-            src:"art/echos-2.jpg",
-            alt:""
-        },
-        {
-            src:"art/echos-3.jpg",
-            alt:""
-        },
-        {
-            src:"art/echos-4.jpg",
-            alt:""
-        }
-    ]),
-    hrefLien="http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html",
-    labelLien="Commander le livre"
-) }}
-
-{{ macro.texteEtVisuel(
-    metadata,
-    titre="Eventide",
-    titreArt="true",
-    contenu="<p>
-        Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm<br>
-        Pour les prix et plus d’infos :
-    </p>",
-    galerie=([
-        {
-            src:"art/eventide-1.jpg",
-            alt:""
-        },
-        {
-            src:"art/eventide-2.jpg",
-            alt:""
-        },
-        {
-            src:"art/eventide-3.jpg"
-        },
-        {
-            src:"art/eventide-4.jpg"
-        }
-    ]),
-    hrefLien="https://www.galerielaurencebernard.ch/artists/marion-tampon-lajarriette/biography/",
-    labelLien="Contact galerie",
-    margetop="true",
-    inverseBloc="true"
-) }}
+{{ macro.galerie(metadata,art.realisations.projets) }}
 
 {{ macro.texteEtVisuel(
     metadata,
@@ -255,15 +166,12 @@ aux pieds. Le souvenir du corps y laisse ses traces.
 
 {{ macro.h2("Perspectives") }}
 
-<p class="cc-2 cc-gap">
-    Je souhaite développer davantage les projets en collaboration avec les univers de la danse, du
-théâtre et de la musique. Créer des environnements scéniques ou des propositions hybrides
-pluridisciplinaires m’attire particulièrement, offrant de nouvelles possibilités et de nouveaux défis à
-ma pratique artistique individuelle en développant ses aspects spatial, corporel et collectif.
-</p>
+<div class="cc-2 cc-gap">
+    {{ art.perspectives.intro | markdown | safe }}
+</div>
 
 <div class="mt">
-    <a href="mailto:{{contact.mtl.mail}}" rel="external">Parlons-en</a>
+    <a href="mailto:{{contact.mtl.mail}}" rel="external">{{ art.perspectives.lien | safe }}</a>
 </div>
 
 <hr> 
@@ -273,17 +181,17 @@ ma pratique artistique individuelle en développant ses aspects spatial, corpore
 <div class="df fd-c fd-r--large ai-c--large gap2">
     <div class="w-70--large">
         <p>
-            Pour découvrir mon portfolio plus détaillé :&nbsp;<br class="hide-for-large"><a href="https://mariontamponlajarriette.com/">https://mariontamponlajarriette.com/</a>
+            {{ art.contact.site }}&nbsp;<br class="hide-for-large"><a href="{{contact.mtl.site}}">{{contact.mtl.site}}</a>
         </p>
         <p>
-            Suivre les étapes de projets en cours :&nbsp;<br class="hide-for-large"><a href="{{contact.mtl.instagram}}" rel="external" target="_blank">Me suivre sur Instagram</a>
+            {{ art.contact.instagram }}&nbsp;<br class="hide-for-large"><a href="{{contact.mtl.instagram}}" rel="external" target="_blank">Me suivre sur Instagram</a>
         </p>
         <p>
-            Me contacter directement :&nbsp;<br class="hide-for-large"><a href="mailto:{{contact.mtl.mail}}">{{contact.mtl.mail}}</a>
+            {{ art.contact.contact }}&nbsp;<br class="hide-for-large"><a href="mailto:{{contact.mtl.mail}}">{{contact.mtl.mail}}</a>
         </p>
     </div>
     <div class="w-30--large text-center">
-        <img src="{{metadata.urlImage}}art/atelier.jpg" alt="" class="w-50pct--md">
+        <img src="{{ art.contact.image }}" alt="" class="w-50pct--md">
     </div>  
 </div>
 

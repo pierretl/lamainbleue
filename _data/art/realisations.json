@@ -1,0 +1,47 @@
+{
+  "projets": [
+    {
+      "images": [
+        {
+          "photo": "/media/image/upload/echos-cover.jpg"
+        },
+        {
+          "photo": "/media/image/upload/echos-1.jpg"
+        },
+        {
+          "photo": "/media/image/upload/echos-2.jpg"
+        },
+        {
+          "photo": "/media/image/upload/echos-3.jpg"
+        },
+        {
+          "photo": "/media/image/upload/echos-4.jpg"
+        }
+      ],
+      "titre": "Echos",
+      "description": "Livre d’artiste, 2020\\\nEditions Casa Grande, 331pages, En/Fr/It/Es\\\nISBN 978-88-7713-868-2\\\nTextes : Mark Lewis, Beau Rhee, Valeria Venditti, Cristòbal Barria, Lucille Ulrich",
+      "lienLabel": "Commander le livre",
+      "lienHref": "http://www.mottodistribution.com/shop/echos-marion-tampon-lajarriette-fondazione-d-arte-erich-lindenberg-edizioni-casagrande-9788877138682.html"
+    },
+    {
+      "titre": "Eventide",
+      "description": "Série photo, 2018, impressions cyanotypes sur papier graphique, 59x41,5 cm\\\nPour les prix et plus d’infos :",
+      "lienLabel": "Contact galerie",
+      "lienHref": "https://www.galerielaurencebernard.ch/artists/marion-tampon-lajarriette/biography/",
+      "images": [
+        {
+          "photo": "/media/image/upload/eventide-1.jpg"
+        },
+        {
+          "photo": "/media/image/upload/eventide-2.jpg"
+        },
+        {
+          "photo": "/media/image/upload/eventide-3.jpg"
+        },
+        {
+          "photo": "/media/image/upload/eventide-4.jpg"
+        }
+      ]
+    }
+  ]
+}

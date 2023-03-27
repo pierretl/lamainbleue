@@ -1,0 +1,25 @@
+{% set order = cycler("", " order-1--large") %}
+
+{% for item in liste %}
+    <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if loop.index0 != '0' %} mt{% endif %}">
+        <div class="df w-50--large sst-m{{ order.next() }} js_scroll-x">
+            {% for image in item.images %}
+                <img src="{{image.photo}}" alt="" class="galerie-img">
+            {% endfor %}
+        </div>
+        <div class="df w-50--large fd-c gap">
+            <h3 class="text-typo2 text-size1 text-fin">
+                {{ item.titre }}
+            </h3>
+            <div>
+                {{ item.description | markdown | safe }}
+            </div>
+            {% if item.lienHref | truncate(4, true, "") == "http" %}
+                <a href="{{ item.lienHref }}" rel="external">{{ item.lienLabel }}</a>
+            {% else %}
+                <a href="{{ item.lienHref }}">{{ item.lienLabel }}</a>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+

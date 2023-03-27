@@ -34,6 +34,7 @@ collections:
           fields:
             - { label: "Email", name: "mail", widget: "string" }
             - { label: "Instagram", name: "instagram", widget: "string" }
+            - { label: "Site Web", name: "site", widget: "string" }
   # Accueil
   - label: "Accueil"
     name: "accueil"   
@@ -239,6 +240,64 @@ collections:
         fields:
               - { label: "Image", name: "image", widget: "image", choose_url: false }
               - { label: "Texte", name: "texte", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+  # Art
+  - label: "Art"
+    name: "art"   
+    files:
+      # Introduction
+      - name: "introduction"
+        label: "Introduction"
+        editor:
+          preview: false
+        file: "_data/art/introduction.json"
+        fields:
+              - { label: "Introduction", name: "introduction", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
+              - { label: "À propos", name: "apropos", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Label du lien", name: "lien", widget: "string" }
+      # Quelques réalisations
+      - name: "realisations"
+        label: "Quelques réalisations"
+        editor:
+          preview: false
+        file: "_data/art/realisations.json"
+        fields:
+          # Projet
+          - name: projets
+            label: Projets
+            label_singular: 'Projet'
+            widget: list
+            summary: '{{fields.titre}}'
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Label du lien", name: "lienLabel", widget: "string" }
+              - { label: "URL", name: "lienHref", widget: "string", hint: "Laissez vide pour l'email" , required: false }
+              - { label: "Images", name: "images", label_singular: 'Image', widget: list, fields: 
+                    [
+                      { label: "Photo", name: "photo",widget: "image", choose_url: false }
+                    ]
+                }
+      # Perspectives
+      - name: "perspectives"
+        label: "Perspectives"
+        editor:
+          preview: false
+        file: "_data/art/perspectives.json"
+        fields:
+              - { label: "Introduction", name: "intro", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Label du lien", name: "lien", widget: "string" }
+      # Contact
+      - name: "contact"
+        label: "Contact"
+        editor:
+          preview: false
+        file: "_data/art/contact.json"
+        fields:
+              - { label: "Site Web", name: "site", widget: "string" }
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "Contact", name: "contact", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", choose_url: false }
   # À propos
   - label: "À propos"
     name: "apropos"   

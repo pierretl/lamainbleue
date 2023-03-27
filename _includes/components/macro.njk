@@ -26,6 +26,13 @@
 
 
 
+{% macro galerie(metadata,liste) %}
+    {% include "macros/galerie.njk" %}
+{% endmacro %}
+
+
+
+
 {% macro cartes(metadata,liste,margeTop) %}
     <ul class="reset df jc-sb gap2 carte sst-m js_scroll-x">
         {% for item in liste %}
