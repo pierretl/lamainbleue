@@ -33,62 +33,6 @@
 
 
 
-{% macro cartes(metadata,liste,margeTop) %}
-    <ul class="reset df jc-sb gap2 carte sst-m js_scroll-x">
-        {% for item in liste %}
-            <li class="fg-1 df fd-c gap carte__item">
-                <div class="df fd-c h-100">
-                    {% if item.imageLarge %}
-                        <img class="carte__img v_large" src="{{metadata.urlImage}}{{ item.image }}" alt="">
-                    {% else %}
-                        <div class="text-center">
-                            {% if item.image %}
-                                <img class="carte__img icone-dark" src="{{metadata.urlImage}}{{ item.image }}" alt="">
-                            {% else %}
-                                <img class="carte__img icone-dark" src="https://via.placeholder.com/400x100/375063/FFFFFF/?text=Visuel" alt="">
-                            {% endif %}
-                        </div>
-                    {% endif %}
-                
-                    {% if item.baliseTitre == "h4" %}
-                        <h4 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h4>
-                    {% else %}
-                        <h3 class="text-center text-typo2 text-size1 mb-0 carte__titre">{{ item.titre | safe }}</h3>
-                    {% endif %}
-                    <div class="fg-1 carte__contenu">
-                        {% for ligne in item.tableau %}
-                            <div class="df jc-sb">
-                                <span class="text-typo2 text-size2 p0">{{ ligne.duree }}</span>
-                                <span class="text-typo2 text-size2 p0">{{ ligne.prix | safe }}</span>
-                            </div>
-                        {% endfor %}
-                        {% if item.contenu and item.tableau %}
-                            <br>
-                        {% endif %}
-                        {{ item.contenu | safe }}
-                    </div>
-                    {% if item.hrefInscription %}
-                        <p class="text-center carte__contenu">
-                            {% if item.hrefInscription %}
-                                <a href="{% if item.hrefMail %}mailto:{% endif %}{{ item.hrefInscription | safe }}" target="_blank" rel="external">
-                                    {% if item.labelLien %}
-                                        {{ item.labelLien }}
-                                    {% else %}
-                                        Inscription
-                                    {% endif %}
-                                </a>
-                            {% endif %}
-                        </p>
-                    {% endif %}
-                </div>
-            </li>
-         {% endfor %}
-    </ul>
-{% endmacro %}
-
-
-
-
 {% macro cartes2(metadata,contact,liste,carteParLigne,imageLarge) %}
     {% include "macros/cartes.njk" %}
 {% endmacro %}
