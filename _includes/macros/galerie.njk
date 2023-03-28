@@ -1,7 +1,20 @@
-{% set order = cycler("", " order-1--large") %}
+{% if option.inverse == true %}
+    {% set order = cycler(" order-1--large", "") %}
+{% else %}
+    {% set order = cycler("", " order-1--large") %}
+{% endif %}
 
 {% for item in liste %}
-    <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{% if loop.index0 != '0' %} mt{% endif %}">
+
+    {% if loop.index0 != '0' %}
+        {% set marginTop = " mt" %}
+    {% else %}
+        {% if option.margeTop == true %}
+            {% set marginTop = " mt" %}
+        {% endif %}
+    {% endif %}
+
+    <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{{marginTop}}">
         <div class="df w-50--large sst-m{{ order.next() }} js_scroll-x">
             {% for image in item.images %}
                 <img src="{{image.photo}}" alt="" class="galerie-img">
@@ -14,10 +27,14 @@
             <div>
                 {{ item.description | markdown | safe }}
             </div>
-            {% if item.lienHref | truncate(4, true, "") == "http" %}
-                <a href="{{ item.lienHref }}" rel="external">{{ item.lienLabel }}</a>
+            {% if item.lienHref %}
+                {% if item.lienHref | truncate(4, true, "") == "http" %}
+                    <a href="{{ item.lienHref }}" rel="external">{{ item.lienLabel }}</a>
+                {% else %}
+                    <a href="{{ item.lienHref }}">{{ item.lienLabel }}</a>
+                {% endif %}
             {% else %}
-                <a href="{{ item.lienHref }}">{{ item.lienLabel }}</a>
+                <a href="mailto:{{contact.mtl.mail}}" rel="external">{{ item.lienLabel }}</a>
             {% endif %}
         </div>
     </div>

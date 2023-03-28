@@ -60,96 +60,10 @@ scriptsJs:
 
 {{ macro.h2("Quelques réalisations") }}
 
-{{ macro.galerie(metadata,art.realisations.projets) }}
-
-{{ macro.texteEtVisuel(
-    metadata,
-    titre="Tacande",
-    titreArt="true",
-    contenu="<p>
-        Série céramique, 2021, dimensions variables<br>
-        Pour plus d’infos sur les ventes directes à l’atelier,<br>
-        me contacter
-    </p>",
-    galerie=([
-        {
-            src:"art/tacande-1.jpg"
-        },
-        {
-            src:"art/tacande-2.jpg"
-        },
-        {
-            src:"art/tacande-3.jpg"
-        },
-        {
-            src:"art/tacande-4.jpg"
-        },
-        {
-            src:"art/tacande-5.jpg"
-        },
-        {
-            src:"art/tacande-6.jpg"
-        }
-    ]),
-    hrefLien="mailto:marion.tamponlajarriette@gmail.com",
-    labelLien="marion.tamponlajarriette@gmail.com",
-    margetop="true"
-) }}
+{{ macro.galerie(metadata,art.realisations.projets,contact) }}
 
 <div class="js_bascule-visibilite__zone hide" data-zone="quelques-realisations">
-    
-    {{ macro.texteEtVisuel(
-        metadata,
-        titre="The Lazy Clock",
-        titreArt="true",
-        contenu="<p>
-            Installation immersive son et lumière, 2019 <br>
-            4 hauts-parleurs, tapis, coussins, filtres bleus sur fenêtres, projection vidéo
-        </p>",
-    galerie=([
-        {
-            src:"art/the-lazy-clock-1.jpg"
-        },
-        {
-            src:"art/the-lazy-clock-2.jpg"
-        },
-        {
-            src:"art/the-lazy-clock-3.jpg"
-        }
-    ]),
-        hrefLien="https://mariontamponlajarriette.com/",
-        labelLien="https://mariontamponlajarriette.com/",
-        margetop="true",
-        inverseBloc="true"
-    ) }}
-
-    {{ macro.texteEtVisuel(
-        metadata,
-        titre="Hot Marble",
-        titreArt="true",
-        contenu="<p>
-           Installation mix media, 2019 <br>
-            Son stéréo, double projection vidéo, tulle, béton, métal
-        </p>",
-        galerie=([
-            {
-                src:"art/hot-marble-1.jpg"
-            },
-            {
-                src:"art/hot-marble-2.jpg"
-            },
-            {
-                src:"art/hot-marble-3.jpg"
-            },
-            {
-                src:"art/hot-marble-4.jpg"
-            }
-        ]),
-        hrefLien="https://vimeo.com/328250549",
-        labelLien="https://vimeo.com/328250549",
-        margetop="true"
-    ) }}
-
+    {{ macro.galerie(metadata,art.realisations.projetsSupplementaire,contact,art.realisations.projetsSupplementaireOption) }}
 </div>
 
 <div class="text-center mt">

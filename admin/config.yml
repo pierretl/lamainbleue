@@ -278,6 +278,29 @@ collections:
                       { label: "Photo", name: "photo",widget: "image", choose_url: false }
                     ]
                 }
+          # Projets supplémentaire - Option
+          - name: projetsSupplementaireOption
+            label: Projets supplémentaire - Option d'affichage
+            widget: 'object'
+            fields:
+            - {label: "Ajouter une marge en haut du premier élément", name: "margeTop", widget: "boolean", default: true}
+            - {label: "Inverser le sens des bloc image-texte", name: "inverse", widget: "boolean", default: true}
+          # Projets supplémentaire
+          - name: projetsSupplementaire
+            label: Projets supplémentaire
+            label_singular: 'ProjetSupplementaire'
+            widget: list
+            summary: '{{fields.titre}}'
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Label du lien", name: "lienLabel", widget: "string" }
+              - { label: "URL", name: "lienHref", widget: "string", hint: "Laissez vide pour l'email" , required: false }
+              - { label: "Images", name: "images", label_singular: 'Image', widget: list, fields: 
+                    [
+                      { label: "Photo", name: "photo",widget: "image", choose_url: false }
+                    ]
+                }
       # Perspectives
       - name: "perspectives"
         label: "Perspectives"

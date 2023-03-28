@@ -42,6 +42,75 @@
           "photo": "/media/image/upload/eventide-4.jpg"
         }
       ]
+    },
+    {
+      "titre": "Tacande",
+      "description": "Série céramique, 2021, dimensions variables\\\nPour plus d’infos sur les ventes directes à l’atelier,\\\nme contacter",
+      "lienLabel": "marion.tamponlajarriette@gmail.com",
+      "lienHref": "",
+      "images": [
+        {
+          "photo": "/media/image/upload/tacande-1.jpg"
+        },
+        {
+          "photo": "/media/image/upload/tacande-2.jpg"
+        },
+        {
+          "photo": "/media/image/upload/tacande-3.jpg"
+        },
+        {
+          "photo": "/media/image/upload/tacande-4.jpg"
+        },
+        {
+          "photo": "/media/image/upload/tacande-5.jpg"
+        },
+        {
+          "photo": "/media/image/upload/tacande-6.jpg"
+        }
+      ]
     }
-  ]
+  ],
+  "projetsSupplementaire": [
+    {
+      "titre": "The Lazy Clock",
+      "description": "Installation immersive son et lumière, 2019\\\n4 hauts-parleurs, tapis, coussins, filtres bleus sur fenêtres, projection vidéo",
+      "lienLabel": "https://mariontamponlajarriette.com/",
+      "lienHref": "https://mariontamponlajarriette.com/",
+      "images": [
+        {
+          "photo": "/media/image/upload/the-lazy-clock-1.jpg"
+        },
+        {
+          "photo": "/media/image/upload/the-lazy-clock-2.jpg"
+        },
+        {
+          "photo": "/media/image/upload/the-lazy-clock-3.jpg"
+        }
+      ]
+    },
+    {
+      "titre": "Hot Marble",
+      "description": "Installation mix media, 2019\\\nSon stéréo, double projection vidéo, tulle, béton, métal",
+      "lienLabel": "https://vimeo.com/328250549",
+      "lienHref": "https://vimeo.com/328250549",
+      "images": [
+        {
+          "photo": "/media/image/upload/hot-marble-1.jpg"
+        },
+        {
+          "photo": "/media/image/upload/hot-marble-2.jpg"
+        },
+        {
+          "photo": "/media/image/upload/hot-marble-3.jpg"
+        },
+        {
+          "photo": "/media/image/upload/hot-marble-4.jpg"
+        }
+      ]
+    }
+  ],
+  "projetsSupplementaireOption": {
+    "inverse": true,
+    "margeTop": true
+  }
 }
