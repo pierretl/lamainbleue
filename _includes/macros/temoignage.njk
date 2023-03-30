@@ -2,11 +2,7 @@
     {% for item in liste %}
         {% if loop.index =="1" %}
             <div class="df fd-c fd-r--large ai-c gap2 mt">
-                {% if item.image %}
-                    <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                {% else %}
-                    <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                {% endif %}
+                <img src="{{item.image}}" alt="{{item.altImage}}" width="130" height="130" class="temoignage__image icone-dark fs-0" loading="lazy">
                 <figure>
                     <h3>Témoignages</h3>
                     <blockquote>
@@ -41,17 +37,9 @@
                                     </cite>
                                 </figcaption>
                             </figure>
-                            {% if item.image %}
-                                <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
-                            {% else %}
-                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0 order-1--mediumDown">
-                            {% endif %}
+                            <img src="{{item.image}}" alt="{{item.altImage}}" width="130" height="130" class="temoignage__image icone-dark fs-0 order-1--mediumDown" loading="lazy">
                         {% else %}
-                            {% if item.image %}
-                                <img src="{{item.image}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                            {% else %}
-                                <img src="{{metadata.urlImage}}{{item.srcImage}}" alt="{{item.altImage}}" class="temoignage__image icone-dark fs-0">
-                            {% endif %}
+                            <img src="{{item.image}}" alt="{{item.altImage}}" width="130" height="130" class="temoignage__image icone-dark fs-0" loading="lazy">
                             <figure>
                                 <blockquote>
                                     <p>

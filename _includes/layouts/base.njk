@@ -21,8 +21,14 @@
 
                 </nav>
 
-                <div class="header__illus">
-                    <img class="hide-for-small hide-for-large" src="{{metadata.urlImage}}main.png" alt="" id="js_nav-illus">
+                <div class="header__illus hide-for-small hide-for-large" id="js_nav-illus">
+                    <div class="show-for-light">
+                        {% image "", "./media/image/main-l.png", "", "(max-width: 440px) 270px, 440px", "" %}
+                    </div>
+
+                    <div class="show-for-dark">
+                        {% image "", "./media/image/main-d.png", "", "(max-width: 440px) 270px, 440px", "" %}
+                    </div>
                 </div> 
                 
             </header>

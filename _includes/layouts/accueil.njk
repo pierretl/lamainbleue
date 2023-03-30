@@ -1,13 +1,21 @@
 ---
 layout: layouts/base.njk
-layoutMainClass : df ai-c accueil__conteneur
+layoutMainClass : df ai-c
 ---
 
-<div class="df ai-c">
 
-    <img class="accueil__img--large" src="{{metadata.urlImage}}main.png" alt="">
 
-    <div>
+<div class="accueil">
+
+    <div class="show-for-light z-0">
+        {% image "", "./media/image/main-l.png", "", "(max-width: 899px) 297px, 340px", "accueil__img" %}
+    </div>
+
+    <div class="show-for-dark z-0">
+        {% image "", "./media/image/main-d.png", "", "(max-width: 899px) 297px, 340px", "accueil__img" %}
+    </div>
+
+    <div class="z-1">
         {{ layoutContent | safe }}
 
         <ul class="reset df jc-sa accueil__liste ts-2">

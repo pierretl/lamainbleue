@@ -1,0 +1,13 @@
+$z-index: (
+  header     : 2,
+  z1         : 1,
+  z0         : 0,
+);
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

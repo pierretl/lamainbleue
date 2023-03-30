@@ -12,14 +12,25 @@ layoutMainClass : accueil__apropos
 
 <h1>À propos</h1>
 
+<div class="a-propos">
+    
+    <div class="show-for-light z-0">
+        {% image "", "./media/image/main-l.png", "", "(max-width: 899px) 297px, 340px", "accueil__img" %}
+    </div>
 
-<div class="df fd-c fd-r--large ai-fs gap2 hide">
-    <div class="w-50--large">
-        {{ apropos.bloc1 | markdown | safe }}
+    <div class="show-for-dark z-0">
+        {% image "", "./media/image/main-d.png", "", "(max-width: 899px) 297px, 340px", "accueil__img" %}
     </div>
-    <div class="w-50--large">
-        {{ apropos.bloc2 | markdown | safe }}
+
+    <div class="df fd-c fd-r--large ai-fs gap2 hide z-1">
+        <div class="w-50--large">
+            {{ apropos.bloc1 | markdown | safe }}
+        </div>
+        <div class="w-50--large">
+            {{ apropos.bloc2 | markdown | safe }}
+        </div>
     </div>
+
 </div>
 
 <div class="text-center mt">

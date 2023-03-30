@@ -17,7 +17,7 @@
     <div class="df fd-c fd-r--large ai-fs ai-c--large gap2{{marginTop}}">
         <div class="df w-50--large sst-m{{ order.next() }} js_scroll-x">
             {% for image in item.images %}
-                <img src="{{image.photo}}" alt="" class="galerie-img">
+                <img src="{{image.photo}}" alt="" class="galerie-img" loading="lazy">
             {% endfor %}
         </div>
         <div class="df w-50--large fd-c gap">

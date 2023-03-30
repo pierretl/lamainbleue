@@ -1,0 +1,15 @@
+.a-propos {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.a-propos > * {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+[data-color-scheme="light"] .a-propos img {
+    opacity: .2;
+}

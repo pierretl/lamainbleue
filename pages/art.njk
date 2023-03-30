@@ -105,7 +105,7 @@ scriptsJs:
         </p>
     </div>
     <div class="w-30--large text-center">
-        <img src="{{ art.contact.image }}" alt="" class="w-50pct--md">
+        {% image "", [".", art.contact.image] | join, "", "(max-width: 599px) 265px, 284px", "w-50pct--md" %}
     </div>  
 </div>
 
