@@ -17,7 +17,7 @@
     {
       "titre": "Thaï-Yoga",
       "lienLabel": "Me contacter",
-      "information": "Mobilisation douce et étirements\n<ul><li>\navec habits au sol\n<li>\nou adapté sur table et combiné avec huiles sur peau nue\n</li></ul>",
+      "information": "Mobilisation douce et étirements\n<ul>\n<li>avec habits au sol</li>\n<li>ou adapté sur table et combiné avec huiles sur peau</li>\n</ul>",
       "image": "/media/image/upload/lotus.png"
     },
     {
@@ -36,7 +36,7 @@
       "lienLabel": "Me contacter",
       "titre": "Cranio-facial",
       "image": "/media/image/upload/diamant.png",
-      "information": "<ul>Crâne, visage et épaules\n<li>Idéal contre le stress & les maux de tête</li>\n</ul>\n"
+      "information": "<ul>Crâne, visage et épaules\n<li>Idéal en cas de stress</li>\n<li>& les maux de tête</li>\n</ul>\n"
     }
   ]
 }
