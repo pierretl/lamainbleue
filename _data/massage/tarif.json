@@ -34,11 +34,11 @@
       "tarifs": [
         {
           "duree": "1h00",
-          "prix": "CH  80"
+          "prix": "CH  90"
         },
         {
           "duree": "1h30",
-          "prix": "CH 120"
+          "prix": "CH 130"
         }
       ]
     },
