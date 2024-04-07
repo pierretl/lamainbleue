@@ -13,41 +13,6 @@
   ],
   "cartes": [
     {
-      "titre": "1er rdv + tarifs réduits",
-      "image": "/media/image/upload/main-etoile.png",
-      "lienLabel": "Me contacter",
-      "lienHref": "",
-      "tarifs": [
-        {
-          "duree": "1h15",
-          "prix": "CHF 110"
-        },
-        {
-          "duree": "1h45",
-          "prix": "CHF 160"
-        }
-      ],
-      "lien": true,
-      "information": "tarif spécial <ul>1ère séance </ul>ou petits revenus (études, chômage...)"
-    },
-    {
-      "titre": "Bon cadeau",
-      "lienHref": "",
-      "lienLabel": "Me contacter",
-      "image": "/media/image/upload/main-cadeau.png",
-      "information": "valable 6 mois",
-      "tarifs": [
-        {
-          "duree": "1h00",
-          "prix": "CHF  100"
-        },
-        {
-          "duree": "1h30",
-          "prix": "CHF 130"
-        }
-      ]
-    },
-    {
       "titre": "Tarifs habituels",
       "lienHref": "",
       "lienLabel": "Me contacter",
@@ -72,6 +37,41 @@
         {
           "duree": "2h30",
           "prix": "CHF 270"
+        }
+      ]
+    },
+    {
+      "titre": "Tarifs réduits",
+      "image": "/media/image/upload/main-etoile.png",
+      "lienLabel": "Me contacter",
+      "lienHref": "",
+      "tarifs": [
+        {
+          "duree": "1h15",
+          "prix": "CHF 110"
+        },
+        {
+          "duree": "1h45",
+          "prix": "CHF 160"
+        }
+      ],
+      "lien": true,
+      "information": "<ul>1ère séance découverte </ul>petits revenus (études, chômage...)"
+    },
+    {
+      "titre": "Bon cadeau",
+      "lienHref": "",
+      "lienLabel": "Me contacter",
+      "image": "/media/image/upload/main-cadeau.png",
+      "information": "valable 6 mois",
+      "tarifs": [
+        {
+          "duree": "1h00",
+          "prix": "CHF  100"
+        },
+        {
+          "duree": "1h30",
+          "prix": "CHF 130"
         }
       ]
     }
