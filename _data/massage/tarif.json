@@ -20,7 +20,7 @@
       "tarifs": [
         {
           "duree": "1h00",
-          "prix": "CH 100"
+          "prix": "CHF 100"
         }
       ],
       "lien": true
@@ -34,11 +34,11 @@
       "tarifs": [
         {
           "duree": "1h00",
-          "prix": "CH  90"
+          "prix": "CHF  90"
         },
         {
           "duree": "1h30",
-          "prix": "CH 130"
+          "prix": "CHF 130"
         }
       ]
     },
@@ -50,11 +50,11 @@
       "tarifs": [
         {
           "duree": "1h15",
-          "prix": "CH 140"
+          "prix": "CHF 140"
         },
         {
           "duree": "1h30",
-          "prix": "CH 160"
+          "prix": "CHF 160"
         },
         {
           "duree": "1h45",
@@ -66,7 +66,7 @@
         },
         {
           "duree": "2h30",
-          "prix": "CH 270"
+          "prix": "CHF 270"
         }
       ]
     },
