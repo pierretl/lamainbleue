@@ -2,7 +2,7 @@
   "informations": [
     {
       "titre": "Bon cadeau",
-      "texte": "La plus belle des idées de cadeau, pour toute.x.s, valable 6 mois.\\\nJolis bons cadeaux en version papier à disposition au cabinet ou envoyés par voie postale suite à [votre commande en ligne](mailto:hello@lamainbleue.ch) ou sur TWINT.",
+      "texte": "La plus belle des idées de cadeau, pour toute.x.s, valable 6 mois.\\\nJolis bons cadeaux numériques ou en version papier à disposition au cabinet ou envoyés par voie postale suite à [votre commande en ligne](mailto:hello@lamainbleue.ch) ou sur TWINT.",
       "image": "/media/image/upload/main-cadeau.png"
     },
     {
@@ -72,23 +72,6 @@
         {
           "duree": "2h30",
           "prix": "CHF 270"
-        }
-      ]
-    },
-    {
-      "titre": "Tarifs réduit",
-      "lienHref": "",
-      "lienLabel": "Me contacter",
-      "image": "/media/image/upload/main-plante.png",
-      "information": "Tarif petits revenus, étudiant.x.e, chômage",
-      "tarifs": [
-        {
-          "duree": "1h15",
-          "prix": "CHF 110"
-        },
-        {
-          "duree": "1h45",
-          "prix": "CHF 160"
         }
       ]
     }
