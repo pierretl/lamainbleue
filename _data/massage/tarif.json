@@ -19,7 +19,7 @@
       "lienHref": "",
       "tarifs": [
         {
-          "duree": "1h15",
+          "duree": "1h00",
           "prix": "CH 100"
         }
       ],
@@ -50,7 +50,7 @@
       "tarifs": [
         {
           "duree": "1h15",
-          "prix": "CH 130"
+          "prix": "CH 140"
         },
         {
           "duree": "1h30",
@@ -58,7 +58,15 @@
         },
         {
           "duree": "1h45",
-          "prix": "CH 180"
+          "prix": "CH 190"
+        },
+        {
+          "duree": "2h00",
+          "prix": "CHF 215"
+        },
+        {
+          "duree": "2h30",
+          "prix": "CH 270"
         }
       ]
     },
