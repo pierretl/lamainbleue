@@ -13,7 +13,7 @@
   ],
   "cartes": [
     {
-      "titre": "1ère séance et tarifs réduits",
+      "titre": "1er rdv + tarifs réduits",
       "image": "/media/image/upload/main-etoile.png",
       "lienLabel": "Me contacter",
       "lienHref": "",
@@ -28,7 +28,7 @@
         }
       ],
       "lien": true,
-      "information": "Petits prix pour votre 1ère séance découverte et tarif spécial pour les petits revenus, en études, chômage"
+      "information": "tarif spécial 1ère séance découverte et pour les petits revenus (études, chômage...)"
     },
     {
       "titre": "Bon cadeau",
