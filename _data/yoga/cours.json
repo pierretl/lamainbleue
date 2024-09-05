@@ -27,18 +27,18 @@
   "ponctuel": {
     "cartes": [
       {
-        "image": "/media/image/upload/yoga-exterieur.jpg",
-        "titre": "Yoga en extérieur",
-        "information": "<ul>Cours pop up, selon météo\n</ul>au parc ou au bord de l’eau",
-        "lienLabel": "S’inscrire au groupe Signal ou WhatsApp",
-        "lienHref": "tel:0797312351"
-      },
-      {
         "image": "/media/image/upload/atelier-meditation.jpg",
         "titre": "Méditation & cercles",
         "information": "<ul>Selon calendrier lunaire et solaire, cercles méditatifs\n</ul>(dynamique, relaxation, mudra, souffle, mantra...) ",
         "lienLabel": "S'inscrire à la newsletter",
         "lienHref": ""
+      },
+      {
+        "image": "/media/image/upload/yoga-exterieur.jpg",
+        "titre": "Yoga en extérieur",
+        "information": "<ul>Cours pop up, selon météo\n</ul>au parc ou au bord de l’eau",
+        "lienLabel": "S’inscrire au groupe Signal ou WhatsApp",
+        "lienHref": "tel:0797312351"
       },
       {
         "image": "/media/image/upload/event-prive.jpg",
