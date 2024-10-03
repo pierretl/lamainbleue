@@ -30,14 +30,14 @@
         "image": "/media/image/upload/atelier-meditation.jpg",
         "titre": "Méditation & cercles",
         "information": "<ul>Selon calendrier lunaire et solaire, cercles méditatifs\n</ul>(dynamique, relaxation, mudra, souffle, mantra...) ",
-        "lienLabel": "S'inscrire à la newsletter",
-        "lienHref": ""
+        "lienLabel": "Calendrier d'inscription",
+        "lienHref": "https://calendly.com/lamainbleue/meditation-cercles-lune-soleil"
       },
       {
         "image": "/media/image/upload/yoga-exterieur.jpg",
         "titre": "Yoga en extérieur",
         "information": "<ul>Cours pop up, selon météo\n</ul>au parc ou au bord de l’eau",
-        "lienLabel": "S’inscrire au groupe Signal ou WhatsApp",
+        "lienLabel": "S’inscrire au groupe WhatsApp ou Signal",
         "lienHref": "tel:0797312351"
       },
       {
