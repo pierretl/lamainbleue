@@ -333,3 +333,4 @@ collections:
         fields:
               - { label: "Bloc 1", name: "bloc1", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
               - { label: "Bloc 2", name: "bloc2", widget: "markdown", modes: ["rich_text"], buttons: ["bold","italic","link","quote","bulleted-list","numbered-list"], editor_components: [] }
+              - { label: "Image", name: "image", widget: "image", choose_url: false, required: false }

@@ -33,6 +33,12 @@ layoutMainClass : accueil__apropos
 
 </div>
 
+{% if apropos.image %}
+    <div class="df jc-c">
+        {% image typeResponsive, [".", apropos.image] | join, "", "(max-width: 899px) 866px, 459px" %}
+    </div>
+{% endif %}
+
 <div class="text-center mt">
     <p class="text-size0">
         {{metadata.firstName}}<br class="hide-for-large">&nbsp;~&nbsp;<br class="hide-for-large"><span class="text-typo2">{{metadata.title}}</span>
