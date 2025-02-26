@@ -1,3 +1,7 @@
+@use "sass:map";
+@use '../1-Base/variable/_index' as *;
+@use '../1-Base/mixins/_index' as *;
+
 .hide {
     display: none;
 }
@@ -43,7 +47,7 @@
     }
     
     .cc-gap {
-        column-gap: map-get($map: $space, $key: xxl);
+        column-gap: map.get($map: $space, $key: xxl);
     }
 
 }

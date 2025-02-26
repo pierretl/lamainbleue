@@ -1,5 +1,5 @@
-@import '1-Base/__index';
-@import '2-Utilitaire/__index';
-@import '3-Structure/__index';
-@import '4-Element/__index';
-@import '5-Satellite/__index';
+@use './1-Base/_index' as base;
+@use './2-Utilitaire/_index' as utilitaire;
+@use './3-Structure/_index' as structure;
+@use './4-Element/_index' as element;
+@use './5-Satellite/_index' as satellite;

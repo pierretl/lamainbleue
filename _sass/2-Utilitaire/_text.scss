@@ -1,3 +1,5 @@
+@use '../1-Base/mixins/_index' as *;
+
 .text-center {
     text-align: center;
 }

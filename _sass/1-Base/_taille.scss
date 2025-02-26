@@ -1,21 +1,10 @@
-$space :(
-    "xxs":      0,
-    "xs":       0,
-    "s":        .75rem,
-    "m":        1rem,
-    "l":        1.25rem,
-    "xl":       1.75rem,
-    "xxl":      3.125rem,
-    "xxxl":     4rem
-);
-
+@use "sass:map";
+@use './variable/_index' as *;
+@use './mixins/_index' as *;
 
 :root {
     --taille: 33.333%;
 }
-
-$main_marge-x : 1rem;
-$height-header: 5rem;
 
 
 .h-100 {
@@ -42,7 +31,7 @@ $height-header: 5rem;
         max-width: 70%;
     }
 
-    $goutiere-gap2: calc(map-get($space, xxl) / 2);
+    $goutiere-gap2: calc(map.get($space, xxl) / 2);
 
     .df.gap2 .w-30--large {
         flex: 0 0 calc(30% - $goutiere-gap2);

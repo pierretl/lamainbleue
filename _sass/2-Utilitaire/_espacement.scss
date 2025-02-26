@@ -1,13 +1,17 @@
+@use "sass:map";
+@use '../1-Base/variable/_index' as *;
+@use '../1-Base/mixins/_index' as *;
+
 .m-0-auto {
     margin: 0 auto;
 }
 
 .mt {
-    margin-top: map-get($space, xxl);
+    margin-top: map.get($space, xxl);
 }
 
 .mb {
-    margin-bottom: map-get($space, xxl);
+    margin-bottom: map.get($space, xxl);
 }
 
 .mt-0 {
@@ -23,17 +27,17 @@
 }
 
 .gap {
-    gap: map-get($space, m);
+    gap: map.get($space, m);
 
     @include breakpoint(large) {
-        gap: map-get($space, l);
+        gap: map.get($space, l);
     }
 }
 
 .gap2 {
-    gap: map-get($space, xl);
+    gap: map.get($space, xl);
 
     @include breakpoint(large) {
-        gap: map-get($space, xxl);
+        gap: map.get($space, xxl);
     }
 }

@@ -1,7 +1,11 @@
+@use "sass:map";
+@use '../1-Base/variable/_index' as *;
+@use '../1-Base/mixins/_index' as *;
+
 .sommaire {
     list-style: none;
     padding-left: 0;
-    margin: map-get($space, xxxl) 0;
+    margin: map.get($space, xxxl) 0;
 }
 
 .sommaire a {
@@ -14,7 +18,7 @@
 }
 
 .sommaire__item {
-    padding: map-get($space, m );
+    padding: map.get($space, m );
     text-align: center;
 }
 
@@ -40,7 +44,7 @@
     }
 
     .sommaire__item {
-        padding: 0 map-get($space, xl );
+        padding: 0 map.get($space, xl );
     }
     
     .sommaire__item:not(:first-child) {

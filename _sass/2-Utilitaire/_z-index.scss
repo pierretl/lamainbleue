@@ -1,3 +1,5 @@
+@use '../1-Base/mixins/_index' as *;
+
 .z-0 {
     @include z-index(z0);
 }

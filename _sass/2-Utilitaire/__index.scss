@@ -1,6 +1,6 @@
-@import 'block';
-@import 'bouton';
-@import 'espacement';
-@import 'flex';
-@import 'text';
-@import 'z-index';
+@forward 'block';
+@forward 'bouton';
+@forward 'espacement';
+@forward 'flex';
+@forward 'text';
+@forward 'z-index';

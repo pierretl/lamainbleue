@@ -1,3 +1,7 @@
+@use "sass:map";
+@use '../1-Base/variable/_index' as *;
+@use '../1-Base/mixins/_index' as *;
+
 .header {
     position: fixed;
     display: grid;

@@ -1,9 +1,13 @@
+@use "sass:map";
+@use '../1-Base/variable/_index' as *;
+@use '../1-Base/mixins/_index' as *;
+
 .carte {
     overflow:auto;
 }
 
 .carte + .carte {
-    margin-top: map-get($space, xxl);
+    margin-top: map.get($space, xxl);
 }
 
 .carte__item {

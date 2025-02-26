@@ -1,7 +1,7 @@
-@import 'a-propos';
-@import 'acceuil';
-@import 'burger';
-@import 'carte';
-@import 'retour-top';
-@import 'sommaire';
-@import 'temoignage';
+@forward 'a-propos';
+@forward 'acceuil';
+@forward 'burger';
+@forward 'carte';
+@forward 'retour-top';
+@forward 'sommaire';
+@forward 'temoignage';

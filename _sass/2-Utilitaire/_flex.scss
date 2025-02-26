@@ -1,3 +1,5 @@
+@use '../1-Base/mixins/_index' as *;
+
 .df {
     display: flex;
 }
