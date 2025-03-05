@@ -41,7 +41,7 @@
     {
       "image": "/media/image/upload/etoile-3.png",
       "titre": "Séances possibles pour 75’, 90’ ou 105’",
-      "information": "~ massage classique, relaxant ou sportif\n~ massage crânio-facial ou Kobido + corps\n~ massage combo huiles & étirements Thaï-Yoga doux",
+      "information": "<ul>massage classique, relaxant ou sportif\n<li>massage crânio-facial ou Kobido + corps</li>\n<li>massage combo classique & Thaï</li>\n</ul>",
       "lienLabel": "contact"
     }
   ]
