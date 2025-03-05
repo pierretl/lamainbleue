@@ -19,12 +19,12 @@
       "image": "/media/image/upload/main-horloge.png",
       "tarifs": [
         {
-          "duree": "1h15",
+          "duree": "1h15 (75 min)",
           "prix": "CHF 140"
         },
         {
           "duree": "1h30",
-          "prix": "CHF 160"
+          "prix": "CHF 165"
         },
         {
           "duree": "1h45",
@@ -37,6 +37,10 @@
         {
           "duree": "2h30",
           "prix": "CHF 270"
+        },
+        {
+          "duree": "45 minutes",
+          "prix": "CHF 85"
         }
       ]
     },
