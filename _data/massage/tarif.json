@@ -25,27 +25,27 @@
       "tarifs": [
         {
           "duree": "45 minutes",
-          "prix": "CHF 85"
+          "prix": "85.-"
         },
         {
           "duree": "1h15 (75min)",
-          "prix": "CHF 140"
+          "prix": "140.-"
         },
         {
           "duree": "1h30 (90min)",
-          "prix": "CHF 165"
+          "prix": "165.-"
         },
         {
           "duree": "1h45 (105min)",
-          "prix": "CHF 190"
+          "prix": "190.-"
         },
         {
           "duree": "2h00 (120min)",
-          "prix": "CHF 215"
+          "prix": "215.-"
         },
         {
           "duree": "2h30 (150min)",
-          "prix": "CHF 270"
+          "prix": "270.-"
         }
       ]
     },
