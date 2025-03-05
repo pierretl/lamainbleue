@@ -57,11 +57,11 @@
       "tarifs": [
         {
           "duree": "45 minutes",
-          "prix": "CHF 65"
+          "prix": "65.-"
         },
         {
           "duree": "1h30 (90min)",
-          "prix": "CHF 130"
+          "prix": "130.-"
         }
       ],
       "lien": true,
@@ -76,11 +76,11 @@
       "tarifs": [
         {
           "duree": "1h00 (60min)",
-          "prix": "CHF  100"
+          "prix": "100.-"
         },
         {
           "duree": "1h30 (90min)",
-          "prix": "CHF 150"
+          "prix": "150.-"
         }
       ]
     },
