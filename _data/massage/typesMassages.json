@@ -9,16 +9,16 @@
       "lienLabel": "Me contacter"
     },
     {
+      "lienLabel": "Me contacter",
+      "titre": "Focus Dos",
+      "image": "/media/image/upload/pierre.png",
+      "information": "<ul>\n<li>Tissus profonds</li>\n<li>Tonique et apaisant</li>\n<li>Soulage les douleurs de dos</li>\n</ul>"
+    },
+    {
       "titre": "Soin visage",
       "information": "Massage et soin ayurvédiques visage & nuque\n<ul>\n<li>\nAvec plantes médicinales indiennes adaptées à votre typologie de peau\n</ul>",
       "image": "/media/image/upload/flacon.png",
       "lienLabel": "Me contacter"
-    },
-    {
-      "titre": "Thaï-Yoga",
-      "lienLabel": "Me contacter",
-      "information": "Mobilisation douce et étirements\n<ul>\n<li>Avec habits au sol ou adapté sur table et combiné avec huiles sur peau</li>\n</ul>",
-      "image": "/media/image/upload/lotus.png"
     },
     {
       "lienLabel": "Me contacter",
@@ -28,15 +28,15 @@
     },
     {
       "lienLabel": "Me contacter",
-      "titre": "Focus Dos",
-      "image": "/media/image/upload/pierre.png",
-      "information": "<ul>\n<li>Tissus profonds</li>\n<li>Tonique et apaisant</li>\n<li>Soulage les douleurs de dos</li>\n</ul>"
-    },
-    {
-      "lienLabel": "Me contacter",
       "titre": "Cranio-facial",
       "image": "/media/image/upload/diamant.png",
       "information": "<ul>Crâne, visage et épaules\n<li>Idéal en cas de stress</li>\n<li>ou de maux de tête</li>\n</ul>\n"
+    },
+    {
+      "titre": "Thaï-Yoga",
+      "lienLabel": "Me contacter",
+      "information": "Mobilisation douce et étirements\n<ul>\n<li>adapté sur table et combiné avec huiles sur la peau</li>\n</ul>",
+      "image": "/media/image/upload/lotus.png"
     },
     {
       "titre": "Les séances de 45’ ou 75’",
