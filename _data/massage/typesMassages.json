@@ -40,9 +40,15 @@
     },
     {
       "image": "/media/image/upload/etoile-3.png",
-      "titre": "<ul>Séances possibles pour <li>75’, 90’ ou 105’</ul>",
-      "information": "<ul>massage classique, relaxant ou sportif\n<li>massage crânio-facial ou Kobido + corps</li>\n<li>massage combo classique & Thaï</li>\n</ul>",
-      "lienLabel": "contact"
+      "titre": "<ul>Séances possibles pour </ul>75’, 90’ ou 105’",
+      "information": "<ul>\n<li>massage classique, relaxant ou sportif</li>\n<li>massage crânio-facial ou Kobido + corps</li>\n<li>massage combo classique & Thaï</li>\n</ul>",
+      "lienLabel": "info"
+    },
+    {
+      "image": "/media/image/upload/etoile-2.png",
+      "information": "<ul>\n<li>massage classique + 1 autre méthode combinée</li>\n<li>massage et soin ayurvédique visage + avant du corps</li>\n</ul>",
+      "titre": "Séances possibles pour 105’",
+      "lienLabel": "info"
     }
   ]
 }
