@@ -19,28 +19,28 @@
       "image": "/media/image/upload/main-horloge.png",
       "tarifs": [
         {
-          "duree": "1h15 (75 min)",
+          "duree": "45 minutes",
+          "prix": "CHF 85"
+        },
+        {
+          "duree": "1h15 (75min)",
           "prix": "CHF 140"
         },
         {
-          "duree": "1h30",
+          "duree": "1h30 (90min)",
           "prix": "CHF 165"
         },
         {
-          "duree": "1h45",
+          "duree": "1h45 (105min)",
           "prix": "CHF 190"
         },
         {
-          "duree": "2h00",
+          "duree": "2h00 (120min)",
           "prix": "CHF 215"
         },
         {
-          "duree": "2h30",
+          "duree": "2h30 (150min)",
           "prix": "CHF 270"
-        },
-        {
-          "duree": "45 minutes",
-          "prix": "CHF 85"
         }
       ]
     },
@@ -51,12 +51,12 @@
       "lienHref": "",
       "tarifs": [
         {
-          "duree": "1h15",
-          "prix": "CHF 110"
+          "duree": "45 minutes",
+          "prix": "CHF 65"
         },
         {
-          "duree": "1h45",
-          "prix": "CHF 160"
+          "duree": "1h30 (90min)",
+          "prix": "CHF 130"
         }
       ],
       "lien": true,
@@ -70,11 +70,11 @@
       "information": "valable 6 mois",
       "tarifs": [
         {
-          "duree": "1h00",
+          "duree": "1h00 (60min)",
           "prix": "CHF  100"
         },
         {
-          "duree": "1h30",
+          "duree": "1h30 (90min)",
           "prix": "CHF 150"
         }
       ]
