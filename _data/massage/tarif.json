@@ -83,6 +83,29 @@
           "prix": "CHF 150"
         }
       ]
+    },
+    {
+      "image": "/media/image/upload/planete-1.png",
+      "titre": "Disponibles pour les séances d’une durée de 45’ ou 75’ ",
+      "tarifs": [
+        {
+          "duree": "~ massage crânio-facial",
+          "prix": "."
+        },
+        {
+          "duree": "~ massage du visage japonais Kobido",
+          "prix": "."
+        },
+        {
+          "duree": "~ massage étoile (tête, mains, pieds) ",
+          "prix": "."
+        },
+        {
+          "duree": "~ massage focus dos",
+          "prix": "."
+        }
+      ],
+      "lienLabel": "Me contacter"
     }
   ]
 }
