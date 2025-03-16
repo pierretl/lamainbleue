@@ -28,8 +28,8 @@
     "cartes": [
       {
         "image": "/media/image/upload/event-prive.jpg",
-        "titre": "Séance privée pour 1 à 4 personnes",
-        "information": "Cours de Yoga personnalisé, à domicile ou au studio\nYoga ou Yoga puis massage (Thaï-Yoga, Kobido)\nAbonnements disponibles.",
+        "titre": "Séance privée 1 à 4 personnes",
+        "information": "Cours de Yoga personnalisé.\nA domicile ou au studio.\nAbonnements disponibles.",
         "lienLabel": "Parlez-moi de votre envie",
         "lienHref": ""
       },
