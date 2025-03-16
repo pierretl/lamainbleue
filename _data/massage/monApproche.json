@@ -6,9 +6,19 @@
   "imageCollapse": "/media/image/upload/formation.jpg",
   "formations": [
     {
-      "avantTilde": "2023/2024",
+      "avantTilde": "2025",
+      "apresTilde": "Massage japonais du visage Kobido + Acupression",
+      "description": "Ecole Azenday, France"
+    },
+    {
+      "avantTilde": "2024",
       "apresTilde": "Ayurvedic Cosmetology and Nutrition",
       "description": "100 heures - Formation massages et soins ayurvédiques (visage, nuque, oreilles), conseils nutrition et phyto / Lords Ayurveda Research Center, Kannur, Kerala (Inde)"
+    },
+    {
+      "avantTilde": "2023",
+      "apresTilde": "Soin traditionnel mexicain Rebozo",
+      "description": "Stage professionnel à Genève (massage à 4 mains, serrage mexicain)"
     },
     {
       "avantTilde": "2022",
