@@ -83,6 +83,16 @@ scriptsJs:
 
 
 
+
+{% if massage.seances %}
+    <hr>
+
+    {{ macro.h2("Séances") }}
+
+    {{ macro.cartes2(metadata,contact,massage.seances.cartes) }}
+{% endif %}
+
+
 <hr>
 
 {{ macro.h2("Mon approche") }}

@@ -37,24 +37,6 @@
       "lienLabel": "Me contacter",
       "information": "Mobilisation douce et étirements\n<ul>\n<li>adapté sur table et combiné avec huiles sur la peau</li>\n</ul>",
       "image": "/media/image/upload/lotus.png"
-    },
-    {
-      "titre": "Les séances de 45’ ou 75’",
-      "information": "<ul>\n<li>massage focus dos</li>\n<li>massage facial japonais anti-âge Kobido</li>\n<li>massage crânio-facial</li>\n<li>massage étoile</li>\n</ul>\n",
-      "image": "/media/image/upload/etoile-4.png",
-      "lienLabel": "info"
-    },
-    {
-      "image": "/media/image/upload/etoile-3.png",
-      "titre": "Les séances de 75’, 90’ ou 105’",
-      "information": "<ul>\n<li>massage classique thérapeutique</li>\n<li>massage corps + crânio-facial ou Kobido</li>\n<li>massage combo classique/Thaï</li>\n<li>massage et soin ayurvédique visage + avant du corps (105')</li>\n</ul>",
-      "lienLabel": "info"
-    },
-    {
-      "image": "/media/image/upload/planete-4.png",
-      "information": "massage complet corps +<ul>\n<li>soin ayurvédique visage</li>\n<li>massage Kobido complet</li>\n<li>traitement ayurvédique (tâches, eczéma, psoriasis, acouphènes, etc)</li>\n</ul>",
-      "titre": "Les séances de 120’ ou 150’",
-      "lienLabel": "info"
     }
   ]
 }

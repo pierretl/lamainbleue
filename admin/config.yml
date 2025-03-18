@@ -115,6 +115,22 @@ collections:
                       { label: "URL", name: "lienHref", widget: "string", hint: "Laissez vide pour l'email" , required: false }
                     ]
                 }
+      # Séances
+      - name: "seances"
+        label: "Séances"
+        editor:
+          preview: false
+        file: "_data/massage/seances.json"
+        fields:
+              - { label: "Cartes", name: "cartes", label_singular: 'Carte', widget: list, summary: '{{fields.titre}}', fields: 
+                    [
+                      { label: "Image", name: "image", widget: "image", choose_url: false },
+                      { label: "Titre", name: "titre", widget: "string" },
+                      { label: "Texte", name: "information", widget: "text", hint: "Balise HTML pris en compte" },
+                      { label: "Label du lien", name: "lienLabel", widget: "string" },
+                      { label: "URL", name: "lienHref", widget: "string", hint: "Laissez vide pour l'email" , required: false }
+                    ]
+                }
       # Mon approche
       - name: "monApproche"
         label: "Mon approche"
