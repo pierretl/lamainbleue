@@ -16,7 +16,13 @@
     {% else %}
         {% if typeResponsive != "false" %}
             <div class="{{colImage}}{% if inverseBloc %} order-1--large{% endif %}">
+                {% if maxWidth == "300" %}
+                <div class="mw-300">
+                    {% image typeResponsive, [".", srcImage] | join, altImage, "(max-width: 899px) 866px, 459px" %}
+                </div>
+            {% else %}
                 {% image typeResponsive, [".", srcImage] | join, altImage, "(max-width: 899px) 866px, 459px" %}
+            {% endif %}
             </div>
         {% else %}
             <img src="{{srcImage}}" alt="{{altImage}}" class="w-50--large{% if inverseBloc %} order-1--large{% endif %}" loading="lazy">

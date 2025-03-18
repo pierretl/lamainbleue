@@ -35,7 +35,9 @@ layoutMainClass : accueil__apropos
 
 {% if apropos.image %}
     <div class="df jc-c">
-        {% image typeResponsive, [".", apropos.image] | join, "", "(max-width: 899px) 866px, 459px" %}
+        <div class="mw-300">
+            {% image typeResponsive, [".", apropos.image] | join, "", "(max-width: 899px) 866px, 459px" %}
+        </div>
     </div>
 {% endif %}
 

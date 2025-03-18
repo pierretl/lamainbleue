@@ -11,6 +11,10 @@
     height: 100%;
 }
 
+.mw-300 {
+    max-width: 300px;
+}
+
 @include breakpoint(mediumDown) {
     .w-50pct--md {
         width: 50%;
