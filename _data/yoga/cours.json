@@ -28,8 +28,8 @@
     "cartes": [
       {
         "image": "/media/image/upload/event-prive.jpg",
-        "titre": "Séance privée 1 à 4 personnes",
-        "information": "Cours de Yoga personnalisé.\n\n\n.A domicile ou au studio.\nAbonnements disponibles.",
+        "titre": "Séance privée 1 à 3 personnes",
+        "information": "Cours de Yoga personnalisé.\n\n\n.\n\n\n.A domicile ou au studio.\nAbonnements disponibles.",
         "lienLabel": "Parlez-moi de votre envie",
         "lienHref": ""
       },
