@@ -3,7 +3,7 @@
     "cartes": [
       {
         "titre": "Mercredi 17h-18h",
-        "information": "Yoga Chill au parc Chuit<br>\nRelais Chuit, Petit-Lancy<br>\n(suivi de dj set, crèpes & hamac)<br>\nPrix libre",
+        "information": "Yoga Chill au parc Chuit<br>\nRelais Chuit, Petit-Lancy<br>\n(suivi de dj set, crèpes & hamac)<br>\nSur donation",
         "lienLabel": "Inscription",
         "lienHref": "https://calendly.com/lamainbleue/yoga-jonction-2023",
         "image": "/media/image/upload/yoga-lundi.png"
@@ -11,13 +11,13 @@
       {
         "image": "/media/image/upload/yoga-vendredi.png",
         "titre": "Vendredi 8h30-9h30",
-        "information": "Yoga Flow des Fleuves<br>\nToit terrasse du bout de la Pointe de la Jonction<br>\nPrix libre",
+        "information": "Yoga Flow des Fleuves<br>\nToit terrasse du bout de la Pointe de la Jonction<br>\nSur donation",
         "lienLabel": "Inscription",
         "lienHref": "https://calendly.com/lamainbleue/cours-de-yoga-st-jean2023-24"
       },
       {
         "titre": "Samedi 9h-10h",
-        "information": "Yoga Flow des Fleuves<br>\nTerrasse du théâtre Galpon<br>\n(suivi d'un pti dej à la buvette de la Pointe)<br>\nPrix libre",
+        "information": "Yoga Flow des Fleuves<br>\nTerrasse du théâtre Galpon<br>\n(suivi d'un pti dej à la buvette de la Pointe)<br>\nSur donation",
         "lienLabel": "Inscription",
         "lienHref": "https://calendly.com/lamainbleue/yoga-jonction-2023",
         "image": "/media/image/upload/yoga-mercredi.png"
@@ -26,13 +26,6 @@
   },
   "ponctuel": {
     "cartes": [
-      {
-        "image": "/media/image/upload/event-prive.jpg",
-        "titre": "Séance privée 1 à 3 personnes",
-        "information": "_  Cours de Yoga personnalisé  _\n\nA domicile ou au studio\nAbonnements disponibles",
-        "lienLabel": "Parlez-moi de votre envie",
-        "lienHref": ""
-      },
       {
         "image": "/media/image/upload/2024yoga-exterieur_img20240819183330_web-calque.jpg",
         "titre": "Yoga en extérieur",
@@ -46,6 +39,13 @@
         "information": "<ul>Selon calendrier lunaire et solaire, cercles méditatifs\n</ul>(dynamique, relaxation, mudra, souffle, mantra...) ",
         "lienLabel": "Calendrier d'inscription",
         "lienHref": "https://calendly.com/lamainbleue/meditation-cercles-lune-soleil"
+      },
+      {
+        "image": "/media/image/upload/event-prive.jpg",
+        "titre": "Séance privée 1 à 3 personnes",
+        "information": "_  Cours de Yoga personnalisé  _\n\nA domicile ou au studio\nAbonnements disponibles",
+        "lienLabel": "Parlez-moi de votre envie",
+        "lienHref": ""
       }
     ]
   }
