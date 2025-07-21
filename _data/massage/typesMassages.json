@@ -9,16 +9,16 @@
       "lienLabel": "Me contacter"
     },
     {
-      "lienLabel": "Me contacter",
-      "titre": "Focus Dos",
-      "image": "/media/image/upload/pierre.png",
-      "information": "<ul>\n<li>Tissus profonds</li>\n<li>Tonique et apaisant</li>\n<li>Soulage les douleurs de dos</li>\n</ul>"
-    },
-    {
       "titre": "Soin visage",
       "information": "Massage et soin visage & nuque\n<ul>\n<li>\nKobido (anti-âge naturel japonais)\n<li>\nAyurvédique (avec plantes médicinales adaptées à votre peau)\n</ul>",
       "image": "/media/image/upload/flacon.png",
       "lienLabel": "Me contacter"
+    },
+    {
+      "lienLabel": "Me contacter",
+      "titre": "Focus Dos",
+      "image": "/media/image/upload/pierre.png",
+      "information": "<ul>\n<li>Tissus profonds</li>\n<li>Tonique et apaisant</li>\n<li>Soulage les douleurs de dos</li>\n</ul>"
     },
     {
       "lienLabel": "Me contacter",
