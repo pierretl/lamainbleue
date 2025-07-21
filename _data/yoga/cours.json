@@ -12,14 +12,14 @@
         "image": "/media/image/upload/yoga-vendredi.png",
         "titre": "Vendredi 8h30-9h30",
         "information": "Yoga Flow des Fleuves<br>\nToit terrasse du bout de la Pointe de la Jonction<br>\nSur donation",
-        "lienLabel": "Inscription",
-        "lienHref": "https://calendly.com/lamainbleue/cours-de-yoga-st-jean2023-24"
+        "lienLabel": "Infos selon météo",
+        "lienHref": "https://www.instagram.com/lamainbleue.ch/"
       },
       {
         "titre": "Samedi 9h-10h",
         "information": "Yoga Flow des Fleuves<br>\nTerrasse du théâtre Galpon<br>\n(puis pti dej @La Pointe)<br>\nSur donation",
-        "lienLabel": "Inscription",
-        "lienHref": "https://calendly.com/lamainbleue/yoga-jonction-2023",
+        "lienLabel": "Infos selon météo",
+        "lienHref": "https://www.instagram.com/lamainbleue.ch/",
         "image": "/media/image/upload/yoga-mercredi.png"
       }
     ]
