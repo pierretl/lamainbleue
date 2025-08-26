@@ -2,7 +2,7 @@
   "reguliers": {
     "cartes": [
       {
-        "titre": "Lundi 18h30-19h30",
+        "titre": "Lundi 18:30-19:30",
         "information": "Espace de quartier St Jean<br>\nQuai du Seujet 32<br>\n1201 Genève<br>\nSur donation",
         "lienLabel": "Inscription dès le 15.09.2025",
         "lienHref": "https://www.instagram.com/lamainbleue.ch/",
@@ -17,7 +17,7 @@
       },
       {
         "image": "/media/image/upload/yoga-vendredi.png",
-        "titre": "Vendredi 12h15-13h15",
+        "titre": "Vendredi 12:15-13:15",
         "information": "Ar(t)cade 9<br>\nRue des Maraîchers 9<br>\n1205 Genève<br>\nSur donation",
         "lienLabel": "Inscription dès le 15.09.2025",
         "lienHref": "https://www.instagram.com/lamainbleue.ch/"
