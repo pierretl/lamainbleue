@@ -27,18 +27,18 @@
   "ponctuel": {
     "cartes": [
       {
+        "image": "/media/image/upload/atelier-meditation.jpg",
+        "titre": "Ateliers thématiques",
+        "information": "<ul>Approfondissements, auto-massage, focus par thèmes ou zones, etc.\n</ul>Tarifs et lieux changeants",
+        "lienLabel": "S’inscrire au groupe d'infos",
+        "lienHref": "https://www.instagram.com/lamainbleue.ch/"
+      },
+      {
         "image": "/media/image/upload/2024yoga-exterieur_img20240819183330_web-calque.jpg",
         "titre": "Méditation & cercles",
         "information": "<ul>Selon calendrier lunaire et solaire, cercles méditatifs\n</ul>(dynamique, relaxation, mudra, souffle, mantra...) ",
         "lienLabel": "Calendrier d'inscription",
         "lienHref": "https://calendly.com/lamainbleue/cercles-lune-soleil"
-      },
-      {
-        "image": "/media/image/upload/atelier-meditation.jpg",
-        "titre": "Ateliers thématiques",
-        "information": "<ul>Approfondissements, focus par thèmes ou zones,      \nauto-massage, etc.\n</ul>Tarifs et lieux changeants",
-        "lienLabel": "S’inscrire au groupe d'infos",
-        "lienHref": "https://www.instagram.com/lamainbleue.ch/"
       },
       {
         "image": "/media/image/upload/event-prive.jpg",
