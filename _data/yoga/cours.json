@@ -2,50 +2,50 @@
   "reguliers": {
     "cartes": [
       {
-        "titre": "Lundi 18h30-19h30",
-        "information": "Espace de Quartier Jonction<br>\nRue Michel-Simon 7, 1205 Genève<br>\n(interphone - 1er étage)<br>\nPrix libre",
-        "lienLabel": "Inscription",
-        "lienHref": "https://calendly.com/lamainbleue/yoga-jonction-2023",
+        "titre": "Lundi 18:30-19:30",
+        "information": "Espace de quartier St Jean<br>\nQuai du Seujet 32<br>\n1201 Genève<br>\nSur donation",
+        "lienLabel": "Réserve tes cours",
+        "lienHref": "https://calendly.com/lamainbleue/yoga-lundis-2025",
         "image": "/media/image/upload/yoga-lundi.png"
       },
       {
-        "image": "/media/image/upload/yoga-vendredi.png",
-        "titre": "Jeudi 18h-19h",
-        "information": "Espace de Quartier Saint-Jean<br>\nQuai du Seujet 32, 1201 Genève<br>\n(interphone - 4ème étage)<br>\nPrix libre",
-        "lienLabel": "Inscription",
-        "lienHref": "https://calendly.com/lamainbleue/cours-de-yoga-st-jean2023-24"
+        "titre": "Mardi 18:15-19:30",
+        "information": "Château-Bruyant<br>\nRue des Buis 14<br>\n1202 Genève<br>\nSur donation",
+        "lienLabel": "Réserve tes cours",
+        "lienHref": "https://calendly.com/lamainbleue/cours-de-yoga-mardi-2025",
+        "image": "/media/image/upload/yoga-mercredi.png"
       },
       {
-        "titre": "Vendredi 12h30-13h30",
-        "information": "Espace de Quartier Jonction<br>\nRue Michel-Simon 7, 1205 Genève<br>\n(interphone - 1er étage)<br>\nPrix libre",
-        "lienLabel": "Inscription",
-        "lienHref": "https://calendly.com/lamainbleue/yoga-jonction-2023",
-        "image": "/media/image/upload/yoga-mercredi.png"
+        "image": "/media/image/upload/yoga-vendredi.png",
+        "titre": "Vendredi 12:15-13:15",
+        "information": "Ar(t)cade 9<br>\nRue des Maraîchers 9<br>\n1205 Genève<br>\nPlaces limitées",
+        "lienLabel": "Réserve tes cours",
+        "lienHref": "https://calendly.com/lamainbleue/yoga-vendredis-2025"
       }
     ]
   },
   "ponctuel": {
     "cartes": [
       {
-        "image": "/media/image/upload/event-prive.jpg",
-        "titre": "Séance privée 1 à 4 personnes",
-        "information": "Cours de Yoga personnalisé.\n\n\n.A domicile ou au studio.\nAbonnements disponibles.",
-        "lienLabel": "Parlez-moi de votre envie",
-        "lienHref": ""
+        "image": "/media/image/upload/atelier-meditation.jpg",
+        "titre": "Ateliers thématiques",
+        "information": "<ul>Approfondissements, découvertes, focus par thèmes, etc.\n</ul>-Tarifs et lieux changeants-",
+        "lienLabel": "Calendrier d'inscription",
+        "lienHref": "https://calendly.com/lamainbleue/cercles-lune-soleil"
       },
       {
         "image": "/media/image/upload/2024yoga-exterieur_img20240819183330_web-calque.jpg",
-        "titre": "Yoga en extérieur",
-        "information": "<ul>Cours pop up, selon météo      \nau parc ou au bord de l’eau\n</ul>Prix libre",
-        "lienLabel": "S’inscrire au groupe WhatsApp ou Signal",
-        "lienHref": "tel:0797312351"
+        "titre": "Cercles & méditations",
+        "information": "<ul>Selon calendrier lunaire et solaire, cercles méditatifs\n(dynamique, relaxation, mudra, souffle, mantra...) \n</ul>-Sur donation-",
+        "lienLabel": "Calendrier et inscription",
+        "lienHref": "https://calendly.com/lamainbleue/cercles-lune-soleil"
       },
       {
-        "image": "/media/image/upload/atelier-meditation.jpg",
-        "titre": "Méditation & cercles",
-        "information": "<ul>Selon calendrier lunaire et solaire, cercles méditatifs\n</ul>(dynamique, relaxation, mudra, souffle, mantra...) ",
-        "lienLabel": "Calendrier d'inscription",
-        "lienHref": "https://calendly.com/lamainbleue/meditation-cercles-lune-soleil"
+        "image": "/media/image/upload/event-prive.jpg",
+        "titre": "Séance privée 1 à 3 personnes",
+        "information": "_  Cours de Yoga personnalisé  _\n\nA domicile ou au studio\nAbonnements disponibles",
+        "lienLabel": "Parlez-moi de votre envie",
+        "lienHref": "https://www.instagram.com/lamainbleue.ch/"
       }
     ]
   }

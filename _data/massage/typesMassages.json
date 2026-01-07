@@ -9,16 +9,16 @@
       "lienLabel": "Me contacter"
     },
     {
+      "titre": "Visage et nuque + soin",
+      "information": "<ul>\n<li>\nMassage Kobido (anti-âge naturel japonais)\n<li>\nVadhana Abhyanga (avec plantes médicinales ayurvédiques sur mesure)\n</ul>",
+      "image": "/media/image/upload/flacon.png",
+      "lienLabel": "Me contacter"
+    },
+    {
       "lienLabel": "Me contacter",
       "titre": "Focus Dos",
       "image": "/media/image/upload/pierre.png",
       "information": "<ul>\n<li>Tissus profonds</li>\n<li>Tonique et apaisant</li>\n<li>Soulage les douleurs de dos</li>\n</ul>"
-    },
-    {
-      "titre": "Soin visage",
-      "information": "Massage et soin ayurvédiques visage & nuque\n<ul>\n<li>\nAvec plantes médicinales indiennes adaptées à votre typologie de peau\n</ul>",
-      "image": "/media/image/upload/flacon.png",
-      "lienLabel": "Me contacter"
     },
     {
       "lienLabel": "Me contacter",
