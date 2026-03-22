@@ -56,15 +56,15 @@
       "tarifs": [
         {
           "duree": "45 minutes",
-          "prix": "65.-"
+          "prix": "75.-"
         },
         {
-          "duree": "1h30 (90min)",
-          "prix": "130.-"
+          "duree": "1h00 (60min)",
+          "prix": "100.-"
         }
       ],
       "lien": true,
-      "information": "<ul>Pour les petits revenus (études, chômage...)"
+      "information": "<ul>petits revenus (études, chômage...)"
     },
     {
       "titre": "Bon cadeau",
