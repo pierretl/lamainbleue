@@ -19,10 +19,6 @@
       "image": "/media/image/upload/main-horloge.png",
       "tarifs": [
         {
-          "duree": "45 minutes",
-          "prix": "85.-"
-        },
-        {
           "duree": "1h00 (60min)",
           "prix": "120.-"
         },
