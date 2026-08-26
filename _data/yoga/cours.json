@@ -34,24 +34,24 @@
   "ponctuel": {
     "cartes": [
       {
+        "image": "/media/image/upload/event-prive.jpg",
+        "titre": "Séance privée 1 à 3 personnes",
+        "information": "_  Cours de Yoga personnalisé  _\n\nA domicile ou au studio\nOffres abonnements disponibles",
+        "lienLabel": "Parlez-moi de votre envie",
+        "lienHref": "https://www.instagram.com/lamainbleue.ch/"
+      },
+      {
         "image": "/media/image/upload/atelier-meditation.jpg",
-        "titre": "Ateliers thématiques",
-        "information": "<ul>Approfondissements, découvertes, focus par thèmes, etc.\n</ul>-Tarifs et lieux changeants-",
+        "titre": "Mon Dimanche Yoga",
+        "information": "<ul>Rdv mensuel avec, selon la saison: focus par thèmes, approfondissements, découvertes, etc.\n</ul>-Tarifs et lieux changeants-",
         "lienLabel": "Calendrier et inscription",
         "lienHref": "https://calendly.com/lamainbleue/cercles-lune-soleil"
       },
       {
         "image": "/media/image/upload/2024yoga-exterieur_img20240819183330_web-calque.jpg",
-        "titre": "Cercles & méditations",
-        "information": "<ul>Selon calendrier lunaire et solaire, cercles méditatifs\n(dynamique, relaxation, mudra, souffle, mantra...) \n</ul>-Sur donation-",
-        "lienLabel": "Calendrier et inscription",
-        "lienHref": "https://calendly.com/lamainbleue/cercles-lune-soleil"
-      },
-      {
-        "image": "/media/image/upload/event-prive.jpg",
-        "titre": "Séance privée 1 à 3 personnes",
-        "information": "_  Cours de Yoga personnalisé  _\n\nA domicile ou au studio\nAbonnements disponibles",
-        "lienLabel": "Parlez-moi de votre envie",
+        "titre": "Retraites & weekend ",
+        "information": "<ul>Pratique en immersion, en nature, thématiques de saisons...\n</ul>-Tarifs et lieux changeants-",
+        "lienLabel": "Demandez le programme à venir",
         "lienHref": "https://www.instagram.com/lamainbleue.ch/"
       }
     ]
