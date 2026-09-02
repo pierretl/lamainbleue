@@ -1,3 +1,5 @@
+//node check-images.js
+
 const fs = require("fs");
 const path = require("path");
 const Image = require("@11ty/eleventy-img");
