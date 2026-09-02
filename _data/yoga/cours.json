@@ -36,7 +36,7 @@
       {
         "image": "/media/image/upload/event-prive.jpg",
         "titre": "Séance privée 1 à 3 personnes",
-        "information": "_  Cours de Yoga personnalisé  _\n\nA domicile ou au studio\nOffres abonnements disponibles",
+        "information": "_  Cours de Yoga personnalisé  _<br>\nA domicile ou au studio<br>\nOffres abonnements disponibles",
         "lienLabel": "Parlez-moi de votre envie",
         "lienHref": "https://www.instagram.com/lamainbleue.ch/"
       },
