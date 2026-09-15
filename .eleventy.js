@@ -7,9 +7,9 @@ const sass = require("sass");
 const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
 const markdownIt = require("markdown-it");
-const Image = require("@11ty/eleventy-img");
+//const Image = require("@11ty/eleventy-img");
 
-function imageShortcodeSync(type, src, alt, sizes, classe="") { 
+function imageShortcodeSyncOLD(type, src, alt, sizes, classe="") { 
   switch (type) {
     case 'carte':
       var widthType = [420, 290];
@@ -56,6 +56,17 @@ function imageShortcodeSync(type, src, alt, sizes, classe="") {
   // get metadata even the images are not fully generated
   let metadata = Image.statsSync(src, options);
   return Image.generateHTML(metadata, imageAttributes);
+}
+
+function imageShortcodeSync(type, src, alt, sizes, classe = "") {
+  return `<img
+    src="${src}"
+    alt="${alt || ""}"
+    ${sizes ? `sizes="${sizes}"` : ""}
+    ${classe ? `class="${classe}"` : ""}
+    loading="lazy"
+    decoding="async"
+  >`;
 }
 
 module.exports = function(eleventyConfig) {
