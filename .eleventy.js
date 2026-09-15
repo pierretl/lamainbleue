@@ -7,9 +7,9 @@ const sass = require("sass");
 const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
 const markdownIt = require("markdown-it");
-//const Image = require("@11ty/eleventy-img");
+const Image = require("@11ty/eleventy-img");
 
-function imageShortcodeSyncOLD(type, src, alt, sizes, classe="") { 
+function imageShortcodeSync(type, src, alt, sizes, classe="") { 
   switch (type) {
     case 'carte':
       var widthType = [420, 290];
@@ -57,8 +57,7 @@ function imageShortcodeSyncOLD(type, src, alt, sizes, classe="") {
   let metadata = Image.statsSync(src, options);
   return Image.generateHTML(metadata, imageAttributes);
 }
-
-function imageShortcodeSync(type, src, alt, sizes, classe = "") {
+function imageShortcodeSyncDebug(type, src, alt, sizes, classe = "") {
   return `<img
     src="${src}"
     alt="${alt || ""}"
