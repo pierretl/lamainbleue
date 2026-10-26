@@ -16,18 +16,18 @@
         "image": "/media/image/upload/yoga-mercredi.png"
       },
       {
+        "image": "/media/image/upload/yoga-vendredi.png",
+        "titre": "Mercredi 09:00-10:00",
+        "information": "Espace de quartier St Jean<br>\nQuai du Seujet 32<br>\n1201 Genève<br>\nSur donation",
+        "lienLabel": "Réserve tes cours",
+        "lienHref": "https://calendly.com/lamainbleue/cours-de-yoga-vendredis-matins"
+      },
+      {
         "information": "Espace de quartier St Jean<br>\nQuai du Seujet 32<br>\n1201 Genève<br>\nSur donation",
         "lienLabel": "Réserve tes cours",
         "lienHref": "https://calendly.com/lamainbleue/yoga-vendredis-2026-2027",
         "titre": "Vendredi 12:15-13:15",
         "image": "/media/image/upload/picto-yoga-new.png"
-      },
-      {
-        "image": "/media/image/upload/yoga-vendredi.png",
-        "titre": "Vendredi 08:00-09:00",
-        "information": "Espace de quartier St Jean<br>\nQuai du Seujet 32<br>\n1201 Genève<br>\nSur donation",
-        "lienLabel": "Réserve tes cours",
-        "lienHref": "https://calendly.com/lamainbleue/cours-de-yoga-vendredis-matins"
       }
     ]
   },
